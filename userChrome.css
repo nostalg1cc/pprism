@@ -10,10 +10,14 @@
 
 #star-button, #PanelUI-menu-button, #star-button-box{
   display: none !important;
+  
 }
 
 
-
+#zen-current-workspace-indicator-icon{
+  display: none !important;
+  
+}
 
 .tab-throbber {
     margin-top: -1px;  /* Adjust this value as needed */
@@ -94,11 +98,21 @@
 
 
 #zen-current-workspace-indicator {
-  margin-left: -2px !important;
-  margin-bottom: -10px !important;
-  margin-top: -3px !important;
+  margin-left: -25px !important;
+  margin-bottom: -5px !important;
+  margin-top: 10px !important;
   font-weight: 500 !important;
-  transform: scale(0.9) !important;
+  transform: scale(0.95) !important;
+  transform-origin: left;
+              transition: all 0.15s ease-in-out;
+
+}
+
+#zen-current-workspace-indicator:hover{
+ margin-left: -30px !important;
+  margin-bottom: -5px !important;
+  margin-top: 10px !important;
+  transform: scale(1.1) !important;
   transform-origin: left;
 }
 /* COLORED TAB BACKGROUND */
