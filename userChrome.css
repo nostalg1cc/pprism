@@ -351,16 +351,18 @@ min-height: 37px !important;
   
     
     box-sizing: border-box!important;
-    
+
 
   box-shadow: none !important; /* Subtle drop shadow */
   
 }
 
-/* URL Bar Background Styles - Not in Breakout */ 
+/* URL Bar Background  color: rgb(255, 255, 255, 0.1) !important;
+ Styles - Not in Breakout */ 
 #urlbar:not([breakout-extend]) #urlbar-background { 
   border-radius: 7px !important; 
       outline: none !important;
+
     border: none !important;
     /*
 outline: 1px solid rgba(225, 225, 225, 0.25) !important;
@@ -587,10 +589,10 @@ outline-offset: -1px;
 #zen-essentials-container {
     display: grid !important; /* Ensures it's a grid */
     grid-template-columns: 1fr 1fr  !important; /* Two columns */
-column-gap: 6px !important; /* Horizontal spacing (left and right) */
-    row-gap: 6px !important; /* Vertical spacing (top and bottom) */    width: 100% !important; /* Ensure full container width */
+column-gap: 5px !important; /* Horizontal spacing (left and right) */
+    row-gap: 5px !important; /* Vertical spacing (top and bottom) */    width: 100% !important; /* Ensure full container width */
    margin-bottom: 0px !important;
-  margin-top: 3px !important;
+  margin-top: 2px !important;
  background-color: transparent !important;
   background: none !important;
 
