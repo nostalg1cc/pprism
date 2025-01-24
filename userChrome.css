@@ -629,20 +629,13 @@ outline-offset: -1px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) !important; /* Subtle drop shadow */
   border: 0px solid rgba(0, 0, 0, 0.01) !important; /* Almost transparent border */
   outline: 0px solid rgba(0, 0, 0, 0.01) !important; /* Almost transparent outline */
-    margin: -1px 0 -1px 0 !important;
+    margin: -1px -1px -1px -0px !important;
 
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.01) !important; /* Subtle and almost invisible box shadow */
 
 }
 
 
-:root {
-	--zen-border-radius: 7px 3px 3px 7px !important;
-  
-    
-    
-  
-}
 
 
 
