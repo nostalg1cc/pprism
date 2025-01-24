@@ -3,9 +3,70 @@
 }
 
 
-#titlebar {
-    -moz-window-dragging: no-drag; /* Disables window dragging */
+
+#context_pinTab, #context_unpinTab {
+  order: -88 !important; /* Move this item to the top */
 }
+
+#context_closeTab {
+  order: -83 !important; /* Move this item to the top */
+}
+
+
+
+#context_zen-add-essential, #context_zen-remove-essential {
+  order: -86 !important; /* Move this item to the top */
+}
+
+
+#context_toggleMuteTabremove-essential, #context_toggleMuteTab {
+  order: -84 !important; /* Move this item to the top */
+}
+
+#context_bookmarkTab, #context-take-screenshot, #context-print-selection, #zen-context-menu-compact-mode, #context_selectAllTabs, #context_reopenInContainer, #context_moveTabOptions{
+  display: none !important;
+}
+
+menuseparator{
+  color: black !important;
+  opacity: 60% !important;
+  
+}
+
+menuseparator:nth-of-type(2) {
+  display: none !important;
+}
+
+menuseparator:nth-of-type(3) {
+    order: -38 !important; /* Move this item to the top */
+
+}
+
+menuitem, #context_closeTabOptions, #_d634138d-c276-4fc8-924b-40a0ea21d284_-menuitem-1, #context_moveTabToGroup, #context-zen-change-workspace-tab, #context_zenTabActions{
+padding-top: 10px !important;
+padding-bottom: 10px !important;
+  margin-top: 3px !important;
+margin-bottom: 3px !important;
+  border-radius: 5px !important;
+}
+
+.menupopup-arrowscrollbox {
+  background-color: rgba(5, 5, 5, 0.985) !important; /* Semi-transparent background */
+  border-radius: 10px !important;
+  border: 1px solid black !important;
+  outline: none !important;
+  color: white !important;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+  padding-left: 7px !important;
+  padding-right: 7px !important;
+  z-index: 10; /* Ensure it is above the pseudo-element */
+}
+
+
+
+
+
 
 
 #star-button, #PanelUI-menu-button, #star-button-box{
@@ -773,11 +834,11 @@ tab-group:has(tab[hidden]){
   filter: blur(10px) brightness(0.7) contrast(1.1) !important;
   opacity: 0.5 !important;
 
-  /* Smooth transition for all specified properties with !important */
-  transition: transform 0.5s ease !important, 
-              backdrop-filter 0.5s ease !important, 
-              filter 0.5s ease !important, 
-              opacity 0.5s ease !important;
+  /* Smooth transition for all specified properties */
+  transition: transform 0.5s ease, 
+              backdrop-filter 0.5s ease, 
+              filter 0.5s ease, 
+              opacity 0.5s ease;
 }
 
 
