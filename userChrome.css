@@ -4,7 +4,9 @@
 
 #vertical-pinned-tabs-container{
   background-color:  rgba( 255, 255, 255, 0.05) !important;
-border: 1px solid rgba( 255, 255, 255, 0.1) !important;  padding: 5px 4px 2px 4px !important;
+border: 1px solid rgba( 255, 255, 255, 0.1) !important;
+
+  padding: 5px 4px 2px 4px !important;
 border-radius: 15px !important;
   margin-top: 20px !important;
   margin-bottom: 6px !important;
@@ -27,8 +29,9 @@ border-radius: 15px !important;
 }
 
 #zen-essentials-container{
-  background-color:  rgba( 255, 255, 255, 0.05) !important;
-border: 1px solid rgba( 255, 255, 255, 0.1) !important;  padding: 5px 4px 2px 4px !important;
+background-color:  rgba( 255, 255, 255, 0.05) !important;
+border: 1px solid rgba( 255, 255, 255, 0.1) !important;
+  padding: 5px 4px 2px 4px !important;
 border-radius: 15px !important;
   margin-top: 4px !important;
   margin-bottom: 3px !important;
@@ -175,6 +178,7 @@ margin-bottom: 3px !important;
 
 
 #nav-bar{
+  margin-right: 1px !important;
 
   border-top: none !important;
   margin-top: -5px !important; /*compactmode -5 pixel */
@@ -471,32 +475,29 @@ min-height: 37px !important;
 
 
 .urlbar-input-container {
-  padding-left: 10px !important;
-  padding-bottom: 2px !important;
-  background-color:  rgba( 255, 255, 255, 0.05) !important;
-  
+  padding-left: 7px !important;
+  padding-bottom: 2px !important; /*
+  background-color:  rgba( 255, 255, 255, 0.05) !important; */
   
 }
 
 #urlbar-container {
-    background: none !important;
-
+background-color:  rgba( 255, 255, 255, 0.05) !important;
+border: 1px solid rgba( 255, 255, 255, 0.1) !important;
+  border-radius: 10px !important;
 
     box-sizing: border-box!important;
 
-
-  box-shadow: none !important; /* Subtle drop shadow */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
   
 }
 
 /* URL Bar Background  color: rgb(255, 255, 255, 0.1) !important;
  Styles - Not in Breakout */ 
 #urlbar:not([breakout-extend]) #urlbar-background { 
-  border-radius: 10px !important; 
     background: none !important;
 
       outline: none !important;
-border: 1px solid rgba( 255, 255, 255, 0.1) !important;
   /*
 outline: 1px solid rgba(225, 225, 225, 0.25) !important;
 outline-offset: -1px;
