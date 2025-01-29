@@ -6,7 +6,7 @@
   background-color:  rgba( 255, 255, 255, 0.05) !important;
 border: 1px solid rgba( 255, 255, 255, 0.1) !important;  padding: 5px 4px 2px 4px !important;
 border-radius: 15px !important;
-  margin-top: 6px !important;
+  margin-top: 20px !important;
   margin-bottom: 6px !important;
   
   padding-bottom: 1px !important;
@@ -15,7 +15,16 @@ border-radius: 15px !important;
 
 }
 
-
+#vertical-pinned-tabs-container::before {
+  content: "";
+  position: absolute;
+  top: -12px; /* Moves the border 10px above */
+  left: 25%;
+  width: 50%;
+  height: 2px; /* Simulates a border */
+  border-radius: 50px !important;
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
 #zen-essentials-container{
   background-color:  rgba( 255, 255, 255, 0.05) !important;
@@ -38,7 +47,23 @@ border-radius: 15px !important;
 }
 
 
+#tabbrowser-arrowscrollbox-periphery {
+    order: 999 !important; /* Move this item to the top */
+  margin-top: 17px !important;
+  position: relative; /* Needed for absolute positioning */
 
+}
+
+#tabbrowser-arrowscrollbox-periphery::before {
+  content: "";
+  position: absolute;
+  top: -12px; /* Moves the border 10px above */
+  left: 25%;
+  width: 50%;
+  height: 2px; /* Simulates a border */
+  border-radius: 50px !important;
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
 
 
