@@ -18,7 +18,7 @@ border-radius: 15px !important;
 #vertical-pinned-tabs-container::before {
   content: "";
   position: absolute;
-  top: -12px; /* Moves the border 10px above */
+  top: -13px; /* Moves the border 10px above */
   left: 25%;
   width: 50%;
   height: 2px; /* Simulates a border */
