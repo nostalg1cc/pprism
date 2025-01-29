@@ -2,6 +2,41 @@
   font-family: 'Poppins', sans-serif;
 }
 
+#vertical-pinned-tabs-container{
+  background-color:  rgba( 255, 255, 255, 0.05) !important;
+border: 1px solid rgba( 255, 255, 255, 0.1) !important;  padding: 5px 4px 2px 4px !important;
+border-radius: 15px !important;
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+
+}
+
+
+
+#zen-essentials-container{
+  background-color:  rgba( 255, 255, 255, 0.05) !important;
+border: 1px solid rgba( 255, 255, 255, 0.1) !important;  padding: 5px 4px 2px 4px !important;
+border-radius: 15px !important;
+  margin-top: 4px !important;
+  margin-bottom: 3px !important;
+  padding: 5px !important;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+
+  
+}
+
+
+
+
+
+#zen-current-workspace-indicator, #vertical-pinned-tabs-container-separator{
+  display: none !important;
+}
+
+
+
+
 
 
 #context_pinTab, #context_unpinTab {
@@ -106,10 +141,8 @@ margin-bottom: 3px !important;
 
 #urlbar-container {
       margin-left: 2px !important; /*compactmode 3pixel */
-      margin-right: 3px !important;
+      margin-right: 0px !important;
     padding-right: -0px !important;
-  
-
 }
 
 
@@ -191,9 +224,12 @@ margin-bottom: 3px !important;
 /* COLORED TAB BACKGROUND */
 /* COLORED TAB BACKGROUND */
 
+
+
 #zen-essentials-container .tabbrowser-tab {
     --toolbarbutton-inner-padding: 0;
     max-width: unset;
+  
     width: 100% !important;
     border-radius: var(--border-radius-medium);
 
@@ -397,8 +433,9 @@ min-height: 37px !important;
 
 
 #urlbar {
-  min-height: 40px !important;
-  margin-left: 1px !important;
+  min-height: 42px !important;
+ /*  margin-left: 1px !important; */
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
 
   
 }
@@ -408,14 +445,15 @@ min-height: 37px !important;
 .urlbar-input-container {
   padding-left: 10px !important;
   padding-bottom: 2px !important;
-  
+  background-color:  rgba( 255, 255, 255, 0.05) !important;
   
   
 }
 
 #urlbar-container {
-  
-    
+    background: none !important;
+
+
     box-sizing: border-box!important;
 
 
@@ -426,11 +464,12 @@ min-height: 37px !important;
 /* URL Bar Background  color: rgb(255, 255, 255, 0.1) !important;
  Styles - Not in Breakout */ 
 #urlbar:not([breakout-extend]) #urlbar-background { 
-  border-radius: 7px !important; 
-      outline: none !important;
+  border-radius: 10px !important; 
+    background: none !important;
 
-    border: none !important;
-    /*
+      outline: none !important;
+border: 1px solid rgba( 255, 255, 255, 0.1) !important;
+  /*
 outline: 1px solid rgba(225, 225, 225, 0.25) !important;
 outline-offset: -1px;
 */
@@ -674,20 +713,34 @@ outline-offset: -1px;
     z-index: 22221; /* Layer it above the element's background but below the content */
 }
 
+#sidebar-box {
+  border-radius: 3px 3px 3px 3px !important;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) !important; /* Subtle drop shadow */
+  border: 0px solid rgba(0, 0, 0, 0.01) !important; /* Almost transparent border */
+    border: 1px solid rgba(0, 0, 0, 0.5) !important; /* Outer border */
+    margin: -2px -1px -1px -0px !important;
+    position: relative; /* Needed for positioning the pseudo-element */
 
-
-
-#zen-essentials-container {
-    display: grid !important; /* Ensures it's a grid */
-    grid-template-columns: 1fr 1fr  !important; /* Two columns */
-column-gap: 5px !important; /* Horizontal spacing (left and right) */
-    row-gap: 5px !important; /* Vertical spacing (top and bottom) */    width: 100% !important; /* Ensure full container width */
-   margin-bottom: 0px !important;
-  margin-top: 2px !important;
- background-color: transparent !important;
-  background: none !important;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.01) !important; /* Subtle and almost invisible box shadow */
 
 }
+
+#sidebar-box::before {
+    content: '';
+    position: absolute;
+    top: 0px; /* Offset for the inner border */
+    left:   0px; /* Offset for the inner border */
+    right:  0px;
+    bottom:   0px;
+    border: 1px solid rgba(220, 220, 220, 0.2)  !important; /* Outer border */
+    border-radius: 2px 2px 2px 2px !important; /* Match the adjusted radius inside */
+    pointer-events: none; /* Ensures it doesn't interfere with clicks */
+    z-index: 22221; /* Layer it above the element's background but below the content */
+}
+
+
+
+
 
 
 
