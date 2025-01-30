@@ -191,7 +191,7 @@ margin-bottom: 3px !important;
 .tab-background[selected='']:not(#essentials) {
   content: '';
   border-radius: 10px !important;
-background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.45)) !important;
+background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.4)) !important;
   border: 1px solid rgba( 255, 255, 255, 0.75) !important; /* Subtle drop shadow */
   width: 100% !important;
   left: -2px !important;
