@@ -790,26 +790,29 @@ tab-group { /* thanks to the few people making + updating this part of the css *
   background: color-mix(in srgb, var(--tab-group-color-invert) 0%, transparent) !important;
   border-radius: 8px !important;
   margin-inline: 0px !important;
-  border: 1px solid color-mix(in srgb, var(--tab-group-color-invert) 0%, transparent);
+  border: 0px solid color-mix(in srgb, var(--tab-group-color-invert) 0%, transparent);
   margin-bottom: 1px !important;
   padding-top: 3px !important;
   padding-right: 0px !important;
   padding-bottom: -0px !important;
-  padding-left: 1px !important;
+  padding-left: 5px !important;
   max-height: 1000px !important;
   transition: max-height 0.2s ease !important;
  
   & tab {
     transition: opacity 0.5s ease !important;
-    padding-left: 15px !important;
+    padding-left: 20px !important;
+    
   }
  
   &>vbox {
     padding-top: 2px !important;
+    
   }
  
   & .tab-group-label-container {
     &:after {
+      
       display: none !important;
     }
  
