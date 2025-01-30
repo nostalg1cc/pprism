@@ -267,18 +267,18 @@ background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 
 
     &[selected] .tab-background {
         box-shadow: none !important;
-        outline: none !important;
-  border: 1px solid rgba( 255, 255, 255, 0.05) !important; /* Subtle drop shadow */
         border-radius: 10px !important;
-
+      outline: 0.5px solid rgba(255, 255, 255, 0.52) !important;
+outline-offset: -1px !important;
+border: none !important;
+      opacity: 0.5 !important;
         z-index: -99 !important;
-        background: rgba(255, 255, 255, 0.2) !important;
+background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1)) !important;
 
         &::after {
             content: "";
             inset: -50%;
-            filter: blur(25px) brightness(0.9) contrast(3.1) !important;
-            opacity: 0.32 !important;
+            filter: blur(30px) brightness(0.85) contrast(1.1) !important;
             position: absolute;
           
             background-size: 100% 100%;
@@ -287,17 +287,21 @@ background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 
             z-index: -1;
         }
 
+      
+      
+      
         background: transparent;
         overflow: hidden;
 
         &::before {
             background: black !important;
             margin: 2px;
+          
             width: 120% !important;
             height: 120% !important;
             top: -4px !important;
             left: -4px !important;
-            opacity: 5% !important;
+            opacity: 20% !important;
             border-radius: calc(var(--tab-border-radius) - 2px);
             position: absolute;
             inset: 0;
@@ -310,10 +314,10 @@ background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 
     &:not([selected], [multiselected="true"]) .tab-background {
         box-shadow: none !important;
         outline: none !important;
-  border: 1px solid rgba( 255, 255, 255, 0.05) !important; /* Subtle drop shadow */
         z-index: -99 !important;
         border-radius: 10px !important;
-
+outline: 0.5px solid rgba(255, 255, 255, 0.05) !important;
+outline-offset: -1px !important;
         background: rgba(255, 255, 255, 0.075) !important;
         backdrop-filter: none !important;
     }
@@ -346,17 +350,15 @@ background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 
     /* When NOT selected */
     &:not([selected]) .tab-background {
         box-shadow: none !important;
-        outline: none !important;
-  border: 1px solid rgba( 255, 255, 255, 0.105) !important; /* Subtle drop shadow */
-        background: rgba(255, 255, 255, 0.12) !important;
+outline: 0.5px solid rgba(255, 255, 255, 0.2) !important;
+outline-offset: -1px !important;        background: rgba(255, 255, 255, 0.12) !important;
     }
 
     /* When SELECTED */
     &[selected] .tab-background {
         box-shadow: none !important;
-        outline: none !important;
-  border: 1px solid rgba( 255, 255, 255, 0.105) !important; /* Subtle drop shadow */
-        background: rgba(255, 255, 255, 0.362) !important;
+outline: 0.5px solid rgba(255, 255, 255, 0.7) !important;
+outline-offset: -1px !important;        background: rgba(255, 255, 255, 0.362) !important;
 
         @media (-moz-bool-pref: 'zen.theme.essentials-favicon-bg') {
             &::after {
@@ -364,6 +366,7 @@ background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 
             }
         }
     }
+
 }
 /* COLORED TAB BACKGROUND */
 /* COLORED TAB BACKGROUND */
@@ -375,7 +378,11 @@ background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 
 /* COLORED TAB BACKGROUND */
 /* COLORED TAB BACKGROUND */
 
-
+      #zen-essentials-container .tab-icon-image{
+  height: 14.5px !important;
+  width: auto !important;
+  z-index: 999 !important;
+}
 
 
 
