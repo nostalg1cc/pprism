@@ -17,7 +17,24 @@ border-radius: 15px !important;
 
 }
 
-
+.tab-content  .tabbrowser-tab{
+  z-index: 9999 !important;
+  margin-top: -9px !important;
+  
+  margin-right: -2px !important;
+  height: 80% !important;
+  width: 80% !important;
+  & .tab-icon-image {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3)) !important;
+  border: 1px solid rgba( 255, 255, 255, 0.55) !important;
+  padding: 5px 5px !important;
+  border-radius: 6px 10px 6px 10px !important;
+  z-index: 9999 !important;
+    backdrop-filter: blur(10px);
+  margin-top: -6px !important;
+  margin-left: 45px !important;
+  }
+}
 
 
 #zen-essentials-container{
@@ -386,7 +403,7 @@ outline-offset: -1px !important;        background: rgba(255, 255, 255, 0.362) !
       #zen-essentials-container .tab-icon-image{
   height: 14.5px !important;
   width: auto !important;
-  z-index: 999 !important;
+  z-index: 9 !important;
 }
 
 
@@ -701,6 +718,75 @@ outline-offset: -1px;
   padding: 15px calc(7px + var(--tab-inline-padding)) !important;
   
 }
+
+
+
+
+
+.browserSidebarContainer.zen-glance-overlay .browserContainer {
+  position: relative; /* Needed for positioning the pseudo-element */
+  border: 1px solid rgba(0, 0, 0, 0.7) !important; /* Outer border */
+  width: 80% !important;
+  height: 90% !important;
+  border-radius: 8px !important; /* Match the border-radius */
+  margin-top: 1px !important;
+}
+
+
+
+.browserSidebarContainer.zen-glance-overlay #zen-glance-sidebar-container {
+  position: relative; /* Needed for positioning the pseudo-element */
+  border: 1px solid rgba(0, 0, 0, 0.7) !important; /* Outer border */
+  border-radius: 8px !important; /* Match the border-radius */
+  margin-left: -20px !important;
+background: rgba(155, 155, 155, 0.25) !important;  
+  top: 50px !important;
+  margin-top: 1px !important;
+  
+  & toolbarbutton {
+        width: 30px !important;
+        height: 30px !important;
+              color: rgba(255, 255, 255, 0.1) !important;  
+
+
+     
+      }
+}
+
+.browserSidebarContainer.zen-glance-overlay .browserStack {
+  position: relative; /* Needed for positioning the pseudo-element */
+  border: 2px solid rgba(0, 0, 0, 0.7) !important; /* Outer border */
+  border-radius: 8px !important; /* Match the border-radius */
+  
+ 
+}
+
+.browserSidebarContainer.zen-glance-overlay .browserContainer::before {
+  content: '';
+  position: absolute;
+  top: 1px; /* Offset for the inner border */
+  left: 1px; /* Offset for the inner border */
+  right: 1px;
+  bottom: 0.5px;
+  border: 1px solid rgba(220, 220, 220, 0.3) !important; /* Outer border */
+  border-radius: 8px; /* Match the adjusted radius inside */
+  pointer-events: none; /* Ensures it doesn't interfere with clicks */
+  z-index: 22221; /* Layer it above the element's background but below the content */
+}
+
+.browserSidebarContainer.zen-glance-overlay #zen-glance-sidebar-container::before {
+  content: '';
+  position: absolute;
+  top: 1px; /* Offset for the inner border */
+  left: 1px; /* Offset for the inner border */
+  right: 1px;
+  bottom: 1px;
+  border: 1px solid rgba(220, 220, 220, 0.3) !important; /* Outer border */
+  border-radius: 6px; /* Match the adjusted radius inside */
+  pointer-events: none; /* Ensures it doesn't interfere with clicks */
+  z-index: 22221; /* Layer it above the element's background but below the content */
+}
+
 
 
 
