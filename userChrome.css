@@ -713,79 +713,77 @@ outline-offset: -1px;
 }
 
 
-#zen-main-app-wrapper {
-    position: relative; /* Needed for positioning the pseudo-element */
-    border: 1px solid rgba(0, 0, 0, 0.7) !important; /* Outer border */
-    border-radius: 8px !important; /* Match the border-radius */
-    margin-top: 1px !important;
+/* Apply these styles only when Firefox is NOT in fullscreen mode */
+#main-window:not([sizemode="fullscreen"]) #zen-appcontent-navbar-container {
+  min-height: 8px !important;
+  max-height: 30px !important;
 }
 
-#zen-main-app-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 1px; /* Offset for the inner border */
-    left: 1px; /* Offset for the inner border */
-    right: 1px;
-    bottom: 1px;
-    border: 1px solid rgba(220, 220, 220, 0.3) !important; /* Outer border */
-    border-radius: 6px; /* Match the adjusted radius inside */
-    pointer-events: none; /* Ensures it doesn't interfere with clicks */
-    z-index: 22221; /* Layer it above the element's background but below the content */
+#main-window:not([sizemode="fullscreen"]) #zen-main-app-wrapper {
+  position: relative; /* Needed for positioning the pseudo-element */
+  border: 1px solid rgba(0, 0, 0, 0.7) !important; /* Outer border */
+  border-radius: 8px !important; /* Match the border-radius */
+  margin-top: 1px !important;
 }
 
+#main-window:not([sizemode="fullscreen"]) #zen-main-app-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 1px; /* Offset for the inner border */
+  left: 1px; /* Offset for the inner border */
+  right: 1px;
+  bottom: 1px;
+  border: 1px solid rgba(220, 220, 220, 0.3) !important; /* Outer border */
+  border-radius: 6px; /* Match the adjusted radius inside */
+  pointer-events: none; /* Ensures it doesn't interfere with clicks */
+  z-index: 22221; /* Layer it above the element's background but below the content */
+}
 
-
-
-#tabbrowser-tabbox #tabbrowser-tabpanels .browserSidebarContainer {
+#main-window:not([sizemode="fullscreen"]) #tabbrowser-tabbox #tabbrowser-tabpanels .browserSidebarContainer {
   border-radius: 3px 3px 3px 3px !important;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) !important; /* Subtle drop shadow */
   border: 0px solid rgba(0, 0, 0, 0.01) !important; /* Almost transparent border */
-    border: 1px solid rgba(0, 0, 0, 0.5) !important; /* Outer border */
-    margin: -2px -1px -1px -0px !important;
-    position: relative; /* Needed for positioning the pseudo-element */
-
+  border: 1px solid rgba(0, 0, 0, 0.5) !important; /* Outer border */
+  margin: -2px -1px -1px -0px !important;
+  position: relative; /* Needed for positioning the pseudo-element */
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.01) !important; /* Subtle and almost invisible box shadow */
-
 }
 
-#tabbrowser-tabbox #tabbrowser-tabpanels .browserSidebarContainer::before {
-    content: '';
-    position: absolute;
-    top: 0px; /* Offset for the inner border */
-    left:   0px; /* Offset for the inner border */
-    right:  0px;
-    bottom:   0px;
-    border: 1px solid rgba(220, 220, 220, 0.2)  !important; /* Outer border */
-    border-radius: 2px 2px 2px 2px !important; /* Match the adjusted radius inside */
-    pointer-events: none; /* Ensures it doesn't interfere with clicks */
-    z-index: 22221; /* Layer it above the element's background but below the content */
+#main-window:not([sizemode="fullscreen"]) #tabbrowser-tabbox #tabbrowser-tabpanels .browserSidebarContainer::before {
+  content: '';
+  position: absolute;
+  top: 0px; /* Offset for the inner border */
+  left: 0px; /* Offset for the inner border */
+  right: 0px;
+  bottom: 0px;
+  border: 1px solid rgba(220, 220, 220, 0.2) !important; /* Outer border */
+  border-radius: 2px 2px 2px 2px !important; /* Match the adjusted radius inside */
+  pointer-events: none; /* Ensures it doesn't interfere with clicks */
+  z-index: 22221; /* Layer it above the element's background but below the content */
 }
 
-#sidebar-box {
+#main-window:not([sizemode="fullscreen"]) #sidebar-box {
   border-radius: 3px 3px 3px 3px !important;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) !important; /* Subtle drop shadow */
   border: 0px solid rgba(0, 0, 0, 0.01) !important; /* Almost transparent border */
-    border: 1px solid rgba(0, 0, 0, 0.5) !important; /* Outer border */
-    margin: -2px -1px -1px -0px !important;
-    position: relative; /* Needed for positioning the pseudo-element */
-
+  border: 1px solid rgba(0, 0, 0, 0.5) !important; /* Outer border */
+  margin: -2px -1px -1px -0px !important;
+  position: relative; /* Needed for positioning the pseudo-element */
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.01) !important; /* Subtle and almost invisible box shadow */
-
 }
 
-#sidebar-box::before {
-    content: '';
-    position: absolute;
-    top: 0px; /* Offset for the inner border */
-    left:   0px; /* Offset for the inner border */
-    right:  0px;
-    bottom:   0px;
-    border: 1px solid rgba(220, 220, 220, 0.2)  !important; /* Outer border */
-    border-radius: 2px 2px 2px 2px !important; /* Match the adjusted radius inside */
-    pointer-events: none; /* Ensures it doesn't interfere with clicks */
-    z-index: 22221; /* Layer it above the element's background but below the content */
+#main-window:not([sizemode="fullscreen"]) #sidebar-box::before {
+  content: '';
+  position: absolute;
+  top: 0px; /* Offset for the inner border */
+  left: 0px; /* Offset for the inner border */
+  right: 0px;
+  bottom: 0px;
+  border: 1px solid rgba(220, 220, 220, 0.2) !important; /* Outer border */
+  border-radius: 2px 2px 2px 2px !important; /* Match the adjusted radius inside */
+  pointer-events: none; /* Ensures it doesn't interfere with clicks */
+  z-index: 22221; /* Layer it above the element's background but below the content */
 }
-
 
 
 
@@ -901,11 +899,6 @@ tab-group:has(tab[hidden]){
 
 
 
-
-#zen-appcontent-navbar-container {
-  min-height: 8px !important;
-  max-height: 30px !important;
-}
 
 
 
