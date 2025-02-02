@@ -154,7 +154,7 @@ margin-bottom: 3px !important;
 }
 
 #urlbar-container {
-      margin-left: 2px !important; /*compactmode 3pixel */
+      margin-left: 4px !important; /*compactmode 3pixel */
       margin-right: 0px !important;
     padding-right: -0px !important;
 }
