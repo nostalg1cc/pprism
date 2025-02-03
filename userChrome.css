@@ -14,10 +14,13 @@ border-radius: 15px !important;
   margin-bottom: 7px !important;
   padding-bottom: 2px !important;
   padding-top: 3.5px !important;
+
   padding-left: 5px !important;
   padding-right: 5px !important;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+
 
 #zen-essentials-container .tab-content  .tabbrowser-tab{
   z-index: 9999 !important;
@@ -177,7 +180,7 @@ margin-bottom: 3px !important;
 #nav-bar{
   margin-right: 1px !important;
   border-top: none !important;
-  margin-top: -5px !important; /*compactmode -5 pixel */
+  margin-top: 3px !important; /*compactmode -5 pixel */
   margin-bottom: 6px !important;
 }
 
@@ -417,7 +420,6 @@ outline-offset: -1px !important;        background: linear-gradient(to bottom, r
 }
 
 .tab-background {
-min-height: 37px !important;
 }
 
 #urlbar {
@@ -466,16 +468,12 @@ outline-offset: -1px;
 }
 
 @-moz-document url-prefix("chrome:") {
-  #back-button {
-    list-style-image: url("chrome://browser/skin/back.svg") !important;
-  }
-
-  #forward-button {
-    list-style-image: url("chrome://browser/skin/forward.svg") !important;
-  }
 
   #reload-button {
-    list-style-image: url("chrome://global/skin/icons/reload.svg") !important;
+transform: scaleX(-1);
+    margin-left: 2px !important;
+    margin-right: -2px !important;
+    
   }
 }
 
@@ -485,53 +483,11 @@ outline-offset: -1px;
   & toolbarbutton:not(.titlebar-button) {
     padding: 0px !important;
     padding-left: 5px !important;
-    margin-top: -4px !important;  /*compactmode -4 pixel */
+    margin-top: 4px !important;  /*compactmode -4 pixel */
+    
   }
 }
 
-/* Media Controller */
-#_2cb0aca0-9284-471a-ba91-38405a061f93_-BAP {
-  list-style-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.698 2.148A.75.75 0 0 1 20 2.75v13.5a.764.764 0 0 1-.004.079 3.5 3.5 0 1 1-1.496-2.702V7.758l-8.5 2.55v7.942a.756.756 0 0 1-.004.079A3.5 3.5 0 1 1 8.5 15.627V5.75a.75.75 0 0 1 .534-.718l10-3a.75.75 0 0 1 .664.116ZM10 8.742l8.5-2.55V3.758L10 6.308v2.434ZM6.5 16.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z' fill='%23ffffff'/%3E%3C/svg%3E") !important;
-}
-
-/* Rename Tab */
-#renametabtitle_mozilla_org-BAP {
-  list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA1klEQVR4nO2UMQrCMBhGexIpru0FXJwVj+GtPI4OPYKTiK1Lp1JwfxKbQNGU/jZJRcibGvqTx5d8JEkigQBSoAAaYD+nOANqOhrbwA6440YLrHpJM/2da3lhE1eepVcty3vJU5vYt9RQm+RDdzGVB7DWeyyAy9v/G7D0LXaTKn4iVZjp5EucpFPFliKh16/2msJ5FY8lVVLVdq/isaR6phXtJxVL71QcBLn4IClSCPFJ0t4Q4jNw1Mk/395QYilRPEg86jnLVeGfUiLeepaXwMb56CJ/xxPx8WMWBg/5XAAAAABJRU5ErkJggg==") !important;
-}
-/* Zotero */
-#zotero_chnm_gmu_edu-BAP {
-  list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAr0lEQVR4nO2Wuw3CMBBAXbFBhgGFHgpKxCIZIqzCGGSCrGAkCpZ4CCWRjoh8nIsdBfl1Pkt+vvPJtjGRJQE2wBV4ouMBHF3EOfNhXcTaTL9wEUt2dSwNKjbdG/KecVrH9qHFalYnjs31/2esJjbX2FLHm2s1XW2XEFvgMEW8NSEBSvlAhBRfZL1E/CcD84WrPGs+fUrxfY5K9Iq9QcULOAOndkV8im9AIsbJJzZlsTcqZbzeiGKWJgAAAABJRU5ErkJggg==") !important;
-}
-/* Session Manager */
-#sessonic_navorite-BAP {
-  list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAb0lEQVR4nO3USwqAMBAE0bmeeGuzEK+h3qPEhSBi4ocZFey3DhR0QszkV4AaGPE3AFUpPB+I0pfCoUzhxeEkN52eWuE9QAe0j0+N51kUXgHSic8pvRVu3MNbelwl3lOn3J2Ghq9QODtJFPtcWCzQBAN4KFvahVqMAAAAAElFTkSuQmCC") !important;
-}
-/* Twitch */
-#_59a39734-1e66-452e-a7b8-cc79f72062f0_-BAP {
-  list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiElEQVR4nO2RyQ2AIBAAsQkLsTb/0JPdWIA9+BpfJnLuKpAY4zyBnUkWYz4HMAIblZiMfACWWnkpMBcfKMjOAxOw9wys52WvgId2mOAsO+/r/wAvXZGGrgHAdQtwkTcPEMgBKwZSMWJRiliuCVAjlwLo5E7aYw32zp9JUftIpgzYZvJEoK28FQc7tVIGUZbJrwAAAABJRU5ErkJggg==") !important;
-}
-/* Premid */
-#support_premid_app-BAP {
-  list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABvUlEQVR4nO3UTYhNcRjH8eNlQ9PsjBk7r1NKNl6G2Eu2smMnNsoSJctZKFnYEAs7QjbIZrZTRsxKKImwwHLktT765z88Tv/7cq7mLnS/det0fs/v+d3/8+88VTVgQFVVWIYt2N1qIEnLNcv/aWgYwXFM44dffMdoi9qkybXT2TvSJHAJTmDOHz7hBo6VmmFF1m7m2nlSj5OpZzfBZ4PxJY5gqMEfH8LR7J1nspNpXRhZYmXQJnAGU3iWTzOXn6eyNhHqR0Ofr1jd7WkTp3AYs7pnNk/pdO39ZKvQpXhn4XhbvGvstfDsKQVf6UPw5VLwiz4EP6+HrupgeIA1WIuHPeiRsRh8QHu2htrtPeiR/TH4vPb83r/puQc9ci4G39WebbVF0lSP3InBT7VnJm+19S3usJMeeRKDP+of72Pwl0LBTmzE9dr+7kSqvZa9uwr65xhcGk9c+GM4hKt4jA/4ln/p+VHWDsbPBTsKfWdicLqf17WC1PQCNlQNwXj2ph6RV+l7Ly2R2y3Gl065uYvATbm2xK2/lkfBnBbAJbwJpvtY3EXwItwLvtTjYlwwTUa2D8MNPMPZM94obMB/x0+gqs/sLzXfTwAAAABJRU5ErkJggg==") !important;
-  .toolbarbutton-badge {
-    margin-top: -4px !important;
-    scale: 0.9;
-    background: dimgray !important;
-    border-radius: 4px !important;
-    padding: 2px!important;
-    font-size: 10px !important;
-    color: white !important;
-  }
-}
-#PanelUI-menu-button {
-  list-style-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><!-- Generator: Adobe Illustrator 28.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;fill:%23FFFFFF;}</style><path class="st0" d="M16,22.2c3.4,0,6.2-2.8,6.2-6.2c0-3.4-2.8-6.2-6.2-6.2c-3.4,0-6.2,2.8-6.2,6.2C9.8,19.4,12.6,22.2,16,22.2z M20.9,16c0,2.7-2.2,4.9-4.9,4.9s-4.9-2.2-4.9-4.9s2.2-4.9,4.9-4.9S20.9,13.3,20.9,16z"/><path class="st0" d="M26.7,16c0,5.9-4.8,10.7-10.7,10.7S5.3,21.9,5.3,16S10.1,5.3,16,5.3S26.7,10.1,26.7,16z M16,24.6c4.8,0,8.6-3.9,8.6-8.6S20.8,7.4,16,7.4S7.4,11.2,7.4,16S11.2,24.6,16,24.6z"/><path class="st0" d="M32,16c0,8.8-7.2,16-16,16S0,24.8,0,16S7.2,0,16,0S32,7.2,32,16z M16,29.1c7.3,0,13.1-5.9,13.1-13.1S23.3,2.9,16,2.9S2.9,8.7,2.9,16S8.7,29.1,16,29.1z"/></svg>') !important;
-  scale: 0.84;
-  margin: 0px !important;
-}
-
-#preferences-button {
-  list-style-image: url("data:image/svg+xml,%3Csvg%20viewBox%3D%221.25%202.25%2021.5%2019.5%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20id%3D%22SVGRepo_bgCarrier%22%20stroke-width%3D%220%22%2F%3E%3Cg%20id%3D%22SVGRepo_tracerCarrier%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cg%20id%3D%22SVGRepo_iconCarrier%22%3E%3Cpath%20d%3D%22M9%2012C9%2011.5341%209%2011.3011%209.07612%2011.1173C9.17761%2010.8723%209.37229%2010.6776%209.61732%2010.5761C9.80109%2010.5%2010.0341%2010.5%2010.5%2010.5H13.5C13.9659%2010.5%2014.1989%2010.5%2014.3827%2010.5761C14.6277%2010.6776%2014.8224%2010.8723%2014.9239%2011.1173C15%2011.3011%2015%2011.5341%2015%2012C15%2012.4659%2015%2012.6989%2014.9239%2012.8827C14.8224%2013.1277%2014.6277%2013.3224%2014.3827%2013.4239C14.1989%2013.5%2013.9659%2013.5%2013.5%2013.5H10.5C10.0341%2013.5%209.80109%2013.5%209.61732%2013.4239C9.37229%2013.3224%209.17761%2013.1277%209.07612%2012.8827C9%2012.6989%209%2012.4659%209%2012Z%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.5%22%2F%3E%3Cpath%20d%3D%22M20.5%207V13C20.5%2016.7712%2020.5%2018.6569%2019.3284%2019.8284C18.1569%2021%2016.2712%2021%2012.5%2021H11.5C7.72876%2021%205.84315%2021%204.67157%2019.8284C3.5%2018.6569%203.5%2016.7712%203.5%2013V7%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M2%205C2%204.05719%202%203.58579%202.29289%203.29289C2.58579%203%203.05719%203%204%203H20C20.9428%203%2021.4142%203%2021.7071%203.29289C22%203.58579%2022%204.05719%2022%205C22%205.94281%2022%206.41421%2021.7071%206.70711C21.4142%207%2020.9428%207%2020%207H4C3.05719%207%202.58579%207%202.29289%206.70711C2%206.41421%202%205.94281%202%205Z%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.5%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") !important;
-}
 
 /*------------ PLAYING/MUTE ICON APPEARANCE CUSTOMIZATION ------------*/
 
@@ -820,10 +776,15 @@ color: rgba(255, 255, 255, 0.7) !important;
 tab-group:has(tab[hidden]){
   display: none !important;
 }
+
 #identity-icon-box, #reader-mode-button{
   display: none !important;
 }
+
+
 #zen-workspaces-button {
+      transform: scale(0.95);
+width: auto !important;
     background-color: rgba(255, 255, 255, 0.04) !important;
     box-shadow: 0px 1px 10px rgba(0,0,0,0.1) !important;
     border-radius: 8px !important;
@@ -831,10 +792,13 @@ tab-group:has(tab[hidden]){
   }
 
   #zen-workspaces-button {
+width: auto !important;
+
     .subviewbutton {
         &[active="true"] {
             background: rgba(255, 255, 255, 0.1) !important;
             transition: 0.3s !important;
+
             border: 1px solid #ffffff0a !important;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.062) !important;
   
