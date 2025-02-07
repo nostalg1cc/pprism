@@ -3,12 +3,10 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
 }
 
-
-
 #vertical-pinned-tabs-container{
 background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1)) !important;
   border: 1px solid rgba( 255, 255, 255, 0.15) !important;
-  padding: 3px 5px 2.5px 5px !important;
+  padding: 3px 5px 3px 5px !important;
 border-radius: 15px !important;
   margin-top: 6px !important;
   margin-bottom: 7px !important;
@@ -92,83 +90,13 @@ border-radius: 15px !important;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-#context_pinTab, #context_unpinTab {
-  order: -88 !important; /* Move this item to the top */
-}
-
-#context_closeTab {
-  order: -83 !important; /* Move this item to the top */
-}
-
-#context_zen-add-essential, #context_zen-remove-essential {
-  order: -86 !important; /* Move this item to the top */
-}
-
-#context_toggleMuteTabremove-essential, #context_toggleMuteTab {
-  order: -84 !important; /* Move this item to the top */
-}
-
-#context_bookmarkTab, #context-take-screenshot, #context-print-selection, #zen-context-menu-compact-mode, #context_selectAllTabs, #context_reopenInContainer, #context_moveTabOptions{
+#star-button, #PanelUI-menu-button, #star-button-box, #zen-current-workspace-indicator-icon{
   display: none !important;
-}
-
-menuseparator{
-  color: black !important;
-  opacity: 60% !important;
-  
-}
-
-menuseparator:nth-of-type(2) {
-  display: none !important;
-}
-
-menuseparator:nth-of-type(3) {
-    order: -38 !important; /* Move this item to the top */
-}
-
-menuitem, #context_closeTabOptions, #_d634138d-c276-4fc8-924b-40a0ea21d284_-menuitem-1, #context_moveTabToGroup, #context-zen-change-workspace-tab, #context_zenTabActions{
-padding-top: 10px !important;
-padding-bottom: 10px !important;
-  margin-top: 3px !important;
-margin-bottom: 3px !important;
-  font-weight: 700 !important;
-  border-radius: 5px !important;
-  
-  &:hover {
-  background-color: rgba(220, 220, 220, 0.1) !important; /* Semi-transparent background */
-  }
-}
-
-.menupopup-arrowscrollbox {
-  background-color: rgba(0, 0, 0, 1) !important; /* Semi-transparent background */
-  border-radius: 10px !important;
-  border: 1px solid black !important;
-  outline: none !important;
-  color: white !important;
-  padding-top: 5px !important;
-  padding-bottom: 5px !important;
-  padding-left: 7px !important;
-  padding-right: 7px !important;
-  z-index: 10; /* Ensure it is above the pseudo-element */
-}
-
-#star-button, #PanelUI-menu-button, #star-button-box{
-  display: none !important;
-  
-}
-
-#zen-current-workspace-indicator-icon{
-  display: none !important;
-  
 }
 
 .tab-throbber {
     margin-top: -1px;  /* Adjust this value as needed */
   margin-bottom: -1px;  /* Adjust this value as needed */
-}
-
-.tab-icon-image[src] {
-
 }
 
 @media not (-moz-bool-pref: 'zen.view.compact') {
@@ -196,7 +124,6 @@ margin-bottom: 3px !important;
     border: 0px solid rgba(255, 0, 0, 255) !important;
     border-radius: 1rem !important; 
   }
-
 }
 
 .tab-background[selected=''] {
@@ -204,8 +131,6 @@ margin-bottom: 3px !important;
   border-radius: 10px !important;
 background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1)) !important;
   border: 1px solid rgba( 255, 255, 255, 1) !important; /* Subtle drop shadow */
-  width: 100% !important;
-  left: -2px !important;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -234,8 +159,6 @@ background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255,
   color: rgba(255, 255, 255) !important;
 }
 
-
-
 #zen-current-workspace-indicator {
   margin-left: -25px !important;
   margin-bottom: -5px !important;
@@ -253,14 +176,7 @@ background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255,
   transform: scale(1.1) !important;
   transform-origin: left;
 }
-/* COLORED TAB BACKGROUND */
-/* COLORED TAB BACKGROUND */
-/* COLORED TAB BACKGROUND */
-/* COLORED TAB BACKGROUND */
-/* COLORED TAB BACKGROUND *//* COLORED TAB BACKGROUND */
-/* COLORED TAB BACKGROUND */
-/* COLORED TAB BACKGROUND */
-/* COLORED TAB BACKGROUND */
+
 /* COLORED TAB BACKGROUND */
 
 #zen-essentials-container .tabbrowser-tab {
@@ -364,14 +280,7 @@ outline-offset: -1px !important;        background: linear-gradient(to bottom, r
     }
 
 }
-/* COLORED TAB BACKGROUND */
-/* COLORED TAB BACKGROUND */
-/* COLORED TAB BACKGROUND */
-/* COLORED TAB BACKGROUND */
-/* COLORED TAB BACKGROUND *//* COLORED TAB BACKGROUND */
-/* COLORED TAB BACKGROUND */
-/* COLORED TAB BACKGROUND */
-/* COLORED TAB BACKGROUND */
+
 /* COLORED TAB BACKGROUND */
 
       #zen-essentials-container .tab-icon-image{
@@ -420,15 +329,6 @@ outline-offset: -1px !important;        background: linear-gradient(to bottom, r
   border-radius: 7px !important;
 }
 
-/* Reset scaling for unselected tabs */
-#zen-essentials-container .tab-stack  { 
-}
-/* Reset scaling for unselected tabs */
-.tab-stack .tab-background {
-}
-
-
-
 #urlbar {
  /*  margin-left: 1px !important; */
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
@@ -475,12 +375,6 @@ outline-offset: -1px;
   background-color: transparent !important;
 }
 
-@-moz-document url-prefix("chrome:") {
-
-  #reload-button {
-    
-  }
-}
 
 /*------------ BUTTONS ABOVE URL BAR ------------*/
 #zen-sidebar-top-buttons,
@@ -492,7 +386,6 @@ outline-offset: -1px;
     
   }
 }
-
 
 /*------------ PLAYING/MUTE ICON APPEARANCE CUSTOMIZATION ------------*/
 
@@ -549,23 +442,6 @@ outline-offset: -1px;
 
 #titlebar{
   margin-left: 2px !important;
-}
-
-@media (-moz-bool-pref: "zen.tabs.vertical") {
-  #navigator-toolbox:is(#navigator-toolbox[zen-user-hover="true"][zen-has-hover], #navigator-toolbox[zen-user-hover="true"]:focus-within, #navigator-toolbox[zen-user-hover="true"][movingtab], #navigator-toolbox[zen-user-hover="true"][flash-popup], #navigator-toolbox[zen-user-hover="true"][has-popup-menu], #navigator-toolbox[zen-user-hover="true"]:has([open="true"]:not(tab):not(.zen-compact-mode-ignore)), #navigator-toolbox[zen-expanded="true"]:not([zen-user-hover="true"])) {
-    & #tabbrowser-tabs {
-      & .tabbrowser-tab {
-        & .tab-throbber, & .tab-icon-pending, & .tab-icon-image, & .tab-sharing-icon-overlay, & .tab-icon-overlay {
-          margin-inline-start: calc(var(--toolbarbutton-inner-padding) / 1.5) !important;
-          
-        }
-      }
-    }
-  }
-}
-
-#zen-current-workspace-indicator {
-  padding: 15px calc(7px + var(--tab-inline-padding)) !important;
 }
 
 .browserSidebarContainer.zen-glance-overlay .browserContainer {
@@ -791,7 +667,6 @@ tab-group:has(tab[hidden]){
   display: none !important;
 }
 
-
 #zen-workspaces-button {
       transform: scale(0.95);
 width: auto !important;
@@ -811,7 +686,6 @@ width: auto !important;
 
             border: 1px solid #ffffff0a !important;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.062) !important;
-  
         }
   
         &:hover {
@@ -869,3 +743,63 @@ width: auto !important;
     }
       }
     }
+
+#context_pinTab, #context_unpinTab {
+  order: -88 !important; /* Move this item to the top */
+}
+
+#context_closeTab {
+  order: -83 !important; /* Move this item to the top */
+}
+
+#context_zen-add-essential, #context_zen-remove-essential {
+  order: -86 !important; /* Move this item to the top */
+}
+
+#context_toggleMuteTabremove-essential, #context_toggleMuteTab {
+  order: -84 !important; /* Move this item to the top */
+}
+
+#context_bookmarkTab, #context-take-screenshot, #context-print-selection, #zen-context-menu-compact-mode, #context_selectAllTabs, #context_reopenInContainer, #context_moveTabOptions{
+  display: none !important;
+}
+
+menuseparator{
+  color: black !important;
+  opacity: 60% !important;
+  
+}
+
+menuseparator:nth-of-type(2) {
+  display: none !important;
+}
+
+menuseparator:nth-of-type(3) {
+    order: -38 !important; /* Move this item to the top */
+}
+
+menuitem, #context_closeTabOptions, #_d634138d-c276-4fc8-924b-40a0ea21d284_-menuitem-1, #context_moveTabToGroup, #context-zen-change-workspace-tab, #context_zenTabActions{
+padding-top: 10px !important;
+padding-bottom: 10px !important;
+  margin-top: 3px !important;
+margin-bottom: 3px !important;
+  font-weight: 700 !important;
+  border-radius: 5px !important;
+  
+  &:hover {
+  background-color: rgba(220, 220, 220, 0.1) !important; /* Semi-transparent background */
+  }
+}
+
+.menupopup-arrowscrollbox {
+  background-color: rgba(0, 0, 0, 1) !important; /* Semi-transparent background */
+  border-radius: 10px !important;
+  border: 1px solid black !important;
+  outline: none !important;
+  color: white !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  padding-left: 7px !important;
+  padding-right: 7px !important;
+  z-index: 10; /* Ensure it is above the pseudo-element */
+}
