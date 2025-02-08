@@ -8,9 +8,22 @@
   margin-left: 0px !important;
 }
 
+#urlbar-background{
+   background-color: rgba(31, 31, 31, 255) !important;
+}
+
+#urlbar{
+  margin-top: 1.25px !important;
+}
+
+#identity-icon-box{
+  border-radius: 5px !important;
+  background-color: rgba(131, 131, 131, 0.2) !important;
+}
+
 #PanelUI-button, #zen-current-workspace-indicator, #vertical-pinned-tabs-container-separator{
   display: none !important;
-}
+} 
 
 .tab-text, #tabs-newtab-button {
   font-size: 1.1em !important;
@@ -93,13 +106,16 @@
 }
 
 
-#vertical-pinned-tabs-container{
-    background-color: rgba(31, 31, 31, 255) !important;
-  padding: 2px !important;
+#vertical-pinned-tabs-container {
+    padding: 2px !important;
     border-radius: 2px !important;
-  margin: 1px 0 !important;
-  
+    margin: 1px 0 !important;
+border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: inset 0 10px 15px rgba(0, 0, 0, 0.1), /* Top shadow */
+                inset 0 -10px 15px rgba(0, 0, 0, 0.1); /* Bottom shadow */
 }
+
 
 #zen-essentials-container{
   gap: 0px !important;
