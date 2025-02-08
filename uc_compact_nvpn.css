@@ -1,0 +1,226 @@
+* {
+  font-family: 'Poppins', sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+#navigator-toolbox{
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+
+#PanelUI-button, #zen-current-workspace-indicator, #vertical-pinned-tabs-container-separator{
+  display: none !important;
+}
+
+.tab-text, #tabs-newtab-button {
+  font-size: 1.1em !important;
+  font-weight: 375 !important;
+  opacity: 70% !important;
+  margin-top: -1px !important;
+  color: rgb(255, 255, 255) !important;
+}
+
+.tab-text[selected], #tabs-newtab-button[selected] {
+  opacity: 90% !important;
+}
+
+
+.tab-background[selected='']:not(#zen-essentials-container .tab-background) {
+  background-color: rgba(31, 31, 31, 255) !important;
+  opacity: 1 !important;
+  position: relative; /* Ensure pseudo-element is positioned relative to this element */
+  box-sizing: border-box; /* Include borders within the element's total size */
+  transition: all 0.3s ease-in-out !important;
+}
+
+.tab-icon-stack[selected='']:not(#zen-essentials-container .tab-icon-stack),
+.tab-label-container[selected='']:not(#zen-essentials-container .tab-label-container) {
+  left: 0px !important; /* Stick to the left */
+  transition: all 0.3s ease-in-out !important;
+}
+
+
+.tab-background[selected='']:not(#zen-essentials-container .tab-background)::before {
+  content: ''; /* Required for pseudo-elements */
+  position: absolute;
+  left: 0px; /* Stick to the left */
+  top: 30%; /* Adjust top margin */
+  bottom: 30%; /* Adjust bottom margin */
+  width: 3px;
+  border-radius: 5px !important;
+  background-color: #4160fd; /* Blue accent */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease-in-out !important; /* Smooth fade-in */
+  animation: fadeInAfterDelay 0.5s ease-in-out 0.1s forwards !important; /* Delayed appearance */
+}
+
+/* Keyframe Animation */
+@keyframes fadeInAfterDelay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+/* Default tab icons (excluding #zen-essentials-container) */
+.tab-icon-image:not(#zen-essentials-container .tab-icon-image) {
+  height: 14.5px !important;
+  width: auto !important;
+  margin-top: 0px !important;
+  z-index: 9 !important;
+  transition: transform 0.1s ease-in-out !important;
+}
+
+/* Special styling for #zen-essentials-container */
+#zen-essentials-container .tab-icon-image {
+  height: 14.5px !important; /* Check if this is really what you want—seems very big */
+  width: auto !important;
+  transition: transform 0.1s ease-in-out !important;
+}
+
+
+.tab-icon-image:hover {
+  transform: scale(1.2) !important;
+}
+
+/* Ensure #zen-essentials-container follows the same styling */
+#zen-essentials-container .tab-icon-image {
+  z-index: 9 !important;
+}
+
+
+#vertical-pinned-tabs-container{
+    background-color: rgba(31, 31, 31, 255) !important;
+  padding: 2px !important;
+    border-radius: 2px !important;
+  margin: 1px 0 !important;
+  
+}
+
+#zen-essentials-container{
+  gap: 0px !important;
+}
+
+
+
+#vertical-pinned-tabs-container .tab-background[selected=''] {
+  background-color: rgba(50, 50, 50, 255) !important;
+  filter: brightness(1.5) !important;
+}
+
+#zen-appcontent-navbar-container{
+  margin-left: -40px !important;
+}
+
+/* COLORED TAB BACKGROUND */
+
+#zen-essentials-container .tabbrowser-tab {
+    --toolbarbutton-inner-padding: 0px;
+    width: 100% !important;
+  
+    border-radius: var(--border-radius-medium);
+
+    &[selected] .tab-background {
+        box-shadow: none !important;
+        border-radius: 10px !important;
+outline: 0px solid rgba(65,96,253,255) !important;
+outline-offset: -1px !important;  
+border: none !important;                
+           filter: brightness(0.9) !important;
+        
+
+
+      opacity: 1 !important;
+        z-index: -99 !important;
+
+        &::after {
+            content: "";
+            inset: -50%;
+            position: absolute;
+            background-size: 50% 50%;
+            background-clip: padding-box;
+            background-image: var(--zen-tab-icon);
+            z-index: -1;
+        }
+
+        background: transparent;
+        overflow: hidden;
+
+        &::before {
+            background: black !important;
+            margin: 2px;
+            width: 120% !important;
+            height: 120% !important;
+            top: -4px !important;
+            left: -4px !important;
+            opacity: 20% !important;
+            border-radius: calc(var(--tab-border-radius) - 2px);
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            content: "";
+            transition: background 0.2s ease-in-out;
+        }
+    }
+
+    &:not([selected], [multiselected="true"]) .tab-background {
+        box-shadow: none !important;
+        outline: none !important;
+        z-index: -99 !important;
+        border-radius: 10px !important;
+        background: rgba(255, 255, 255, 0.0) !important;
+        backdrop-filter: none !important;
+    }
+
+    & .tab-content {
+        display: flex;
+        justify-content: center;
+    }
+
+    & .tab-label-container {
+        display: none !important;
+    }
+
+    & .tab-close-button {
+        display: none !important;
+    }
+
+    & .tab-icon-image,
+    & .tab-icon-overlay {
+        margin-inline-end: 0 !important;
+    }
+
+    &[selected]:hover .tab-background::before {
+        background: light-dark(rgba(255, 255, 255, 0.8), rgba(68, 64, 64, 0.85));
+    }
+}
+
+#zen-essentials-container .tabbrowser-tab:hover {
+    /* When NOT selected */
+    &:not([selected]) .tab-background {
+      
+        box-shadow: none !important;
+       background: rgba(255, 255, 255, 0.05) !important;
+    }
+
+    /* When SELECTED */
+    &[selected] .tab-background {
+      
+        box-shadow: none !important;
+            filter: brightness(1.2) !important;
+
+
+        @media (-moz-bool-pref: 'zen.theme.essentials-favicon-bg') {
+            &::after {
+              
+            }
+        }
+    }
+
+}
+
+/* COLORED TAB BACKGROUND */
