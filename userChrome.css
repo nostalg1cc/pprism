@@ -1,15 +1,42 @@
 * {
   font-family: 'Poppins', sans-serif;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
   
 }
 
-.zen-workspace-tabs-section:first-child {
-background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1)) !important;
-  border: 1px solid rgba( 255, 255, 255, 0.15) !important;
-  padding: 4px 4px 0px 4px !important;
-border-radius: 15px !important;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+#navigator-toolbox{
+min-width: 147px !important;
+}
+
+#zen-sidebar-icons-wrapper, #zen-essentials-container{
+  padding-right: 8px !important;
+}
+
+.tab-close-button, .tab-reset-button{
+  margin-right: 8px !important;
+}
+
+.vertical-pinned-tabs-container-separator{
+width: 90% !important;
+  margin-left: 2px !important;
+}
+
+#tabbrowser-arrowscrollbox-periphery{
+width: 95% !important;
+  margin-left: -3px !important;
+}
+
+.tab-label-container{
+  margin-right: 8px !important;
+}
+
+#zen-sidebar-icons-wrapper #preferences-button{
+    margin-right: 8px !important;
+
+}
+
+.tab-background{
+  max-width: 92% !important;
 }
 
 #zen-sidebar-icons-wrapper{
@@ -18,21 +45,12 @@ border-radius: 15px !important;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
 */
   padding: 4px 6px 3px 2px !important;
-border-radius: 15px !important;
   margin-bottom: 2px !important;
 }
 
 
 
-#zen-workspaces-button {
-      transform: scale(1);
-width: auto !important;
-      border-radius: 10px !important;
 
-    background-color: rgba(255, 255, 255, 0.04) !important;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0.1) !important;
-    border: 1px solid #ffffff0c !important;
-  }
 
   #zen-workspaces-button {
 width: auto !important;
@@ -41,7 +59,6 @@ width: auto !important;
         &[active="true"] {
             background: rgba(255, 255, 255, 0.1) !important;
             transition: 0.3s !important;
-border-radius: 8px !important;
             border: 1px solid #ffffff0a !important;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.062) !important;
         }
@@ -49,7 +66,6 @@ border-radius: 8px !important;
         &:hover {
             background: rgba(255, 255, 255, 0.2) !important;
             transition: 0.3s !important;
-          border-radius: 8px !important;
 
         }
   
@@ -59,11 +75,6 @@ border-radius: 8px !important;
     }
   }
 
-
-.zen-workspace-tabs-section:nth-child(2) {
-    padding: 8px 0px 0px 0px !important;
-    border-radius: 15px !important;
-}
 
 
 /*
@@ -89,8 +100,6 @@ border-radius: 15px !important;
   transform: scale(1);
   & .tab-icon-image {
 
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3)) !important;
-  border: 1px solid rgba( 255, 255, 255, 0.55) !important;
   padding: 5px 5px !important;
   border-radius: 6px !important;
   z-index: 9999 !important;
@@ -113,19 +122,26 @@ border-radius: 15px !important;
 }
 
 #zen-essentials-container{
-background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1)) !important;
+/*background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1)) !important;
   border: 1px solid rgba( 255, 255, 255, 0.15) !important;
   padding: 4px !important;
-border-radius: 15px !important;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  */
   margin-top: 3px !important;
-  min-height: 150px !important;
-  margin-bottom: -35px !important;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  min-height: 160px !important;
+  column-gap: 4px !important;
+  row-gap: 0px !important;
 }
 
-#zen-current-workspace-indicator, #vertical-pinned-tabs-container-separator{
-  display: none !important;
+#zen-essentials-container .tab-stack{
+max-height: 10px !important;
 }
+
+.zen-current-workspace-indicator-name{
+  margin-top: 2.3px !important;
+  
+}
+
 
 #tabbrowser-arrowscrollbox-periphery {
     order: 999 !important; /* Move this item to the top */
@@ -144,7 +160,7 @@ border-radius: 15px !important;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-#star-button, .vertical-pinned-tabs-container-separator, .zen-current-workspace-indicator, #PanelUI-menu-button, #star-button-box, #zen-current-workspace-indicator-icon{
+#star-button, #PanelUI-menu-button, #star-button-box{
   display: none !important;
 }
 
@@ -161,8 +177,8 @@ border-radius: 15px !important;
 }
 
 #urlbar-container {
-      margin-left: 4px !important; /*compactmode 3pixel */
-      margin-right: 0px !important;
+      margin-left: 5px !important; /*compactmode 3pixel */
+      margin-right: 1px !important;
     padding-right: -0px !important;
 }
 
@@ -182,15 +198,19 @@ border-radius: 15px !important;
 
 .tab-background[selected=''] {
   content: '';
-  border-radius: 10px !important;
-background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1)) !important;
-  border: 1px solid rgba( 255, 255, 255, 1) !important; /* Subtle drop shadow */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px !important;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.01);
+}
+
+.tab-background:not(#zen-essentials-container .tab-background) {
+  content: '';
+  border-radius: 8px !important;
+  margin-left: 1px !important;
 }
 
 .tab-background {
   content: '';
-  border-radius: 10px !important;
+  border-radius: 8px !important;
 }
 
 #zen-essentials-container .tab-background[selected='']:not(#essentials) {
@@ -198,8 +218,6 @@ background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255,
 background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1)) !important;
   width: 95% !important;
   left: 0px !important;
-  transform: scale(1.01) !important;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .tab-text[selected=''], #tabs-newtab-button[selected=''] {
@@ -218,29 +236,13 @@ background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255,
   color: rgba(255, 255, 255) !important;
 }
 
-#zen-current-workspace-indicator {
-  margin-left: -25px !important;
-  margin-bottom: -5px !important;
-  margin-top: 10px !important;
-  font-weight: 500 !important;
-  transform: scale(0.95) !important;
-  transform-origin: left;
-              transition: all 0.15s ease-in-out;
-}
 
-#zen-current-workspace-indicator:hover{
- margin-left: -30px !important;
-  margin-bottom: -5px !important;
-  margin-top: 10px !important;
-  transform: scale(1.1) !important;
-  transform-origin: left;
-}
 
 /* COLORED TAB BACKGROUND */
 
 #zen-essentials-container .tabbrowser-tab {
     --toolbarbutton-inner-padding: 0px;
-    width: 99% !important;
+    width: 100% !important;
   
     border-radius: var(--border-radius-medium);
  &[selected]{
@@ -253,7 +255,7 @@ background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255,
         box-shadow: none !important;
       
         border-radius: 10px !important;
-      outline: 1px solid rgba(255, 255, 255, 0.52) !important;
+      
 outline-offset: -1px !important;
 border: none !important;
        &[selected]{
@@ -340,15 +342,13 @@ background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255,
     /* When NOT selected */
     &:not([selected]) .tab-background {
         box-shadow: none !important;
-outline: 0.5px solid rgba(255, 255, 255, 0.2) !important;
-outline-offset: -1px !important;        background: rgba(255, 255, 255, 0.12) !important;
+        background: rgba(255, 255, 255, 0.12) !important;
     }
 
     /* When SELECTED */
     &[selected] .tab-background {
         box-shadow: none !important;
-outline: 1px solid rgba(255, 255, 255, 0.8) !important;
-outline-offset: -1px !important;         background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.61)) !important;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.61)) !important;
 
 
         @media (-moz-bool-pref: 'zen.theme.essentials-favicon-bg') {
@@ -415,9 +415,8 @@ outline-offset: -1px !important;         background: linear-gradient(to bottom, 
 
 #urlbar {
  /*  margin-left: 1px !important; */
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.07)) !important;
-  border: 1px solid rgba( 255, 255, 255, 0.2) !important;
+  background: rgba(5, 5, 5, 0.3) !important;
+
 }
 
 .urlbar-input-container {
