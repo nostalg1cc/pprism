@@ -13,12 +13,13 @@ border-radius: 15px !important;
 }
 
 #zen-sidebar-icons-wrapper{
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1)) !important;
+  /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1)) !important;
   border: 1px solid rgba( 255, 255, 255, 0.15) !important;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+*/
   padding: 4px 6px 3px 2px !important;
-border-radius: 15px 15px 5px 5px !important;
+border-radius: 15px !important;
   margin-bottom: 2px !important;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
 
@@ -26,7 +27,7 @@ border-radius: 15px 15px 5px 5px !important;
 #zen-workspaces-button {
       transform: scale(1);
 width: auto !important;
-      border-radius: 10px 10px 10px 2px !important;
+      border-radius: 10px !important;
 
     background-color: rgba(255, 255, 255, 0.04) !important;
     box-shadow: 0px 1px 10px rgba(0,0,0,0.1) !important;
@@ -40,7 +41,7 @@ width: auto !important;
         &[active="true"] {
             background: rgba(255, 255, 255, 0.1) !important;
             transition: 0.3s !important;
-border-radius: 8px 8px 8px 2px !important;
+border-radius: 8px !important;
             border: 1px solid #ffffff0a !important;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.062) !important;
         }
@@ -48,7 +49,7 @@ border-radius: 8px 8px 8px 2px !important;
         &:hover {
             background: rgba(255, 255, 255, 0.2) !important;
             transition: 0.3s !important;
-          border-radius: 8px 8px 8px 2px !important;
+          border-radius: 8px !important;
 
         }
   
@@ -430,7 +431,6 @@ outline-offset: -1px !important;         background: linear-gradient(to bottom, 
   border-radius: 10px !important;
 min-height: 40px !important;
     box-sizing: border-box!important;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 /* URL Bar Background  color: rgb(255, 255, 255, 0.1) !important;
