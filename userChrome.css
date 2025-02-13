@@ -1,17 +1,69 @@
 * {
   font-family: 'Poppins', sans-serif;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
+  
 }
 
-#vertical-pinned-tabs-container{
+.zen-workspace-tabs-section:first-child {
 background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1)) !important;
   border: 1px solid rgba( 255, 255, 255, 0.15) !important;
-  padding: 3px 5px 3px 5px !important;
+  padding: 4px 4px 0px 4px !important;
 border-radius: 15px !important;
-  margin-top: 6px !important;
-  margin-bottom: 7px !important;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
 }
+
+#zen-sidebar-icons-wrapper{
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1)) !important;
+  border: 1px solid rgba( 255, 255, 255, 0.15) !important;
+  padding: 4px 6px 3px 2px !important;
+border-radius: 15px 15px 5px 5px !important;
+  margin-bottom: 2px !important;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+
+
+#zen-workspaces-button {
+      transform: scale(1);
+width: auto !important;
+      border-radius: 10px 10px 10px 2px !important;
+
+    background-color: rgba(255, 255, 255, 0.04) !important;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.1) !important;
+    border: 1px solid #ffffff0c !important;
+  }
+
+  #zen-workspaces-button {
+width: auto !important;
+
+    .subviewbutton {
+        &[active="true"] {
+            background: rgba(255, 255, 255, 0.1) !important;
+            transition: 0.3s !important;
+border-radius: 8px 8px 8px 2px !important;
+            border: 1px solid #ffffff0a !important;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.062) !important;
+        }
+  
+        &:hover {
+            background: rgba(255, 255, 255, 0.2) !important;
+            transition: 0.3s !important;
+          border-radius: 8px 8px 8px 2px !important;
+
+        }
+  
+        &:after {
+            display: none !important;
+        }
+    }
+  }
+
+
+.zen-workspace-tabs-section:nth-child(2) {
+    padding: 8px 0px 0px 0px !important;
+    border-radius: 15px !important;
+}
+
 
 /*
 #vertical-pinned-tabs-container{
@@ -62,10 +114,11 @@ border-radius: 15px !important;
 #zen-essentials-container{
 background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1)) !important;
   border: 1px solid rgba( 255, 255, 255, 0.15) !important;
-  padding: 5px 4px 4px 5px !important;
+  padding: 4px !important;
 border-radius: 15px !important;
   margin-top: 3px !important;
-  margin-bottom: 4px !important;
+  min-height: 150px !important;
+  margin-bottom: -35px !important;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -90,7 +143,7 @@ border-radius: 15px !important;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-#star-button, #PanelUI-menu-button, #star-button-box, #zen-current-workspace-indicator-icon{
+#star-button, .vertical-pinned-tabs-container-separator, .zen-current-workspace-indicator, #PanelUI-menu-button, #star-button-box, #zen-current-workspace-indicator-icon{
   display: none !important;
 }
 
@@ -132,6 +185,11 @@ border-radius: 15px !important;
 background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1)) !important;
   border: 1px solid rgba( 255, 255, 255, 1) !important; /* Subtle drop shadow */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab-background {
+  content: '';
+  border-radius: 10px !important;
 }
 
 #zen-essentials-container .tab-background[selected='']:not(#essentials) {
@@ -182,17 +240,34 @@ background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255,
 #zen-essentials-container .tabbrowser-tab {
     --toolbarbutton-inner-padding: 0px;
     width: 99% !important;
+  
     border-radius: var(--border-radius-medium);
+ &[selected]{
+  
+      transform: scale(1.0) !important;
 
+  }
+ 
     &[selected] .tab-background {
         box-shadow: none !important;
+      
         border-radius: 10px !important;
       outline: 1px solid rgba(255, 255, 255, 0.52) !important;
 outline-offset: -1px !important;
 border: none !important;
+       &[selected]{
+  transition: all 0.3s ease-in-out !important;
+         animation: ease-in-out 10s !important;
+
+    border-radius: 10px !important;
+  }
       opacity: 0.5 !important;
         z-index: -99 !important;
 background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1)) !important;
+      
+
+      
+
 
         &::after {
             content: "";
@@ -223,11 +298,12 @@ background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255,
             content: "";
             transition: background 0.2s ease-in-out;
         }
-    }
-
+    
+  }
     &:not([selected], [multiselected="true"]) .tab-background {
         box-shadow: none !important;
         outline: none !important;
+      
         z-index: -99 !important;
         border-radius: 10px !important;
         background: rgba(255, 255, 255, 0.075) !important;
@@ -254,6 +330,8 @@ background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255,
 
     &[selected]:hover .tab-background::before {
         background: light-dark(rgba(255, 255, 255, 0.8), rgba(68, 64, 64, 0.85));
+      
+      
     }
 }
 
@@ -269,7 +347,7 @@ outline-offset: -1px !important;        background: rgba(255, 255, 255, 0.12) !i
     &[selected] .tab-background {
         box-shadow: none !important;
 outline: 1px solid rgba(255, 255, 255, 0.8) !important;
-outline-offset: -1px !important;        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.61)) !important;
+outline-offset: -1px !important;         background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.61)) !important;
 
 
         @media (-moz-bool-pref: 'zen.theme.essentials-favicon-bg') {
@@ -299,6 +377,7 @@ outline-offset: -1px !important;        background: linear-gradient(to bottom, r
 .tab-background[selected=''] {
   background-color: rgba(255, 255, 255, 0.6) !important;
   opacity: 0.4 !important;
+  
   position: relative; /* Ensure pseudo-element is positioned relative to this element */
   box-sizing: border-box; /* Include borders within the element's total size */
 }
@@ -308,6 +387,10 @@ outline-offset: -1px !important;        background: linear-gradient(to bottom, r
   opacity: 1 !important;
   position: relative; /* Ensure pseudo-element is positioned relative to this element */
 }
+
+
+
+
 .tab-icon-stack[selected='']  {
 }
 
@@ -667,37 +750,7 @@ tab-group:has(tab[hidden]){
   display: none !important;
 }
 
-#zen-workspaces-button {
-      transform: scale(0.95);
-width: auto !important;
-    background-color: rgba(255, 255, 255, 0.04) !important;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0.1) !important;
-    border-radius: 8px !important;
-    border: 1px solid #ffffff0c !important;
-  }
 
-  #zen-workspaces-button {
-width: auto !important;
-
-    .subviewbutton {
-        &[active="true"] {
-            background: rgba(255, 255, 255, 0.1) !important;
-            transition: 0.3s !important;
-
-            border: 1px solid #ffffff0a !important;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.062) !important;
-        }
-  
-        &:hover {
-            background: rgba(255, 255, 255, 0.2) !important;
-            transition: 0.3s !important;
-        }
-  
-        &:after {
-            display: none !important;
-        }
-    }
-  }
 
 .browserSidebarContainer:has([zen-glance-selected]),
 .browserSidebarContainer.zen-glance-overlay {
