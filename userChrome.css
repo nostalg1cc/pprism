@@ -6,7 +6,9 @@
 
 
 
-
+#tabbrowser-arrowscrollbox-periphery{
+  display: none !important;
+}
 
 
 
@@ -40,6 +42,7 @@ min-width: 147px !important;
 .vertical-pinned-tabs-container-separator{
 width: 90% !important;
   margin-left: 2px !important;
+  margin-top: 4px !important;
 }
 
 #tabbrowser-arrowscrollbox-periphery{
