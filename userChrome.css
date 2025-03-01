@@ -63,14 +63,14 @@ width: 95% !important;
 }
 
 #zen-sidebar-bottom-buttons {
-  padding: 4px 6px 3px 2px !important;
+  padding: 9px 6px 2px 2px !important;
   position: relative;
 }
 
 #zen-sidebar-bottom-buttons::before {
   content: "";
   position: absolute;
-  top: -5px;
+  top: 0px;
   left: 2%; /* Centers the border */
   width: 90%;
   height: 1px;
