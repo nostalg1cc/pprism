@@ -66,8 +66,8 @@ width: 95% !important;
 
 #unified-extensions-button {
   position: absolute !important;
-  bottom: 43px !important;
-  margin-left: 1px !important;
+  bottom: 40px !important;
+  margin-left: -1px !important;
   z-index: 9999 !important;
 }
 
@@ -77,14 +77,15 @@ width: 95% !important;
   top: 5px !important; /* Adjust as needed for spacing */
   left: 35px !important; /* Align it to the left of the button */
   font-size: 12px !important;
-  color: rgba(255, 255, 255, 0.8) !important; /* White color with 0.6 opacity */
+  color: rgba(255, 255, 255, 0.6) !important; /* White color with 0.6 opacity */
 
   border-radius: 5px !important; /* Optional: make the background rounded */
 }
 
 
 #zen-sidebar-bottom-buttons {
-  padding: 40px 6px 2px 2px !important;
+  margin-bottom: -2px !important;
+  padding: 37px 5px 2px 0px !important;
   position: relative;
 }
 
@@ -474,8 +475,10 @@ margin-top: -20px !important;
 }
 
 .urlbar-input-container {
-  padding-left: 7px !important;
-  padding-bottom: 2px !important; /*
+  padding-left: 10px !important;
+    color: rgba(255, 255, 255, 0.85) !important; /* White color with 0.6 opacity */
+
+  padding-bottom: 5px !important; /*
   background-color:  rgba( 255, 255, 255, 0.05) !important; */
 }
 
