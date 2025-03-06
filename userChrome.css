@@ -67,7 +67,7 @@ width: 95% !important;
 #unified-extensions-button {
   position: absolute !important;
   bottom: 43px !important;
-  padding-left: 200px !important;
+  margin-left: 1px !important;
   z-index: 9999 !important;
 }
 
