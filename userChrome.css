@@ -62,8 +62,27 @@ width: 95% !important;
   max-width: 92% !important;
 }
 
+#unified-extensions-button {
+  position: absolute !important;
+  bottom: 43px !important;
+  padding-left: 200px !important;
+  z-index: 9999 !important;
+}
+
+#unified-extensions-button::before {
+  content: "Extensions" !important; /* Adds the text "Addons" */
+  position: absolute !important; /* Position it relative to the button */
+  top: 5px !important; /* Adjust as needed for spacing */
+  left: 35px !important; /* Align it to the left of the button */
+  font-size: 12px !important;
+  color: rgba(255, 255, 255, 0.8) !important; /* White color with 0.6 opacity */
+
+  border-radius: 5px !important; /* Optional: make the background rounded */
+}
+
+
 #zen-sidebar-bottom-buttons {
-  padding: 9px 6px 2px 2px !important;
+  padding: 40px 6px 2px 2px !important;
   position: relative;
 }
 
@@ -190,9 +209,13 @@ max-height: 10px !important;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-#star-button, #PanelUI-menu-button, #star-button-box{
+#star-button, #star-button-box{
   display: none !important;
 }
+
+
+
+
 
 .tab-throbber {
     margin-top: -1px;  /* Adjust this value as needed */
