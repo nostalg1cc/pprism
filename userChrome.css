@@ -162,6 +162,7 @@ border-radius: 15px !important;
   margin-right: 15px !important;
   background-color: transparent !important;
   transform: scale(1);
+  
   & .tab-icon-image {
 
   padding: 5px 5px !important;
@@ -195,6 +196,7 @@ border-radius: 15px !important;
   min-height: 160px !important;
   column-gap: 4px !important;
   row-gap: 0px !important;
+  
 }
 
 #zen-essentials-container .tab-stack{
@@ -246,7 +248,7 @@ max-height: 10px !important;
 
 #urlbar-container {
       margin-left: 5px !important; /*compactmode 3pixel */
-      margin-right: 1px !important;
+      margin-right: 0px !important;
     padding-right: -0px !important;
 }
 
@@ -286,6 +288,7 @@ max-height: 10px !important;
 background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1)) !important;
   width: 95% !important;
   left: 0px !important;
+  
 }
 
 .tab-text[selected=''], #tabs-newtab-button[selected=''] {
@@ -303,8 +306,6 @@ background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255,
   margin-top: -1px !important;
   color: rgba(255, 255, 255) !important;
 }
-
-
 
 /* COLORED TAB BACKGROUND */
 
