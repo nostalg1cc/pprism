@@ -4,70 +4,58 @@
   
 }
 
-#zen-appcontent-wrapper{
-  margin: -2px -5px -4px 0px !important;
+
+
+
+#zen-sidebar-top-buttons-customization-target{
+  margin-top: -0px !important;
 }
 
-#tabbrowser-arrowscrollbox-periphery{
-  display: none !important;
-}
-
-
-#navigator-toolbox{
-min-width: 147px !important;
+#tabbrowser-tabbox{
+  padding-top: 2px !important;
+  padding-bottom: 0px !important;
 }
 
 #zen-current-workspace-indicator-container{
   padding: 0px !important;
- transform: translateX(-3px) !important;
+ transform: translateX(-0px) !important;
 
-  margin-top: -10px !important;
-  margin-bottom: 40px !important;
+  margin-top: -15px !important;
+  margin-bottom: 35px !important;
 }
 
 .zen-current-workspace-indicator-name{
   font-size: 12px !important;
- transform: translateX(-3px) !important;
+ transform: translateX(-0px) !important;
     padding-top: 1px !important;
 
 }
 
-#zen-sidebar-icons-wrapper, #zen-essentials-container{
-  padding-right: 8px !important;
+
+.tab-background[selected=''] {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  opacity: 0.5 !important;
 }
 
-.tab-close-button, .tab-reset-button{
-  margin-right: 8px !important;
+#zen-tabs-wrapper .tab-background{
+  margin: 4px 0 !important;
 }
 
-.vertical-pinned-tabs-container-separator{
-width: 90% !important;
-  margin-left: 2px !important;
-  margin-top: 4px !important;
-}
 
-#tabbrowser-arrowscrollbox-periphery{
-width: 95% !important;
-  margin-left: -3px !important;
-}
 
-.tab-label-container{
-  margin-right: 8px !important;
-}
-
-#zen-sidebar-icons-wrapper #preferences-button{
-    margin-right: 8px !important;
-
-}
-
-.tab-background{
-  max-width: 92% !important;
+#zen-essentials-container {
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: 1fr 1fr !important;
+  padding-top: 3px !important;
+  padding-bottom: 4px !important;
+  margin-bottom: 8px !important;
+  gap: 5px !important;
 }
 
 #unified-extensions-button {
   position: absolute !important;
-  bottom: 36px !important;
-  margin-left: -4px !important;
+  bottom: 32px !important;
+  margin-left: -2px !important;
   
   z-index: 9999 !important;
 }
@@ -83,6 +71,69 @@ width: 95% !important;
   border-radius: 5px !important; /* Optional: make the background rounded */
 }
 
+
+
+#navigator-toolbox{
+min-width: 147px !important;
+}
+
+.tab-icon-image{
+  height: 14.5px !important;
+  width: auto !important;
+  z-index: 9 !important;
+}
+
+
+#zen-essentials-container, #zen-sidebar-bottom-buttons, #zen-tabs-wrapper{
+  padding-right: 8px !important;
+  padding-left: 3px !important;
+  
+}
+
+
+
+#reload-button{
+  margin-right: -4px !important;
+}
+
+
+#nav-bar{
+  margin-top: -2px !important;
+  margin-right: -2px !important;
+  margin-left: 3px !important;
+}
+
+#urlbar-background {
+    border-radius: 10px !important;
+  
+  min-height: 37px !important;
+  background: rgba(5, 5, 5, 0.3) !important;
+
+}
+
+.urlbar-input-container {
+  padding-left: 10px !important;
+    color: rgba(255, 255, 255, 0.85) !important; /* White color with 0.6 opacity */
+
+  padding-bottom: 2px !important; /*
+  background-color:  rgba( 255, 255, 255, 0.05) !important; */
+}
+
+.tab-text[selected=''], #tabs-newtab-button[selected=''] {
+  font-size: 1.1em !important;
+  font-weight: 375 !important;
+    opacity: 90% !important;
+  margin-top: -1px !important;
+  color: rgb(255, 255, 255) !important;
+}
+
+.tab-text, #tabs-newtab-button {
+  font-size: 1.1em !important;
+  font-weight: 375 !important;
+      opacity: 70% !important;
+  margin-top: -1px !important;
+  color: rgba(255, 255, 255) !important;
+}
 
 #zen-sidebar-bottom-buttons {
   margin-bottom: -3px !important;
@@ -107,592 +158,8 @@ width: 95% !important;
   background-color: rgba(255, 255, 255, 0.1); /* Less opaque */
 }
 
-
-
-
-
-
-  #zen-workspaces-button {
-width: auto !important;
-    overflow: visible !important;
-    margin-right: 13px !important;
-
-    .subviewbutton {
-        &[active="true"] {
-  background: rgba(255, 255, 255, 0.25) !important;
-            transition: 0.3s !important;
-            border: 1px solid #ffffff0a !important;
-          width: 100% !important;
-            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1) !important; /* Inset 1px black with 60% opacity */
-
-        }
-  
-        &:hover {
-  background: rgba(255, 255, 255, 0.25) !important;
-            transition: 0.3s !important;
-
-        }
-  
-        &:after {
-            display: none !important;
-        }
-    }
-  }
-
-
-
-/*
-#vertical-pinned-tabs-container{
-background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1)) !important;
-  border: 1px solid rgba( 255, 255, 255, 0.15) !important;
-  padding: 5px 4px 2.5px 4px !important;
-border-radius: 15px !important;
-  margin-top: 6px !important;
-  margin-bottom: 7px !important;
-
-  padding-left: 5px !important;
-  padding-right: 5px !important;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-*/
-
-#zen-essentials-container .tab-content  .tabbrowser-tab{
-  z-index: 9999 !important;
-  margin-top: -7px !important;
-  margin-right: 15px !important;
-  background-color: transparent !important;
-  transform: scale(1);
-  
-  & .tab-icon-image {
-
-  padding: 5px 5px !important;
-  border-radius: 6px !important;
-  z-index: 9999 !important;
-    backdrop-filter: blur(5px) !important;
-  margin-top: -6px !important;
-  margin-left: 45px !important;
-  }
-}
-
-.tab-content  .tabbrowser-tab{
-  z-index: 9999 !important;
-  right: -7px !important;
-  transform: scale(0.8);
-  
-  & .tab-icon-image {
-  border-radius: 6px 10px 6px 10px !important;
-  z-index: 9999 !important;
-    backdrop-filter: blur(10px);
-  }
-}
-
-#zen-essentials-container{
-/*background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1)) !important;
-  border: 1px solid rgba( 255, 255, 255, 0.15) !important;
-  padding: 4px !important;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  */
-  margin-top: -10px !important;
-  min-height: 160px !important;
-  column-gap: 4px !important;
-  row-gap: 0px !important;
-  
-}
-
-#zen-essentials-container .tab-stack{
-max-height: 10px !important;
-}
-
-.zen-current-workspace-indicator-name{
-  margin-top: 2.3px !important;
-  
-}
-
-
-#tabbrowser-arrowscrollbox-periphery {
-    order: 999 !important; /* Move this item to the top */
-  margin-top: 17px !important;
-  position: relative; /* Needed for absolute positioning */
-}
-
-#tabbrowser-arrowscrollbox-periphery::before {
-  content: "";
-  position: absolute;
-  top: -12px; /* Moves the border 10px above */
-  left: 4%;
-  width: 95%;
-  height: 1px; /* Simulates a border */
-  border-radius: 50px !important;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-#star-button, #star-button-box{
-  display: none !important;
-}
-
-
-
-
-
-.tab-throbber {
-    margin-top: -1px;  /* Adjust this value as needed */
-  margin-bottom: -1px;  /* Adjust this value as needed */
-}
-
-@media not (-moz-bool-pref: 'zen.view.compact') {
-  #TabsToolbar {
-    margin-left: 1.5px !important;
-    margin-right: 1px !important;  
-  }
-}
-
-#urlbar-container {
-      margin-left: 5px !important; /*compactmode 3pixel */
-      margin-right: 0px !important;
-    padding-right: -0px !important;
-}
-
-#nav-bar{
-  margin-right: 1px !important;
-  border-top: none !important;
-  margin-top: 3px !important; /*compactmode -5 pixel */
-  margin-bottom: 6px !important;
-}
-
-@-moz-document url("chrome://global/content/pictureinpicture/player.xhtml") {
-  html {
-    border: 0px solid rgba(255, 0, 0, 255) !important;
-    border-radius: 1rem !important; 
-  }
-}
-
-.tab-background[selected=''] {
-  content: '';
-  border-radius: 8px !important;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.01);
-}
-
-.tab-background:not(#zen-essentials-container .tab-background) {
-  content: '';
-  border-radius: 8px !important;
-  margin-left: 1px !important;
-}
-
-.tab-background {
-  content: '';
-  border-radius: 8px !important;
-}
-
-#zen-essentials-container .tab-background[selected='']:not(#essentials) {
-  content: '';
-background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1)) !important;
-  width: 95% !important;
-  left: 0px !important;
-  
-}
-
-.tab-text[selected=''], #tabs-newtab-button[selected=''] {
-  font-size: 1.1em !important;
-  font-weight: 375 !important;
-    opacity: 90% !important;
-  margin-top: -1px !important;
-  color: rgb(255, 255, 255) !important;
-}
-
-.tab-text, #tabs-newtab-button {
-  font-size: 1.1em !important;
-  font-weight: 375 !important;
-      opacity: 70% !important;
-  margin-top: -1px !important;
-  color: rgba(255, 255, 255) !important;
-}
-
-/* COLORED TAB BACKGROUND */
-
-#zen-essentials-container .tabbrowser-tab {
-    --toolbarbutton-inner-padding: 0px;
-    width: 100% !important;
-  
-    border-radius: var(--border-radius-medium);
- &[selected]{
-  
-      transform: scale(1.0) !important;
-
-  }
- 
-    &[selected] .tab-background {
-        box-shadow: none !important;
-      
-        border-radius: 10px !important;
-      
-
-border: none !important;
-       &[selected]{
-  transition: all 0.3s ease-in-out !important;
-         animation: ease-in-out 10s !important;
-
-    border-radius: 10px !important;
-  }
-      opacity: 0.85 !important;
-        z-index: -99 !important;
-      
-
-      
-
-
-        &::after {
-            content: "";
-            inset: -50%;
-            filter: blur(30px) brightness(0.75) contrast(1.1) !important;
-            position: absolute;
-            background-size: 100% 100%;
-            background-clip: padding-box;
-            background-image: var(--zen-tab-icon);
-            z-index: -1;
-        }
-
-        background: transparent;
-        overflow: hidden;
-
-        &::before {
-            background: black !important;
-            width: 120% !important;
-            height: 120% !important;
-            top: -4px !important;
-            left: -4px !important;
-            opacity: 10% !important;
-            border-radius: calc(var(--tab-border-radius) - 2px);
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-            content: "";
-            transition: background 0.2s ease-in-out;
-        }
-    
-  }
-    &:not([selected], [multiselected="true"]) .tab-background {
-        box-shadow: none !important;
-        outline: none !important;
-      
-        z-index: -99 !important;
-        border-radius: 10px !important;
-        background: rgba(255, 255, 255, 0.075) !important;
-        backdrop-filter: none !important;
-    }
-
-    & .tab-content {
-        display: flex;
-        justify-content: center;
-    }
-
-    & .tab-label-container {
-        display: none !important;
-    }
-
-    & .tab-close-button {
-        display: none !important;
-    }
-
-    & .tab-icon-image,
-    & .tab-icon-overlay {
-        margin-inline-end: 0 !important;
-    }
-
-    &[selected]:hover .tab-background::before {
-      
-      
-    }
-}
-
-#zen-essentials-container .tabbrowser-tab:hover {
-    /* When NOT selected */
-    &:not([selected]) .tab-background {
-        box-shadow: none !important;
-        background: rgba(255, 255, 255, 0.12) !important;
-    }
-
-    /* When SELECTED */
-    &[selected] .tab-background {
-        box-shadow: none !important;
-
-
-        @media (-moz-bool-pref: 'zen.theme.essentials-favicon-bg') {
-            &::after {
-                filter: blur(25px) brightness(0.7) contrast(1.1) !important;
-            }
-        }
-    }
-
-}
-
-/* COLORED TAB BACKGROUND */
-
-      #zen-essentials-container .tab-icon-image{
-  height: 14.5px !important;
-  width: auto !important;
-  z-index: 9 !important;
-}
-
-/* ----- Selected Tab Styles ----- */
-.tab-icon-image{
-  height: 14.5px !important;
-  width: auto !important;
-  z-index: 99 !important;
-}
-
-.tab-background[selected=''] {
-  background-color: rgba(255, 255, 255, 0.6) !important;
-  opacity: 0.4 !important;
-  
-  position: relative; /* Ensure pseudo-element is positioned relative to this element */
-  box-sizing: border-box; /* Include borders within the element's total size */
-}
-
-#zen-essentials-container .tab-background[selected=''] {
-  background-color: rgba(255, 255, 255, 0.6) !important;
-  opacity: 1 !important;
-  position: relative; /* Ensure pseudo-element is positioned relative to this element */
-}
-
-
-
-
-.tab-icon-stack[selected='']  {
-}
-
-#zen-essentials-container .tab-icon-stack:not([selected='']) {
-}
-
-#zen-essentials-container .tab-icon-stack {
-    margin: 16px 0px !important;
-}
-
-#zen-essentials-container .tab-icon-stack[selected=''] {
-}
-
-.tab-icon-stack:not([selected='']):not(essentials)  {
-}
-
-/* Reset scaling for unselected tabs */
-.tab-background:not([selected='']):not(#essentials) {
-  border-radius: 7px !important;
-}
-
-#urlbar {
- /*  margin-left: 1px !important; */
-  min-height: 37px !important;
-    border-radius: 10px !important;
-margin-top: -20px !important;
-  background: rgba(5, 5, 5, 0.3) !important;
-
-}
-
-.urlbar-input-container {
-  padding-left: 10px !important;
-    color: rgba(255, 255, 255, 0.85) !important; /* White color with 0.6 opacity */
-
-  padding-bottom: 5px !important; /*
-  background-color:  rgba( 255, 255, 255, 0.05) !important; */
-}
-
-#urlbar-container {
-
-min-height: 40px !important;
-    box-sizing: border-box!important;
-}
-
-/* URL Bar Background  color: rgb(255, 255, 255, 0.1) !important;
- Styles - Not in Breakout */ 
-#urlbar:not([breakout-extend]) #urlbar-background { 
-    background: none !important;
-      outline: none !important;
-  /*
-outline: 1px solid rgba(225, 225, 225, 0.25) !important;
-outline-offset: -1px;
-*/
-}
-
-#urlbar:is([breakout-extend]) {
-
-  border-radius: 15px !important;
-}
-
-.tabbrowser-tab:not(:last-child):not(#essentials) {
-  margin-bottom: 3px !important;
-  background-color: transparent !important;
-}
-
-#zen-essentials-container .tabbrowser-tab[zen-essential="true"] {
-  margin-bottom: 0px !important;
-  background-color: transparent !important;
-}
-
-
-/*------------ BUTTONS ABOVE URL BAR ------------*/
-#zen-sidebar-top-buttons,
-#zen-sidebar-top-buttons-customization-target {
-  & toolbarbutton:not(.titlebar-button) {
-    padding: 0px !important;
-    padding-left: 5px !important;
-    margin-top: -9px !important;  /*compactmode -4 pixel */
-    
-  }
-}
-
-/*------------ PLAYING/MUTE ICON APPEARANCE CUSTOMIZATION ------------*/
-
-@-moz-document url-prefix("chrome:") {
-  /* ---- Volume Icon Theming ---- */
-  /* edited from github.com/itsmefen/Dark-Harmony */
-  .tabbrowser-tab img {
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]) img {
-    opacity: 0 !important;
-    transition: opacity 0.1s !important;
-  }
-  
-  .tab-icon-overlay {  
-   
-    &:is([soundplaying], [muted], [activemedia-blocked]) {
-      display: block !important;
-      border: 0px !important;
-      border-radius: 0px !important;
-      top: -0px !important;
-      right: 0.5px !important;
-      scale: 1.25 !important;
-      opacity: 0.9 !important;
-      margin: 0px 3px !important;
-      background: white !important;
-      /* svg modified from https://samherbert.net/svg-loaders/ */
-      --play-svg: url('data:image/svg+xml,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%20135%20140%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22%22%3E%3Crect%20y%3D%2210%22%20width%3D%2215%22%20height%3D%22120%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220.5s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220.5s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3Crect%20x%3D%2230%22%20y%3D%2210%22%20width%3D%2215%22%20height%3D%22120%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220.25s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220.25s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3Crect%20x%3D%2260%22%20width%3D%2215%22%20height%3D%22140%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3Crect%20x%3D%2290%22%20y%3D%2210%22%20width%3D%2215%22%20height%3D%22120%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220.25s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220.25s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3Crect%20x%3D%22120%22%20y%3D%2210%22%20width%3D%2215%22%20height%3D%22120%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220.5s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220.5s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3C%2Fsvg%3E');
-      --mute-svg: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxMzYgMTQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9IiNmZmYiPjxyZWN0IHg9IjQiIHk9IjcwIiB3aWR0aD0iMTUiIGhlaWdodD0iMTUiIHJ4PSI2Ii8+PHJlY3QgeD0iMzQiIHk9IjcwIiB3aWR0aD0iMTUiIGhlaWdodD0iMTUiIHJ4PSI2Ii8+PHJlY3QgeD0iNjQiIHk9IjcwIiB3aWR0aD0iMTUiIGhlaWdodD0iMTUiIHJ4PSI2Ii8+PHJlY3QgeD0iOTQiIHk9IjcwIiB3aWR0aD0iMTUiIGhlaWdodD0iMTUiIHJ4PSI2Ii8+PHJlY3QgeD0iMTI0IiB5PSI3MCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjE1IiByeD0iNiIvPjwvc3ZnPg==');
-      mask-size: 10px 10px !important;
-      mask-repeat: no-repeat !important;
-      mask-position: center !important;
-    }
-  
-    @media (prefers-color-scheme: light) {
-      &:is([soundplaying], [muted], [activemedia-blocked]) {
-        filter: invert(1);
-      }
-    }
-  
-    &:is([activemedia-blocked]) {
-      background: none !important;
-      list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEb0lEQVR4nO2YW4hWVRTHP7URvM6ooWYa1kPlQ4GXxISyC4mUVg/RZQyjKLUsUcsmJRm8pqUgXSCRbhZCqT1mkARaWm+l9qK9jCKZ2KhUD4nWLxbuM/1ncfb3nfPNGaeH84cPPtZ/n7XX2pe1/3tXKiVKlChR4v8I4BZgFtCnB/q+AnjQYuiqo2bgby6htbAIs/e/KvRtMTxWr5PpwHn+w3uFR1o7hg+kf4vlnrwOrgHaxckp4Npuizgex3Wh7wS/AWOyftwH2C8f/wFM6Pao4/FMDDEk+BboneXDBXTGbMe/CvwKbOqGoFcCx4Hlzv64i2l+LUdXAmflg22Of9E5bCowif7O92LHfyLcGWBYNWerXePhwt0JXBT+G6BXUYmEPvaKf+trmnAj3CCvjDkZ5Bq2CDcwTHmCX4DRRSYR+hkNnJR+jgEDhH/FDfTANCdPukaDhXtNuL+AKe7Qmgc8kjNoKyrPAwuBBrHfGvpIsEa4wSG2BE+kOf5aGrwl9mGuarzhvtsqXOZkgOfku3cdt1G434Ghwr0t3B7vtNGt/8nCLXUzpU7nC5c+QvFEnnXfzhVuqFvmS4WbIvYLunIqQUslOKWbGDgk3GqxD3HTvE+XSGjTFxgXfn1TOPtGD7sm4dcId1DsvYHTwt2nTtcJ8anbfIrxkQrX7ipc/7A8zkkb+/860E/aDXeDsUq4Ca7vq4XbkbaHjNglRMdhZEJN7G1upn4W7mWXxHfEccAl0yLcEbH3cpXyUXcoJ9ihiRwU4qHIqOtM3Sh2U6YjIhs1hg3S/ipR2IYbhNtOyrkBPCz2HzURzfx2sW8T+2axPyD2Q27d63KK4awruT8Jd3+KjDd8KPZpYj+miZyJ7IPPI8tHK84XYrdNnRU68rvTdBSwROy7IvunPW8iLZGyuzuy5GrhevnuS7HP60oiurRuE/tHGZbW4R5eWm15N/tnkZG3jTpSOCuxtbBe2o8C/onM1PYMm/0HTWRnpPzanV0FnJbfo5Fl1y+U2Bj2u/K7rI7yuyJWftdGyuwYF8T4yLR7yW/JbHAyw/6vd0lEpTmXboaxA3FnmtowYmYViXI4okSb3L0+TaI0iERJ46pJlLVpZ0WQKNY2wb1eNJoAS9DxjmRl142qisa5btSeqdSnfg1PO8WtM/WScFPFbjEPqibj36wi4ze677YI15wjEbuLJNjiuE1VZPw7wn2V92K1zr0vTXUXq6dsM+a5+oZS/UKYmQY34ucjirvRzdScvFfdAa6CnMz8vtS1q26biVDhlwvXnnrVzfD4cIe7fH1f5OND2MQH3PpX3TfSHbattZ6DVK587PjFdEZjgYlY34pFjtfD0arWkLzVxD/Q2fSeUCleYDKbQ5DLnH1O7uoYXjfsWTKBVayJlR4CMAn4U+LZm+nJVE50/4g9ttujdrCHc/eIfVpP+EywJ3xXBjvV+ssB4H3p32K5q15HzVKpOp5kLheA1tD3RRWN9Tq7Cbi7sOjyl+QZwM090X+JEiVKlKjUwr/rwkME7dPwYwAAAABJRU5ErkJggg==") !important;
-      width: 16px !important;
-      height: 16px !important;
-      margin: 0px 3px !important;
-    }
-  
-    &:is([soundplaying]) {
-      list-style-image: none !important;
-      mask-image: var(--play-svg) !important;
-    }
-  
-    &:is([muted]) {
-      list-style-image: none !important;
-      mask-image: var(--mute-svg) !important;
-    }
-  }
-  @media not (-moz-bool-pref: "zen.view.sidebar-expanded") {
-      .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]):hover img {
-          opacity: 1 !important;
-          transition: opacity 0.1s ease-out !important;
-      }
-  
-      .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]):hover .tab-icon-overlay { 
-          margin: 0px !important;
-          transition: opacity 0.1s ease-out, transform 0.1s ease-out !important;
-          transform: translate(6.9px, -6.9px) scale(0.69) !important;
-      }
-    }
-  #zen-essentials-container {
-    .tab-icon-overlay:is([soundplaying], [muted]) {
-      margin: 0px !important;
-    }
-  
-    .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]) img {
-      opacity: 0 !important;
-    }
-  }
-  
-}
-
-#titlebar{
-  margin-left: 2px !important;
-}
-
-.browserSidebarContainer.zen-glance-overlay .browserContainer {
-  position: relative; /* Needed for positioning the pseudo-element */
-  width: 80% !important;
-  height: 90% !important;
-  border-radius: 10px !important; /* Match the border-radius */
-  margin-top: 1px !important;
-}
-
-.browserSidebarContainer.zen-glance-overlay #zen-glance-sidebar-container {
-  position: relative; /* Needed for positioning the pseudo-element */
-  border: 0px solid rgba(0, 0, 0, 0.7) !important; /* Outer border */
-  border-radius: 8px !important; /* Match the border-radius */
-  margin-left: -20px !important;
-background: rgba(155, 155, 155, 0.25) !important;  
-  top: 50px !important;
-  margin-top: 1px !important;
-  
-  & toolbarbutton {
-        width: 30px !important;
-        height: 30px !important;
-              color: rgba(255, 255, 255, 0.1) !important;  
-      }
-}
-
-.browserSidebarContainer.zen-glance-overlay .browserStack {
-  position: relative; /* Needed for positioning the pseudo-element */
-  border: 0px solid rgba(0, 0, 0, 0.7) !important; /* Outer border */
-  border-radius: 18px !important; /* Match the border-radius */
-}
-
-.browserSidebarContainer.zen-glance-overlay .browserContainer::before {
-  content: '';
-  position: absolute;
-  top: 1px; /* Offset for the inner border */
-  left: 1px; /* Offset for the inner border */
-  right: 1px;
-  bottom: 0.5px;
-  border: 1px solid rgba(220, 220, 220, 0.2) !important; /* Outer border */
-  border-radius: 8px; /* Match the adjusted radius inside */
-  pointer-events: none; /* Ensures it doesn't interfere with clicks */
-  z-index: 22221; /* Layer it above the element's background but below the content */
-}
-
-.browserSidebarContainer.zen-glance-overlay #zen-glance-sidebar-container::before {
-  content: '';
-  position: absolute;
-  top: 1px; /* Offset for the inner border */
-  left: 1px; /* Offset for the inner border */
-  right: 1px;
-  bottom: 1px;
-  border: 1px solid rgba(220, 220, 220, 0.3) !important; /* Outer border */
-  border-radius: 6px; /* Match the adjusted radius inside */
-  pointer-events: none; /* Ensures it doesn't interfere with clicks */
-  z-index: 22221; /* Layer it above the element's background but below the content */
-}
-
-#vertical-pinned-tabs-container-separator {
-	background: solid black !important;
-	margin: 5px auto;
-  height: 1px !important;
-  border-radius: 50px !important;
-	width: 90% !important;
-}
-
 /* Apply these styles only when Firefox is NOT in fullscreen mode */
 #main-window:not([sizemode="fullscreen"]) #zen-appcontent-navbar-container {
-  min-height: 8px !important;
-  max-height: 30px !important;
 }
 
 #main-window:not([sizemode="fullscreen"]) #zen-main-app-wrapper {
@@ -748,214 +215,49 @@ background: rgba(155, 155, 155, 0.25) !important;
   pointer-events: none; /* Ensures it doesn't interfere with clicks */
   z-index: 22221; /* Layer it above the element's background but below the content */
 }
-tab-group { /* thanks to the few people making + updating this part of the css */
-  display: grid !important;
-  background: color-mix(in srgb, var(--tab-group-color-invert) 0%, transparent) !important;
-  border-radius: 8px !important;
-  margin-inline: 0px !important;
-  border: 0px solid color-mix(in srgb, var(--tab-group-color-invert) 0%, transparent);
-  margin-bottom: 1px !important;
-  padding-top: 3px !important;
-  padding-right: 0px !important;
-  padding-bottom: -0px !important;
-  padding-left: 5px !important;
-  max-height: 1000px !important;
-  transition: max-height 0.2s ease !important;
- 
-  & tab {
-    transition: opacity 0.5s ease !important;
-    padding-left: 20px !important;
-  }
- 
-  &>vbox {
-    padding-top: 2px !important;
-  }
- 
-  & .tab-group-label-container {
-    &:after {
 
-      display: none !important;
-    }
- 
-    &>label {
-      background: transparent !important;
-      border: unset !important;
-      text-align: unset !important;
-      text-align: unset !important;
-color: rgba(255, 255, 255, 0.9) !important;      
-     /* color: var(--tab-group-color-invert) !important; */
- font-size: 1em !important;
-  font-weight: 505 !important;  
-      text-align: unset !important;
-      padding-left: 32px !important;
-          padding-top: 2px !important;
-}
-    &>label::before {
-      content: "" !important;
-      position: absolute !important;
-      left: 7px !important;
-      top: 15%;
-      width: 18px !important;
-      height: 18px !important;
-      background-color: var(--tab-group-color-invert);
-  mask-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IS0tIFVwbG9hZGVkIHRvOiBTVkcgUmVwbywgd3d3LnN2Z3JlcG8uY29tLCBHZW5lcmF0b3I6IFNWRyBSZXBvIE1peGVyIFRvb2xzIC0tPg0KPHN2ZyB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMy4zNTc5MSAxMi43Nzg3QzIuNzQ3NzIgMTMuNzIwMSAyLjk5OTU2IDE1LjAyOTEgMy41MDMyMyAxNy42NDdDMy44NjU4IDE5LjUzMTYgNC4wNDcwOSAyMC40NzM4IDQuNjc1MjMgMjEuMDk5MUM0LjgzODIgMjEuMjYxNCA1LjAyMDU0IDIxLjQwNTIgNS4yMTg2IDIxLjUyNzdDNS45ODE5NSAyMS45OTk5IDYuOTk1MzkgMjEuOTk5OSA5LjAyMjI3IDIxLjk5OTlIMTUuOTc3N0MxOC4wMDQ2IDIxLjk5OTkgMTkuMDE4MSAyMS45OTk5IDE5Ljc4MTQgMjEuNTI3N0MxOS45Nzk1IDIxLjQwNTIgMjAuMTYxOCAyMS4yNjE0IDIwLjMyNDggMjEuMDk5MUMyMC45NTI5IDIwLjQ3MzggMjEuMTM0MiAxOS41MzE2IDIxLjQ5NjggMTcuNjQ3QzIyLjAwMDQgMTUuMDI5MSAyMi4yNTIzIDEzLjcyMDEgMjEuNjQyMSAxMi43Nzg3QzIxLjQ4NjQgMTIuNTM4NCAyMS4yOTQzIDEyLjMyMSAyMS4wNzIxIDEyLjEzMzJDMjAuMjAxMSAxMS4zOTc1IDE4Ljc5MzMgMTEuMzk3NSAxNS45Nzc3IDExLjM5NzVIOS4wMjIyN0M2LjIwNjY3IDExLjM5NzUgNC43OTg4OCAxMS4zOTc1IDMuOTI3OTIgMTIuMTMzMkMzLjcwNTY2IDEyLjMyMSAzLjUxMzYzIDEyLjUzODQgMy4zNTc5MSAxMi43Nzg3Wk05LjY5NTE4IDE3LjE4MDZDOS42OTUxOCAxNi43ODE0IDEwLjAzNzYgMTYuNDU3NyAxMC40NjAxIDE2LjQ1NzdIMTQuNTM5OEMxNC45NjIyIDE2LjQ1NzcgMTUuMzA0NyAxNi43ODE0IDE1LjMwNDcgMTcuMTgwNkMxNS4zMDQ3IDE3LjU3OTggMTQuOTYyMiAxNy45MDM1IDE0LjUzOTggMTcuOTAzNUgxMC40NjAxQzEwLjAzNzYgMTcuOTAzNSA5LjY5NTE4IDE3LjU3OTggOS42OTUxOCAxNy4xODA2WiIgZmlsbD0iIzFDMjc0QyIvPg0KPHBhdGggb3BhY2l0eT0iMC41IiBkPSJNMy41NzYyIDEyLjQ4NDZDMy42ODI3MSAxMi4zNTg2IDMuODAwMzQgMTIuMjQxIDMuOTI3OTIgMTIuMTMzMkM0Ljc5ODg4IDExLjM5NzUgNi4yMDY2NyAxMS4zOTc1IDkuMDIyMjcgMTEuMzk3NUgxNS45Nzc3QzE4Ljc5MzMgMTEuMzk3NSAyMC4yMDExIDExLjM5NzUgMjEuMDcyMSAxMi4xMzMyQzIxLjIgMTIuMjQxMyAyMS4zMTc5IDEyLjM1OTIgMjEuNDI0NyAxMi40ODU3VjkuNzU1NzlDMjEuNDI0NyA4Ljg0Njg3IDIxLjQyNDcgOC4wOTI3OSAyMS4zMzk0IDcuNDkxNTZDMjEuMjQ5NCA2Ljg1NzA0IDIxLjA1MzEgNi4yOTQ1OCAyMC41ODM5IDUuODMyNDVDMjAuNTA3NCA1Ljc1NzA3IDIwLjQyNjYgNS42ODU1MiAyMC4zNDIgNS42MTgwN0MxOS44MzAyIDUuMjEwMjMgMTkuMjE2NyA1LjA0MzQ1IDE4LjUyMjIgNC45NjYwOEMxNy44NTMxIDQuODkxNTUgMTcuMDEwMiA0Ljg5MTU3IDE1Ljk3NjkgNC44OTE1OEwxNS42MjQyIDQuODkxNThDMTQuNjQyMSA0Ljg5MTU4IDE0LjI5IDQuODg1ODcgMTMuOTcxMSA0LjgwNTMzQzEzLjc4MzcgNC43NTgwMiAxMy42MDQgNC42OTE5NSAxMy40MzUyIDQuNjA4NzhDMTMuMTUxIDQuNDY4NjcgMTIuOTAzMyA0LjI1NzYyIDEyLjIwNzcgMy42NDEzMkwxMS43MzM2IDMuMjIxMjhDMTEuNTM0NSAzLjA0NDg5IDExLjM5ODcgMi45MjQ1IDExLjI1MzEgMi44MTc1NUMxMC42Mjg0IDIuMzU4NzkgOS44Njc3OSAyLjA4MTMyIDkuMDcxNDUgMi4wMTUzNEM4Ljg4NjAyIDEuOTk5OTggOC42OTY4IDEuOTk5OTkgOC40MTM1NiAyLjAwMDAyTDguMjk3MTQgMi4wMDAwMUM3LjY1NjQ3IDEuOTk5OSA3LjIzMzY1IDEuOTk5ODMgNi44NjY1MiAyLjA2MTJDNS4yNjE2NyAyLjMyOTQ3IDMuOTYzOTIgMy40NTE0MyAzLjY0NzgyIDQuOTM1NzVDMy41NzU5MSA1LjI3MzQ0IDMuNTc2MDIgNS42NjAzNSAzLjU3NjE5IDYuMjE4NTNMMy41NzYyIDEyLjQ4NDZaIiBmaWxsPSIjMUMyNzRDIi8+DQo8L3N2Zz4=');      mask-size: contain;
-      mask-repeat: no-repeat;
-      background-size: contain !important;
-      background-repeat: no-repeat !important;
-  }
-  }
- 
-  &[collapsed] {
-    overflow: hidden !important;
-    max-height: 3rem !important;
- 
-    & tab {
-      opacity: 0 !important;
-    }
-	  
-    & .tab-group-label-container > label {
-      background: transparent !important;
-      border: unset !important;
-      font-size: 1em !important;
-  font-weight: 405 !important;
-color: rgba(255, 255, 255, 0.7) !important;      
-      text-align: unset !important;
-      padding-left: 32px !important;
-      padding-top: 2px !important;
-    }
-    & .tab-group-label-container > label::before {
-      content: "" !important;
-      position: absolute !important;
-      left: 7px !important;
-      top: 15%;
-      width: 18px !important;
-      height: 18px !important;
-      background-color: var(--tab-group-color-invert);
-      mask-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IS0tIFVwbG9hZGVkIHRvOiBTVkcgUmVwbywgd3d3LnN2Z3JlcG8uY29tLCBHZW5lcmF0b3I6IFNWRyBSZXBvIE1peGVyIFRvb2xzIC0tPg0KPHN2ZyB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIG9wYWNpdHk9IjAuNSIgZD0iTTIyIDE0VjExLjc5NzlDMjIgOS4xNjU1NCAyMiA3Ljg0OTM1IDIxLjIzMDUgNi45OTM4M0MyMS4xNTk4IDYuOTE1MTQgMjEuMDg0OSA2Ljg0MDI0IDIxLjAwNjIgNi43Njk0NkMyMC4xNTA2IDYgMTguODM0NSA2IDE2LjIwMjEgNkgxNS44Mjg0QzE0LjY3NDcgNiAxNC4wOTc5IDYgMTMuNTYwNCA1Ljg0Njc4QzEzLjI2NTEgNS43NjI2IDEyLjk4MDQgNS42NDQ3MSAxMi43MTIxIDUuNDk1NDNDMTIuMjIzNyA1LjIyMzY3IDExLjgxNTggNC44MTU3OCAxMSA0TDEwLjQ0OTcgMy40NDk3NUMxMC4xNzYzIDMuMTc2MzMgMTAuMDM5NiAzLjAzOTYxIDkuODk1OTQgMi45MjA1MUM5LjI3NjUyIDIuNDA3MDQgOC41MTY2NSAyLjA5MjI5IDcuNzE1NTcgMi4wMTczOEM3LjUyOTc2IDIgNy4zMzY0MiAyIDYuOTQ5NzUgMkM2LjA2NzIyIDIgNS42MjU5NSAyIDUuMjU4MzkgMi4wNjkzNUMzLjY0MDMxIDIuMzc0NjQgMi4zNzQ2NCAzLjY0MDMxIDIuMDY5MzUgNS4yNTgzOUMyIDUuNjI1OTUgMiA2LjA2NzIyIDIgNi45NDk3NVYxNEMyIDE3Ljc3MTIgMiAxOS42NTY5IDMuMTcxNTcgMjAuODI4NEM0LjM0MzE1IDIyIDYuMjI4NzYgMjIgMTAgMjJIMTRDMTcuNzcxMiAyMiAxOS42NTY5IDIyIDIwLjgyODQgMjAuODI4NEMyMiAxOS42NTY5IDIyIDE3Ljc3MTIgMjIgMTRaIiBmaWxsPSIjMUMyNzRDIi8+DQo8cGF0aCBkPSJNMTIuMjUgMTBDMTIuMjUgOS41ODU3OSAxMi41ODU4IDkuMjUgMTMgOS4yNUgxOEMxOC40MTQyIDkuMjUgMTguNzUgOS41ODU3OSAxOC43NSAxMEMxOC43NSAxMC40MTQyIDE4LjQxNDIgMTAuNzUgMTggMTAuNzVIMTNDMTIuNTg1OCAxMC43NSAxMi4yNSAxMC40MTQyIDEyLjI1IDEwWiIgZmlsbD0iIzFDMjc0QyIvPg0KPC9zdmc+');
-      mask-size: contain;
-      mask-repeat: no-repeat;
-      background-size: contain !important;
-      background-repeat: no-repeat !important;
-  }
-  }
-}
- 
-tab-group:has(tab[hidden]){
-  display: none !important;
+#zen-sidebar-bottom-buttons {
+  margin-bottom: 0px !important;
+  margin-left: 0px !important;
+  padding: 32px 0px 0px 1px !important;
+  position: relative;
+    border-radius: 4px !important;
+  box-shdow: inset 0 0 0 1px rgba(255, 255, 255, 0.1) !important; /* Inset 1px black with 60% opacity */
+
+  backgrond: rgba(255, 255, 255, 0.1) !important;
+  width: calc(100% - 2px) !important; /* 100% width minus 10px */
 }
 
-#identity-icon-box, #reader-mode-button{
-  display: none !important;
+
+#zen-sidebar-bottom-buttons::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 2%; /* Centers the border */
+  width: 90%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1); /* Less opaque */
+}
+
+
+#vertical-pinned-tabs-container-separator {
+	background: solid black !important;
+	margin: 5px auto;
+  height: 1px !important;
+  border-radius: 50px !important;
+	width: 90% !important;
+}
+
+.vertical-pinned-tabs-container-separator{
+width: 90% !important;
+  margin-left: 8px !important;
+  margin-top: 5px !important;
+  margin-bottom: 6px !important;
 }
 
 
 
-.browserSidebarContainer:has([zen-glance-selected]),
-.browserSidebarContainer.zen-glance-overlay {
-  visibility: inherit;
-}
-
-.zen-glance-background {
-  transform: scale(1) !important;
-  filter: blur(0px) brightness(0.2) contrast(0.65) !important;
-  opacity: 0.5 !important;
-
-  /* Smooth transition for all specified properties */
-  transition: all 10.5s ease;
-}
-
-#zen-glance-sidebar-container {
-
-  & toolbarbutton:hover {
-  }
-}
-
-.browserSidebarContainer.zen-glance-overlay {
-
-  &[fade-out='true'] {
-
-    & .browserContainer {
-     
-      & browser {
-      }
-
-      & #zen-glance-sidebar-container {
-      }
-    }
-  }
-
-  & .browserContainer {
-    position: fixed;
-    flex: unset !important;
-
-    &[has-finished-animation='true'] {
-      position: relative !important;
-      margin: auto !important;
-    }
-      }
-    }
-
-#context_pinTab, #context_unpinTab {
-  order: -88 !important; /* Move this item to the top */
-}
-
-#context_closeTab {
-  order: -83 !important; /* Move this item to the top */
-}
-
-#context_zen-add-essential, #context_zen-remove-essential {
-  order: -86 !important; /* Move this item to the top */
-}
-
-#context_toggleMuteTabremove-essential, #context_toggleMuteTab {
-  order: -84 !important; /* Move this item to the top */
-}
-
-#context_bookmarkTab, #context-take-screenshot, #context-print-selection, #zen-context-menu-compact-mode, #context_selectAllTabs, #context_reopenInContainer, #context_moveTabOptions{
-  display: none !important;
-}
-
-menuseparator{
-  color: black !important;
-  opacity: 60% !important;
-  
-}
-
-menuseparator:nth-of-type(2) {
-  display: none !important;
-}
-
-menuseparator:nth-of-type(3) {
-    order: -38 !important; /* Move this item to the top */
-}
-
-menuitem, #context_closeTabOptions, #_d634138d-c276-4fc8-924b-40a0ea21d284_-menuitem-1, #context_moveTabToGroup, #context-zen-change-workspace-tab, #context_zenTabActions{
-padding-top: 10px !important;
-padding-bottom: 10px !important;
-  margin-top: 3px !important;
-margin-bottom: 3px !important;
-  font-weight: 700 !important;
-  border-radius: 5px !important;
-  
-  &:hover {
-  background-color: rgba(220, 220, 220, 0.1) !important; /* Semi-transparent background */
-  }
-}
-
-.menupopup-arrowscrollbox {
-  background-color: rgba(0, 0, 0, 1) !important; /* Semi-transparent background */
-  border-radius: 10px !important;
-  border: 1px solid black !important;
-  outline: none !important;
-  color: white !important;
-  padding-top: 5px !important;
-  padding-bottom: 5px !important;
-  padding-left: 7px !important;
-  padding-right: 7px !important;
-  z-index: 10; /* Ensure it is above the pseudo-element */
-}
-
-
+/* URL BAR MODS */
 
 #urlbar:is([breakout][breakout-extend], [breakout][usertyping][focused]):after {
   top: -6px !important;
@@ -1051,6 +353,96 @@ margin-bottom: 3px !important;
   --urlbarView-item-block-padding: 12px !important;
 }
 
+/* COLORED TAB BACKGROUND */
 
+#zen-essentials-container .tabbrowser-tab {
+    --toolbarbutton-inner-padding: 0px;
+    width: 100% !important;
+  
+    border-radius: var(--border-radius-medium);
 
+    &[selected] {
+        transform: scale(1.0) !important;
+    }
 
+    &[selected] .tab-background {
+        box-shadow: none !important;
+        border-radius: 10px !important;
+        border: none !important;
+        opacity: 0.85 !important;
+        z-index: -99 !important;
+
+        &[selected] {
+            transition: all 0.3s ease-in-out !important;
+            animation: ease-in-out 10s !important;
+            border-radius: 10px !important;
+        }
+
+        &::after {
+            content: "";
+            filter: blur(30px) brightness(0.75) contrast(1.1) !important;
+            position: absolute;
+            background-size: 100% 100%;
+            background-clip: padding-box;
+            background-image: var(--zen-tab-icon);
+            z-index: -1;
+        }
+
+        background: transparent;
+        overflow: hidden;
+
+        &::before {
+            background: black !important;
+            opacity: 10% !important;
+            border-radius: calc(var(--tab-border-radius) - 2px);
+            position: absolute;
+            z-index: 0;
+            content: "";
+            transition: background 0.2s ease-in-out;
+        }
+    }
+
+    &:not([selected], [multiselected="true"]) .tab-background {
+        box-shadow: none !important;
+        outline: none !important;
+        z-index: -99 !important;
+        border-radius: 10px !important;
+        background: rgba(255, 255, 255, 0.075) !important;
+        backdrop-filter: none !important;
+    }
+
+    & .tab-content {
+        display: flex;
+        justify-content: center;
+    }
+
+    & .tab-label-container {
+        display: none !important;
+    }
+
+    & .tab-close-button {
+        display: none !important;
+    }
+
+    &[selected]:hover .tab-background::before {}
+
+}
+
+#zen-essentials-container .tabbrowser-tab:hover {
+    /* When NOT selected */
+    &:not([selected]) .tab-background {
+        box-shadow: none !important;
+        background: rgba(255, 255, 255, 0.12) !important;
+    }
+
+    /* When SELECTED */
+    &[selected] .tab-background {
+        box-shadow: none !important;
+
+        @media (-moz-bool-pref: 'zen.theme.essentials-favicon-bg') {
+            &::after {
+                filter: blur(25px) brightness(0.7) contrast(1.1) !important;
+            }
+        }
+    }
+}
