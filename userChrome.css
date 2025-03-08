@@ -247,7 +247,7 @@ min-width: 147px !important;
   top: 0px;
   left: 6%; /* Centers the border */
   width: 85%;
-  height: 2px;
+  height: 1px;
   background-color: rgba(255, 255, 255, 0.13); /* Less opaque */
 }
 
@@ -532,5 +532,4 @@ width: 84% !important;
   }
   
 }
-
 
