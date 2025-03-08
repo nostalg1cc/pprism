@@ -1,3 +1,8 @@
+/* IMPORTANT: in about:config, set zen.theme.border-radiusto 0 and zen.theme.content-element-separation to 6 for all the margin and padding to appear correct when using this CSS */
+
+
+
+
 * {
   font-family: 'Poppins', sans-serif;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
@@ -208,10 +213,10 @@ min-width: 147px !important;
   #tabbrowser-tabpanels[zen-split-view="true"]
     .browserSidebarContainer {
     outline: var(--zen-colors-border) !important;
-      margin-top: 6px !important;
+      margin-top: 7px !important;
       margin-bottom: 0px !important;
       margin-left: 0px !important;
-      margin-right: 6px !important;
+      margin-right: 7px !important;
   }
   
 }
@@ -534,6 +539,5 @@ width: 90% !important;
   }
   
 }
-
 
 
