@@ -12,8 +12,8 @@
 }
 
 #tabbrowser-tabbox{
-  padding-top: 2px !important;
-  padding-bottom: 0px !important;
+  padding-top: 0px !important;
+  margin-bottom: -.5px !important;
 }
 
 #zen-current-workspace-indicator-container{
@@ -90,12 +90,26 @@ min-width: 147px !important;
   
 }
 
+#zen-sidebar-top-buttons-customization-target{
+  margin-right: -3px !important;
+}
+
 #zen-tabs-wrapper .tabbrowser-tab{
-  padding-right: 11px !important;
+  padding-right: 12px !important;
   padding-left: 2px !important;
 }
 
-#reload-button{
+#zen-tabs-wrapper tab-group{
+  margin-right: 13px !important;
+}
+
+#zen-tabs-wrapper tab-group .tabbrowser-tab{
+  padding: 1px 3px 0px 3px !important;
+  border-radius: 0px !important;
+}
+
+
+#rerload-button{
   margin-right: -4px !important;
 }
 
@@ -161,16 +175,13 @@ min-width: 147px !important;
   background-color: rgba(255, 255, 255, 0.1); /* Less opaque */
 }
 
+
+
 /* Apply these styles only when Firefox is NOT in fullscreen mode */
 #main-window:not([sizemode="fullscreen"]) #zen-appcontent-navbar-container {
 }
 
-#main-window:not([sizemode="fullscreen"]) #zen-main-app-wrapper {
-  position: relative; /* Needed for positioning the pseudo-element */
-  border: 0px solid rgba(0, 0, 0, 0.7) !important; /* Outer border */
-  border-radius: 8px !important; /* Match the border-radius */
-  margin-top: 1px !important;
-}
+
 
 #main-window:not([sizemode="fullscreen"]) #zen-main-app-wrapper::before {
   content: '';
@@ -179,45 +190,36 @@ min-width: 147px !important;
   left: 1px; /* Offset for the inner border */
   right: 1px;
   bottom: 1px;
-  border: 1px solid rgba(220, 220, 220, 0.3) !important; /* Outer border */
+  border: 1px solid rgba(220, 220, 220, 0.35) !important; /* Outer border */
   border-radius: 6px; /* Match the adjusted radius inside */
   pointer-events: none; /* Ensures it doesn't interfere with clicks */
   z-index: 22221; /* Layer it above the element's background but below the content */
 }
 
-#main-window:not([sizemode="fullscreen"]) #tabbrowser-tabbox #tabbrowser-tabpanels .browserSidebarContainer {
-  border-radius: 5px 5px 5px 5px !important;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) !important; /* Subtle drop shadow */
-  border: 1px solid rgba(0, 0, 0, 0.0) !important; /* Outer border */
-  margin: -2px -0px -1px -0px !important;
-  position: relative; /* Needed for positioning the pseudo-element */
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.01) !important; /* Subtle and almost invisible box shadow */
+@-moz-document url-prefix("chrome:") {
+  #tabbrowser-tabpanels[zen-split-view="true"]
+    .browserSidebarContainer.deck-selected {
+    outline: var(--zen-colors-border) !important;
+  }
+  
+}
+
+@-moz-document url-prefix("chrome:") {
+  #tabbrowser-tabpanels[zen-split-view="true"]
+    .browserSidebarContainer {
+    outline: var(--zen-colors-border) !important;
+      margin-top: 6px !important;
+      margin-bottom: 0px !important;
+      margin-left: 0px !important;
+      margin-right: 6px !important;
+  }
+  
 }
 
 
 
-#main-window:not([sizemode="fullscreen"]) #sidebar-box {
-  border-radius: 3px 3px 3px 3px !important;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) !important; /* Subtle drop shadow */
-  border: 0px solid rgba(0, 0, 0, 0.01) !important; /* Almost transparent border */
-  border: 1px solid rgba(0, 0, 0, 0.5) !important; /* Outer border */
-  margin: -2px -1px -1px -0px !important;
-  position: relative; /* Needed for positioning the pseudo-element */
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.01) !important; /* Subtle and almost invisible box shadow */
-}
 
-#main-window:not([sizemode="fullscreen"]) #sidebar-box::before {
-  content: '';
-  position: absolute;
-  top: 0px; /* Offset for the inner border */
-  left: 0px; /* Offset for the inner border */
-  right: 0px;
-  bottom: 0px;
-  border: 1px solid rgba(220, 220, 220, 0.2) !important; /* Outer border */
-  border-radius: 2px 2px 2px 2px !important; /* Match the adjusted radius inside */
-  pointer-events: none; /* Ensures it doesn't interfere with clicks */
-  z-index: 22221; /* Layer it above the element's background but below the content */
-}
+
 
 #zen-sidebar-bottom-buttons {
   margin-bottom: 0px !important;
