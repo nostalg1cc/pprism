@@ -196,7 +196,7 @@ min-width: 147px !important;
 }
 
 #urlbar-background {
-    border-radius: 10px !important;
+border-radius: 12px !important;
   
   min-height: 37px !important;
   background: rgba(5, 5, 5, 0.3) !important;
@@ -506,7 +506,6 @@ width: 84% !important;
 
     &[selected] .tab-background {
         box-shadow: none !important;
-        border-radius: 10px !important;
         border: none !important;
         opacity: 0.65 !important;
         z-index: -99 !important;
@@ -518,7 +517,7 @@ width: 84% !important;
 
         &::after {
             content: "";
-            filter: blur(7px) brightness(1) contrast(1.1) !important;
+            filter: blur(15px) brightness(1) contrast(1.1) !important;
             background-size: 100% 100% !important;
             background-clip: padding-box;
             background-image: var(--zen-tab-icon);
@@ -533,7 +532,7 @@ width: 84% !important;
 
         &::before {
             background: black !important;
-            opacity: 50% !important;
+            opacity: 20% !important;
            margin: -50px !important;
             transition: background 0.0s ease-in-out;
         }
@@ -543,7 +542,6 @@ width: 84% !important;
         box-shadow: none !important;
         outline: none !important;
         z-index: -99 !important;
-        border-radius: 10px !important;
         background: rgba(255, 255, 255, 0.075) !important;
         backdrop-filter: none !important;
     }
@@ -579,12 +577,15 @@ width: 84% !important;
             &::after {
               
             transition: filter 0.0s ease-in-out !important; /* Add this line for smooth transition */
-                filter: blur(8px) brightness(1.15) contrast(1.0) !important;
+                filter: blur(15px) brightness(1.15) contrast(1.0) !important;
             }
         }
     }
 }
 
+#zen-essentials-container .tab-background {
+border-radius: 12px !important;
+}
 
 @keyframes spinAndBreathe {
     0% {
