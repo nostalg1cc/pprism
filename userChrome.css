@@ -1,40 +1,11 @@
 /* IMPORTANT: in about:config, set zen.theme.border-radiusto 0 and zen.theme.content-element-separation to 6 for all the margin and padding to appear correct when using this CSS */
 
 
-
-@font-face {
-  font-family: 'SST';
-  src: url('C:/Users/marce/Documents/sst/SSTRg.TTF') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'SST';
-  src: url('C:/Users/marce/Documents/sst/SSTMedium.TTF') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'SST';
-  src: url('C:/Users/marce/Documents/sst/SSTLight.TTF') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'SST';
-  src: url('C:/Users/marce/Documents/sst/SSTBold.TTF') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-
 * {
-  font-family: 'SST', sans-serif !important;
+  font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', sans-serif !important;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15) !important;
 }
+
 
 
 /* Default height for #zen-appcontent-navbar-container when collapsed is false */
@@ -81,6 +52,15 @@
   margin-bottom: -.5px !important;
 }
 
+@-moz-document url-prefix("chrome:") {
+  :root {
+    --zen-webview-border-radius: 3px !important;
+    #tabbrowser-tabpanels:not([zen-split-view="flase"]) {
+
+    }
+  }
+  
+}
 
 
 #zen-current-workspace-indicator-container{
@@ -203,7 +183,7 @@ min-width: 147px !important;
 }
 
 #zen-tabs-wrapper .tabbrowser-tab{
-  padding-right: 13px !important;
+  padding-right: 12px !important;
   padding-left: 2px !important;
 }
 
@@ -243,16 +223,15 @@ font-size: 14px !important;
 
 .tab-text[selected=''], #tabs-newtab-button[selected=''] {
   font-size: 1.1em !important;
-  font-weight: 500 !important;
     opacity: 90% !important;
-  margin-top: -2px !important;
+  margin-top: -1px !important;
   color: rgb(255, 255, 255) !important;
 }
 
 .tab-text, #tabs-newtab-button {
   font-size: 1.1em !important;
       opacity: 70% !important;
-  margin-top: -2px !important;
+  margin-top: -1px !important;
   color: rgba(255, 255, 255) !important;
 }
 
