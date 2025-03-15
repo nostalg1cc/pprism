@@ -616,3 +616,612 @@ border-radius: 12px !important;
 
 
    
+
+/* Default height for #zen-appcontent-navbar-container when collapsed is false */
+:root[zen-single-toolbar="true"]:not([customizing]) #zen-appcontent-navbar-container {
+  &:has(#PersonalToolbar[collapsed="false"]) {
+    height: 38px !important; /* Default height */
+    transition: height 0.3s ease-in-out, padding-top 0.3s ease-in-out, opacity 0.3s ease-in-out !important; /* Add smooth transitions */
+  }
+}
+
+/* When the conditions aren't met, set height to 0px */
+:root[zen-single-toolbar="true"]:not([customizing]) #zen-appcontent-navbar-container {
+  &:has(#PersonalToolbar[collapsed="false"]) {
+    @media (-moz-bool-pref: "zen.view.hide-window-controls") {
+      &:not([zen-has-hover="true"]):not([has-popup-menu]):not(:focus-within):not(:has(:is([panelopen="true"], [open="true"]))) {
+        height: 0px !important; /* Set height to 0px when the conditions aren't met */
+        opacity: 0 !important; /* Fade out */
+                transition: all 0.3s ease-in-out !important; /* Smooth transition for padding */
+
+      }
+    }
+  }
+}
+
+/* Set height back to 38px when the conditions aren't met, as the default */
+:root[zen-single-toolbar="true"]:not([customizing]) #zen-appcontent-navbar-container {
+  &:has(#PersonalToolbar[collapsed="false"]) {
+    height: 40px !important; /* Default height when the hover is not active */
+    opacity: 1 !important; /* Make sure it's visible */
+  }
+}
+
+
+
+
+
+#zen-sidebar-top-buttons-customization-target{
+  margin-top: -2px !important;
+}
+
+#tabbrowser-tabbox{
+  padding-top: 0px !important;
+  margin-top: -.5px !important;
+  margin-bottom: -.5px !important;
+}
+
+@-moz-document url-prefix("chrome:") {
+  :root {
+    --zen-webview-border-radius: 3px !important;
+    #tabbrowser-tabpanels:not([zen-split-view="flase"]) {
+
+    }
+  }
+  
+}
+
+
+#zen-current-workspace-indicator-container{
+  padding: 0px !important;
+ transform: translateX(4.5px) !important;
+
+  margin-top: -15px !important;
+  margin-bottom: 35px !important;
+}
+
+.zen-current-workspace-indicator-name{
+  font-size: 12px !important;
+ transform: translateX(-0px) !important;
+    padding-top: 1px !important;
+
+}
+
+
+.tab-background[selected=''] {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  opacity: 0.5 !important;
+}
+
+#zen-tabs-wrapper .tab-background{
+  margin: 4px 0 !important;
+  margin-right: 2px !important;
+}
+
+
+
+#zen-essentials-container {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important; /* Two items per row */
+  gap: 5px !important; /* First-row gap */
+  padding-top: 3px !important;
+  padding-bottom: 4px !important;
+  padding-right: 10px !important;
+  padding-left: 3px !important;
+  margin-bottom: 10px !important;
+}
+
+#zen-essentials-container > :nth-child(n+3) {
+  margin-top: 0.5px !important; /* Extra space for second row */
+}
+
+
+#unified-extensions-button {
+  display: none !important;
+  /*
+  position: absolute !important;
+  bottom: 32px !important;
+  margin-left: -2px !important;
+  
+  z-index: 9999 !important;*/
+}
+
+/*
+#unified-extensions-button::before {
+  content: "Extensions" !important; 
+  position: absolute !important; 
+  top: 5px !important; 
+  left: 35px !important; 
+  font-size: 12px !important;
+  color: rgba(255, 255, 255, 0.6) !important; 
+
+  border-radius: 5px !important;
+}
+*/
+
+
+#navigator-toolbox{
+min-width: 147px !important;
+}
+
+.tab-icon-image {
+  height: 14.5px !important;
+  width: auto !important;
+  z-index: 9 !important;
+  animation: none;
+}
+
+.tab-icon-image:hover {
+  animation: tabIconHover 0.3s ease-in-out forwards;
+}
+
+.tab-icon-image:not(:hover) {
+  animation: tabIconUnhover 0.3s ease-in-out forwards;
+}
+
+@keyframes tabIconHover {
+  0% {
+    transform: scale(1) translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: scale(1.2) translateY(-5px) rotate(5deg);
+  }
+}
+
+@keyframes tabIconUnhover {
+  0% {
+    transform: scale(1.2) translateY(-5px) rotate(5deg);
+  }
+  100% {
+    transform: scale(1) translateY(0) rotate(0deg);
+  }
+}
+
+
+
+#zen-sidebar-bottom-buttons, #zen-tabs-wrapper{
+  padding-right: 8px !important;
+  padding-left: 3px !important;
+  
+}
+
+
+
+#zen-sidebar-top-buttons-customization-target{
+  margin-right: -3px !important;
+}
+
+#zen-tabs-wrapper .tabbrowser-tab{
+  padding-right: 12px !important;
+  padding-left: 2px !important;
+}
+
+#zen-tabs-wrapper tab-group{
+  margin-right: 13px !important;
+}
+
+#zen-tabs-wrapper tab-group .tabbrowser-tab{
+  padding: 1px 3px 0px 3px !important;
+  border-radius: 0px !important;
+}
+
+
+
+#nav-bar{
+  margin-top: -2px !important;
+  margin-bottom: 4px !important;
+  margin-right: 2px !important;
+  margin-left: 3px !important;
+}
+
+#urlbar-background {
+border-radius: 12px !important;
+  
+  min-height: 37px !important;
+  background: rgba(5, 5, 5, 0.3) !important;
+
+}
+
+.urlbar-input-container {
+  padding-left: 10px !important;
+    color: rgba(255, 255, 255, 0.85) !important; /* White color with 0.6 opacity */
+font-size: 14px !important;
+  padding-bottom: 4px !important; /*
+  background-color:  rgba( 255, 255, 255, 0.05) !important; */
+}
+
+.tab-text[selected=''], #tabs-newtab-button[selected=''] {
+  font-size: 1.1em !important;
+    opacity: 90% !important;
+  margin-top: -1px !important;
+  color: rgb(255, 255, 255) !important;
+}
+
+.tab-text, #tabs-newtab-button {
+  font-size: 1.1em !important;
+      opacity: 70% !important;
+  margin-top: -1px !important;
+  color: rgba(255, 255, 255) !important;
+}
+
+
+
+
+
+/* Apply these styles only when Firefox is NOT in fullscreen mode */
+#main-window:not([sizemode="fullscreen"]) #zen-appcontent-navbar-container {
+}
+
+
+
+#main-window:not([sizemode="fullscreen"]) #zen-main-app-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 1px; /* Offset for the inner border */
+  left: 1px; /* Offset for the inner border */
+  right: 1px;
+  bottom: 1px;
+  border: 1px solid rgba(220, 220, 220, 0.35) !important; /* Outer border */
+  border-radius: 6px; /* Match the adjusted radius inside */
+  pointer-events: none; /* Ensures it doesn't interfere with clicks */
+  z-index: 22221; /* Layer it above the element's background but below the content */
+}
+
+@-moz-document url-prefix("chrome:") {
+  #tabbrowser-tabpanels[zen-split-view="true"]
+    .browserSidebarContainer.deck-selected {
+    outline: var(--zen-colors-border) !important;
+  }
+  
+}
+
+@-moz-document url-prefix("chrome:") {
+  #tabbrowser-tabpanels[zen-split-view="true"]
+    .browserSidebarContainer {
+    outline: var(--zen-colors-border) !important;
+      margin-top: 7px !important;
+      margin-bottom: 0px !important;
+      margin-left: 0px !important;
+      margin-right: 7px !important;
+  }
+  
+}
+
+
+
+
+#zen-sidebar-bottom-buttons {
+  margin-bottom: 0px !important;
+  margin-left: 0px !important;
+    padding: 5px 0px 0px 1px !important;
+
+ /* padding: 32px 0px 0px 1px !important;*/
+  position: relative;
+    border-radius: 4px !important;
+  box-shdow: inset 0 0 0 1px rgba(255, 255, 255, 0.1) !important; /* Inset 1px black with 60% opacity */
+
+  backgrond: rgba(255, 255, 255, 0.1) !important;
+  width: calc(100% - 2px) !important; /* 100% width minus 10px */
+}
+
+
+#zen-sidebar-bottom-buttons::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 2%; /* Centers the border */
+  width: 90%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1); /* Less opaque */
+}
+
+.vertical-pinned-tabs-container-separator{
+width: 84% !important;
+  margin-left: 7px !important;
+  margin-top: 5px !important;
+  margin-bottom: 6px !important;
+}
+
+/* SoundWave */
+
+@-moz-document url-prefix("chrome:") {
+  /* ---- Volume Icon Theming ---- */
+  /* edited from github.com/itsmefen/Dark-Harmony */
+  .tabbrowser-tab img {
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]) img {
+    opacity: 0 !important;
+    transition: opacity 0.1s !important;
+  }
+  
+  .tab-icon-overlay {  
+   
+    &:is([soundplaying], [muted], [activemedia-blocked]) {
+      display: block !important;
+      border: 0px !important;
+      border-radius: 0px !important;
+      top: -0px !important;
+      right: 0.5px !important;
+      scale: 1.25 !important;
+      opacity: 0.9 !important;
+      margin: 0px 3px !important;
+      background: white !important;
+      /* svg modified from https://samherbert.net/svg-loaders/ */
+      --play-svg: url('data:image/svg+xml,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%20135%20140%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22%22%3E%3Crect%20y%3D%2210%22%20width%3D%2215%22%20height%3D%22120%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220.5s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220.5s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3Crect%20x%3D%2230%22%20y%3D%2210%22%20width%3D%2215%22%20height%3D%22120%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220.25s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220.25s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3Crect%20x%3D%2260%22%20width%3D%2215%22%20height%3D%22140%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3Crect%20x%3D%2290%22%20y%3D%2210%22%20width%3D%2215%22%20height%3D%22120%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220.25s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220.25s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3Crect%20x%3D%22120%22%20y%3D%2210%22%20width%3D%2215%22%20height%3D%22120%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220.5s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220.5s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3C%2Fsvg%3E');
+      --mute-svg: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxMzYgMTQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9IiNmZmYiPjxyZWN0IHg9IjQiIHk9IjcwIiB3aWR0aD0iMTUiIGhlaWdodD0iMTUiIHJ4PSI2Ii8+PHJlY3QgeD0iMzQiIHk9IjcwIiB3aWR0aD0iMTUiIGhlaWdodD0iMTUiIHJ4PSI2Ii8+PHJlY3QgeD0iNjQiIHk9IjcwIiB3aWR0aD0iMTUiIGhlaWdodD0iMTUiIHJ4PSI2Ii8+PHJlY3QgeD0iOTQiIHk9IjcwIiB3aWR0aD0iMTUiIGhlaWdodD0iMTUiIHJ4PSI2Ii8+PHJlY3QgeD0iMTI0IiB5PSI3MCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjE1IiByeD0iNiIvPjwvc3ZnPg==');
+      mask-size: 10px 10px !important;
+      mask-repeat: no-repeat !important;
+      mask-position: center !important;
+    }
+  
+    @media (prefers-color-scheme: light) {
+      &:is([soundplaying], [muted], [activemedia-blocked]) {
+        filter: invert(1);
+      }
+    }
+  
+    &:is([activemedia-blocked]) {
+      background: none !important;
+      list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEb0lEQVR4nO2YW4hWVRTHP7URvM6ooWYa1kPlQ4GXxISyC4mUVg/RZQyjKLUsUcsmJRm8pqUgXSCRbhZCqT1mkARaWm+l9qK9jCKZ2KhUD4nWLxbuM/1ncfb3nfPNGaeH84cPPtZ/n7XX2pe1/3tXKiVKlChR4v8I4BZgFtCnB/q+AnjQYuiqo2bgby6htbAIs/e/KvRtMTxWr5PpwHn+w3uFR1o7hg+kf4vlnrwOrgHaxckp4Npuizgex3Wh7wS/AWOyftwH2C8f/wFM6Pao4/FMDDEk+BboneXDBXTGbMe/CvwKbOqGoFcCx4Hlzv64i2l+LUdXAmflg22Of9E5bCowif7O92LHfyLcGWBYNWerXePhwt0JXBT+G6BXUYmEPvaKf+trmnAj3CCvjDkZ5Bq2CDcwTHmCX4DRRSYR+hkNnJR+jgEDhH/FDfTANCdPukaDhXtNuL+AKe7Qmgc8kjNoKyrPAwuBBrHfGvpIsEa4wSG2BE+kOf5aGrwl9mGuarzhvtsqXOZkgOfku3cdt1G434Ghwr0t3B7vtNGt/8nCLXUzpU7nC5c+QvFEnnXfzhVuqFvmS4WbIvYLunIqQUslOKWbGDgk3GqxD3HTvE+XSGjTFxgXfn1TOPtGD7sm4dcId1DsvYHTwt2nTtcJ8anbfIrxkQrX7ipc/7A8zkkb+/860E/aDXeDsUq4Ca7vq4XbkbaHjNglRMdhZEJN7G1upn4W7mWXxHfEccAl0yLcEbH3cpXyUXcoJ9ihiRwU4qHIqOtM3Sh2U6YjIhs1hg3S/ipR2IYbhNtOyrkBPCz2HzURzfx2sW8T+2axPyD2Q27d63KK4awruT8Jd3+KjDd8KPZpYj+miZyJ7IPPI8tHK84XYrdNnRU68rvTdBSwROy7IvunPW8iLZGyuzuy5GrhevnuS7HP60oiurRuE/tHGZbW4R5eWm15N/tnkZG3jTpSOCuxtbBe2o8C/onM1PYMm/0HTWRnpPzanV0FnJbfo5Fl1y+U2Bj2u/K7rI7yuyJWftdGyuwYF8T4yLR7yW/JbHAyw/6vd0lEpTmXboaxA3FnmtowYmYViXI4okSb3L0+TaI0iERJ46pJlLVpZ0WQKNY2wb1eNJoAS9DxjmRl142qisa5btSeqdSnfg1PO8WtM/WScFPFbjEPqibj36wi4ze677YI15wjEbuLJNjiuE1VZPw7wn2V92K1zr0vTXUXq6dsM+a5+oZS/UKYmQY34ucjirvRzdScvFfdAa6CnMz8vtS1q26biVDhlwvXnnrVzfD4cIe7fH1f5OND2MQH3PpX3TfSHbattZ6DVK587PjFdEZjgYlY34pFjtfD0arWkLzVxD/Q2fSeUCleYDKbQ5DLnH1O7uoYXjfsWTKBVayJlR4CMAn4U+LZm+nJVE50/4g9ttujdrCHc/eIfVpP+EywJ3xXBjvV+ssB4H3p32K5q15HzVKpOp5kLheA1tD3RRWN9Tq7Cbi7sOjyl+QZwM090X+JEiVKlKjUwr/rwkME7dPwYwAAAABJRU5ErkJggg==") !important;
+      width: 16px !important;
+      height: 16px !important;
+      margin: 0px 3px !important;
+    }
+  
+    &:is([soundplaying]) {
+      list-style-image: none !important;
+      mask-image: var(--play-svg) !important;
+    }
+  
+    &:is([muted]) {
+      list-style-image: none !important;
+      mask-image: var(--mute-svg) !important;
+    }
+  }
+  @media not (-moz-bool-pref: "zen.view.sidebar-expanded") {
+      .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]):hover img {
+          opacity: 1 !important;
+          transition: opacity 0.1s ease-out !important;
+      }
+  
+      .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]):hover .tab-icon-overlay { 
+          margin: 0px !important;
+          transition: opacity 0.1s ease-out, transform 0.1s ease-out !important;
+          transform: translate(6.9px, -6.9px) scale(0.69) !important;
+      }
+    }
+  #zen-essentials-container {
+    .tab-icon-overlay:is([soundplaying], [muted]) {
+      margin: 0px !important;
+    }
+  
+    .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]) img {
+      opacity: 0 !important;
+    }
+  }
+  
+}
+
+
+/* URL BAR MODS */
+
+#urlbar:is([breakout][breakout-extend], [breakout][usertyping][focused]):after {
+  top: -6px !important;
+}
+
+.urlbarView-body-inner {
+  #urlbar[open] > .urlbarView > .urlbarView-body-outer > & {
+    border-top: none !important;
+  }
+}
+
+.search-one-offs {
+  display: none !important;
+}
+
+#urlbar[breakout-extend="true"] > #urlbar-background {
+  background: rgba(10, 10, 10, 0.4) !important;
+  backdrop-filter: blur(3rem) !important;
+  border-radius: 16px !important;
+  border-color: transparent !important;
+}
+
+#urlbar[breakout-extend] {
+  #identity-permission-box,
+  #tracking-protection-icon-container,
+  #page-action-buttons {
+    display: none !important;
+  }
+
+  #identity-icon-box {
+    margin: 5px !important;
+    scale: 150%;
+    border-radius: 6px !important;
+  }
+
+  #identity-box {
+    margin-right: 0px !important;
+  }
+
+  #urlbar-input {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    font-size: 20px !important;
+  }
+}
+
+.urlbarView-row-inner {
+  border-radius: calc(var(--urlbarView-row-gutter) + var(--toolbarbutton-border-radius));
+  display: flex !important;
+}
+
+.urlbarView-title,
+.urlbarView-title-separator,
+.urlbarView-action,
+.urlbarView-url {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
+.urlbarView-title {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.urlbarView-url,
+.urlbarView-title-separator::before {
+  font-weight: 500 !important;
+  color: rgba(215, 215, 215) !important;
+}
+
+.urlbarView-favicon {
+  margin-left: 3px !important;
+  margin-right: 12px !important;
+  padding: 4px !important;
+  border-radius: 6px !important;
+  transform: scale(1.5) !important;
+}
+
+.urlbarView-row:hover {
+  background: transparent !important;
+}
+
+.urlbarView-row:hover .urlbarView-favicon {
+  background-color: #f1efe2 !important;
+}
+
+.urlbarView-row:hover .urlbarView-row-inner {
+  background: color-mix(in srgb, var(--zen-colors-primary) 30%, #f1efe230) !important;
+}
+
+* {
+  --urlbarView-item-inline-padding: 8px !important;
+  --urlbarView-item-block-padding: 12px !important;
+}
+
+/* COLORED TAB BACKGROUND */
+
+#zen-essentials-container .tabbrowser-tab {
+    --toolbarbutton-inner-padding: 0px;
+    width: 100% !important;
+  
+    border-radius: var(--border-radius-medium);
+
+    &[selected] {
+                      transition: all 0.1s ease-in-out !important;
+
+  }
+  
+  &:hover {
+  transform: scale(1.05);
+                transition: all 0.3s ease-in-out !important;
+
+}
+
+
+    &[selected] .tab-background {
+        box-shadow: none !important;
+        border: none !important;
+        opacity: 0.65 !important;
+        z-index: -99 !important;
+
+        &[selected] {
+            transition: all 0.3s ease-in-out !important;
+            animation: ease-in-out 10s !important;
+        }
+
+        &::after {
+            content: "";
+            filter: blur(15px) brightness(1) contrast(1.1) !important;
+            background-size: 100% 100% !important;
+            background-clip: padding-box;
+            background-image: var(--zen-tab-icon);
+            z-index: -1;
+          
+            transition: filter 0.0s ease-in-out !important; /* Add this line for smooth transition */
+            animation: spinAndBreathe 10s linear infinite !important; /* Update this line */
+        }
+
+        background: transparent;
+        overflow: hidden;
+
+        &::before {
+            background: black !important;
+            opacity: 20% !important;
+           margin: -50px !important;
+            transition: background 0.0s ease-in-out;
+        }
+    }
+
+    &:not([selected], [multiselected="true"]) .tab-background {
+        box-shadow: none !important;
+        outline: none !important;
+        z-index: -99 !important;
+        background: rgba(255, 255, 255, 0.075) !important;
+        backdrop-filter: none !important;
+    }
+
+    & .tab-content {
+        display: flex;
+        justify-content: center;
+    }
+
+    & .tab-label-container {
+        display: none !important;
+    }
+
+    & .tab-close-button {
+        display: none !important;
+    }
+
+    &[selected]:hover .tab-background::before {}
+}
+
+#zen-essentials-container .tabbrowser-tab:hover {
+    /* When NOT selected */
+    &:not([selected]) .tab-background {
+        box-shadow: none !important;
+        background: rgba(255, 255, 255, 0.12) !important;
+    }
+
+    /* When SELECTED */
+    &[selected] .tab-background {
+        box-shadow: none !important;
+
+        @media (-moz-bool-pref: 'zen.theme.essentials-favicon-bg') {
+            &::after {
+              
+            transition: filter 0.0s ease-in-out !important; /* Add this line for smooth transition */
+                filter: blur(15px) brightness(1.15) contrast(1.0) !important;
+            }
+        }
+    }
+}
+
+#zen-essentials-container .tab-background {
+border-radius: 12px !important;
+}
+
+@keyframes spinAndBreathe {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    25% {
+        transform: rotate(90deg) scale(1.1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1);
+    }
+    75% {
+        transform: rotate(270deg) scale(1.1);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+
+
+
+
+   
