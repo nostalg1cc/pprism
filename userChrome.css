@@ -1,6 +1,7 @@
 /* IMPORTANT: in about:config, set zen.theme.border-radiusto 0 and zen.theme.content-element-separation to 6 for all the margin and padding to appear correct when using this CSS */
 
 
+
 * {
   font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', sans-serif !important;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15) !important;
@@ -42,25 +43,13 @@
 
 
 
-#zen-sidebar-top-buttons-customization-target{
-  margin-top: -2px !important;
-}
-
-#tabbrowser-tabbox{
-  padding-top: 0px !important;
-  margin-top: -.5px !important;
-  margin-bottom: -.5px !important;
-}
-
 @-moz-document url-prefix("chrome:") {
   :root {
-    --zen-webview-border-radius: 5px !important;
+    --zen-webview-border-radius: 4px !important;
     #tabbrowser-tabpanels:not([zen-split-view="flase"]) {
-
-    }
-  }
-  
 }
+
+  
 
 
 #zen-current-workspace-indicator-container{
@@ -102,20 +91,23 @@
   margin-bottom: 10px !important;
 }
 
-#zen-essentials-container > :nth-child(n+3) {
-  margin-top: 0.5px !important; /* Extra space for second row */
-}
 
 
 #unified-extensions-button {
-  display: none !important;
-  /*
-  position: absolute !important;
-  bottom: 32px !important;
-  margin-left: -2px !important;
-  
-  z-index: 9999 !important;*/
+  margin-left: -5px !important;
+  margin-right: -15px !important;
+  display: block !important; /* Make sure it's block-level by default */
+  opacity: 0 !important; /* Hidden initially */
+  transition: opacity 0.3s ease, visibility 0s ease 0.3s; /* Smooth transition */
 }
+
+#unified-extensions-button:hover {
+  opacity: 1 !important; /* Fully visible on hover */
+  visibility: visible !important; /* Make it interactable */
+  transition: opacity 0.3s ease, visibility 0s ease 0s; /* Reset transition for smooth appearance */
+}
+
+
 
 /*
 #unified-extensions-button::before {
@@ -246,26 +238,38 @@ font-size: 14px !important;
 
 
 
+#zen-main-app-wrapper {
+    position: relative;
+    padding: 0px; /* Space for the inside border */
+}
 
+#zen-main-app-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 1px; /* Move the white border up by 1px */
+    left: 0px; 
+    right: 0px;
+    bottom: 0px;
+    border-radius: 8px !important;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* White with 70% opacity */
+    pointer-events: none;
+}
 
-/* Apply these styles only when Firefox is NOT in fullscreen mode */
-#main-window:not([sizemode="fullscreen"]) #zen-appcontent-navbar-container {
+#zen-main-app-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0px; /* Place the black border 1px above the white border */
+    left: -1px; 
+    right: -1px;
+    bottom: -1px;
+    border-radius: 8px !important;
+    border: 2px solid rgba(5, 5, 5, 0.75); /* White with 70% opacity */
+    pointer-events: none;
 }
 
 
 
-#main-window:not([sizemode="fullscreen"]) #zen-main-app-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 1px; /* Offset for the inner border */
-  left: 0.4px; /* Offset for the inner border */
-  right: 1px;
-  bottom: 1px;
-  border: 1px solid rgba(220, 220, 220, 0.35) !important; /* Outer border */
-  border-radius: 8px; /* Match the adjusted radius inside */
-  pointer-events: none; /* Ensures it doesn't interfere with clicks */
-  z-index: 22221; /* Layer it above the element's background but below the content */
-}
+
 
 @-moz-document url-prefix("chrome:") {
   #tabbrowser-tabpanels[zen-split-view="true"]
@@ -279,10 +283,10 @@ font-size: 14px !important;
   #tabbrowser-tabpanels[zen-split-view="true"]
     .browserSidebarContainer {
     outline: var(--zen-colors-border) !important;
-      margin-top: 7px !important;
+      margin-top: 6px !important;
       margin-bottom: 0px !important;
       margin-left: 0px !important;
-      margin-right: 7px !important;
+      margin-right: 6px !important;
   }
   
 }
@@ -501,122 +505,19 @@ width: 84% !important;
   --urlbarView-item-block-padding: 12px !important;
 }
 
-/* COLORED TAB BACKGROUND */
+#zen-essentials-container .tab-background {
+    border-radius: 12px !important;
+    background: rgba(255, 255, 255, 0.05) !important; /* Normal background */
+}
 
 #zen-essentials-container .tabbrowser-tab {
-    --toolbarbutton-inner-padding: 0px;
     width: 100% !important;
-  
-    border-radius: var(--border-radius-medium);
-
-    &[selected] {
-                      transition: all 0.1s ease-in-out !important;
-
-  }
-  
-  &:hover {
-  transform: scale(1.05);
-                transition: all 0.3s ease-in-out !important;
-
 }
 
-
-    &[selected] .tab-background {
-        box-shadow: none !important;
-        border: none !important;
-        opacity: 0.65 !important;
-        z-index: -99 !important;
-
-        &[selected] {
-            transition: all 0.3s ease-in-out !important;
-            animation: ease-in-out 10s !important;
-        }
-
-        &::after {
-            content: "";
-            filter: blur(15px) brightness(1) contrast(1.1) !important;
-            background-size: 100% 100% !important;
-            background-clip: padding-box;
-            background-image: var(--zen-tab-icon);
-            z-index: -1;
-          
-            transition: filter 0.0s ease-in-out !important; /* Add this line for smooth transition */
-            animation: spinAndBreathe 10s linear infinite !important; /* Update this line */
-        }
-
-        background: transparent;
-        overflow: hidden;
-
-        &::before {
-            background: black !important;
-            opacity: 20% !important;
-           margin: -50px !important;
-            transition: background 0.0s ease-in-out;
-        }
-    }
-
-    &:not([selected], [multiselected="true"]) .tab-background {
-        box-shadow: none !important;
-        outline: none !important;
-        z-index: -99 !important;
-        background: rgba(255, 255, 255, 0.075) !important;
-        backdrop-filter: none !important;
-    }
-
-    & .tab-content {
-        display: flex;
-        justify-content: center;
-    }
-
-    & .tab-label-container {
-        display: none !important;
-    }
-
-    & .tab-close-button {
-        display: none !important;
-    }
-
-    &[selected]:hover .tab-background::before {}
+#zen-essentials-container .tabbrowser-tab:hover .tab-background {
+    background: rgba(255, 255, 255, 0.15) !important; /* Hover background */
 }
 
-#zen-essentials-container .tabbrowser-tab:hover {
-    /* When NOT selected */
-    &:not([selected]) .tab-background {
-        box-shadow: none !important;
-        background: rgba(255, 255, 255, 0.12) !important;
-    }
-
-    /* When SELECTED */
-    &[selected] .tab-background {
-        box-shadow: none !important;
-
-        @media (-moz-bool-pref: 'zen.theme.essentials-favicon-bg') {
-            &::after {
-              
-            transition: filter 0.0s ease-in-out !important; /* Add this line for smooth transition */
-                filter: blur(15px) brightness(1.15) contrast(1.0) !important;
-            }
-        }
-    }
+#zen-essentials-container .tabbrowser-tab[selected] .tab-background {
+    background: rgba(255, 255, 255, 0.5) !important; /* Selected background */
 }
-
-#zen-essentials-container .tab-background {
-border-radius: 12px !important;
-}
-
-@keyframes spinAndBreathe {
-    0% {
-        transform: rotate(0deg) scale(1);
-    }
-    25% {
-        transform: rotate(90deg) scale(1.1);
-    }
-    50% {
-        transform: rotate(180deg) scale(1);
-    }
-    75% {
-        transform: rotate(270deg) scale(1.1);
-    }
-    100% {
-        transform: rotate(360deg) scale(1);
-    }
