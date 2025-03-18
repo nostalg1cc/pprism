@@ -54,7 +54,7 @@
 
 @-moz-document url-prefix("chrome:") {
   :root {
-    --zen-webview-border-radius: 3px !important;
+    --zen-webview-border-radius: 5px !important;
     #tabbrowser-tabpanels:not([zen-split-view="flase"]) {
 
     }
@@ -258,11 +258,11 @@ font-size: 14px !important;
   content: '';
   position: absolute;
   top: 1px; /* Offset for the inner border */
-  left: 1px; /* Offset for the inner border */
+  left: 0.4px; /* Offset for the inner border */
   right: 1px;
   bottom: 1px;
   border: 1px solid rgba(220, 220, 220, 0.35) !important; /* Outer border */
-  border-radius: 6px; /* Match the adjusted radius inside */
+  border-radius: 8px; /* Match the adjusted radius inside */
   pointer-events: none; /* Ensures it doesn't interfere with clicks */
   z-index: 22221; /* Layer it above the element's background but below the content */
 }
