@@ -190,13 +190,17 @@ min-width: 147px !important;
 
 #zen-tabs-wrapper tab-group{
   margin-right: 13px !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 #zen-tabs-wrapper tab-group .tabbrowser-tab{
-  padding: 1px 3px 0px 3px !important;
+  padding: 0px 1px 0px 3px !important;
   border-radius: 0px !important;
 }
 
+    #tabbrowser-tabbox{
+      margin-top: 1px !important;
+    }
 
 
 #nav-bar{
