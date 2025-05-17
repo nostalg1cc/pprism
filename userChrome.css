@@ -76,6 +76,11 @@
   margin-right: 2px !important;
 }
 
+.zen-essentials-container .tab-background{
+border-radius: 12px !important;
+}
+
+
     #TabsToolbar-customization-target{
       padding-right: 11px !important;
     }
@@ -84,7 +89,6 @@
   display: grid !important;
   grid-template-columns: repeat(2, 1fr) !important; /* Two items per row */
   gap: 5px !important; /* First-row gap */
-  padding-top: 2px !important;
   padding-bottom: 4px !important;
   margin-bottom: 10px !important;
     }
@@ -93,6 +97,8 @@
     gap: 5px !important; /* First-row gap */
     padding-left: 9px !important;
     padding-right: 0px !important;
+    margin-top:4px !important;
+
 
 
 }
@@ -174,7 +180,7 @@ min-width: 147px !important;
 
 
 #zen-media-controls-toolbar {
-  margin-right: 10px !important;
+  margin-right: 7px !important;
   margin-left: 4px !important;
  margin-bottom: 10px !important;
   
@@ -189,6 +195,7 @@ min-width: 147px !important;
 
 #zen-tabs-wrapper .tabbrowser-tab{
   padding-left: 2px !important;
+  margin-right: -3wpx !important;
 }
 
 #zen-tabs-wrapper tab-group{
@@ -206,7 +213,7 @@ min-width: 147px !important;
 #nav-bar{
   margin-top: -2px !important;
   margin-bottom: 4px !important;
-  margin-right: 0px !important;
+  margin-right: 1px !important;
   margin-left: 3px !important;
 }
 
@@ -245,7 +252,7 @@ font-size: 14px !important;
 #zen-main-app-wrapper {
     position: relative;
     padding: 0px; /* Space for the inside border */
-  background-color: rgba(50, 50, 50, 0.6)!important;
+  background-color: rgba(50, 50, 50, 0.45)!important;
 }
 
 #zen-main-app-wrapper::before {
@@ -256,7 +263,7 @@ font-size: 14px !important;
     right: 0px;
     bottom: 0px;
     border-radius: 8px !important;
-    border: 2px solid rgba(155, 155, 155, 0.5); /* White with 70% opacity */
+    border: 2px solid rgba(155, 155, 155, 0.4); /* White with 70% opacity */
     pointer-events: none;
 }
 
@@ -268,7 +275,7 @@ font-size: 14px !important;
     right: -1px;
     bottom: -1px;
     border-radius: 8px !important;
-    border: 2px solid rgba(5, 5, 5, 0.5); /* White with 70% opacity */
+    border: 2px solid rgba(5, 5, 5, 0.25); /* White with 70% opacity */
     pointer-events: none;
 }
 
