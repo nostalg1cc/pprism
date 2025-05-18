@@ -1,258 +1,84 @@
-/* IMPORTANT: in about:config, set zen.theme.border-radiusto 0 and zen.theme.content-element-separation to 6 for all the margin and padding to appear correct when using this CSS */
-
-
-
 * {
   font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', sans-serif !important;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15) !important;
 }
 
-#downloads-button{
-  margin-right: 5px !important;
-}
-
-/* Default height for #zen-appcontent-navbar-container when collapsed is false */
-:root[zen-single-toolbar="true"]:not([customizing]) #zen-appcontent-navbar-container {
-  &:has(#PersonalToolbar[collapsed="false"]) {
-    height: 38px !important; /* Default height */
-    transition: height 0.3s ease-in-out, padding-top 0.3s ease-in-out, opacity 0.3s ease-in-out !important; /* Add smooth transitions */
-  }
-}
-
-/* When the conditions aren't met, set height to 0px */
-:root[zen-single-toolbar="true"]:not([customizing]) #zen-appcontent-navbar-container {
-  &:has(#PersonalToolbar[collapsed="false"]) {
-    @media (-moz-bool-pref: "zen.view.hide-window-controls") {
-      &:not([zen-has-hover="true"]):not([has-popup-menu]):not(:focus-within):not(:has(:is([panelopen="true"], [open="true"]))) {
-        height: 0px !important; /* Set height to 0px when the conditions aren't met */
-        opacity: 0 !important; /* Fade out */
-                transition: all 0.3s ease-in-out !important; /* Smooth transition for padding */
-
-      }
-    }
-  }
-}
-
-/* Set height back to 38px when the conditions aren't met, as the default */
-:root[zen-single-toolbar="true"]:not([customizing]) #zen-appcontent-navbar-container {
-  &:has(#PersonalToolbar[collapsed="false"]) {
-    height: 40px !important; /* Default height when the hover is not active */
-    opacity: 1 !important; /* Make sure it's visible */
-  }
-}
-
-
-
-
-
-
-
-  
-
-
-#zen-current-workspace-indicator-container{
-  padding: 0px !important;
- transform: translateX(4.5px) !important;
-
-  margin-top: -15px !important;
-  margin-bottom: 35px !important;
-}
-
-.zen-current-workspace-indicator-name{
-  font-size: 12px !important;
- transform: translateX(-0px) !important;
-    padding-top: 1px !important;
-
-}
-
-
-.tab-background[selected=''] {
-  background-color: rgba(255, 255, 255, 0.6) !important;
-  opacity: 0.5 !important;
-}
-
-#zen-tabs-wrapper .tab-background{
-  margin: 4px 0 !important;
-  margin-right: 2px !important;
-}
-
-.zen-essentials-container .tab-background{
-border-radius: 12px !important;
-}
-
-
-    #TabsToolbar-customization-target{
-      padding-right: 11px !important;
-    }
-
-#zen-essentials-wrapper {
-  display: grid !important;
-  grid-template-columns: repeat(2, 1fr) !important; /* Two items per row */
-  gap: 5px !important; /* First-row gap */
-  padding-bottom: 4px !important;
-  margin-bottom: 10px !important;
-    }
-
-.zen-essentials-container{
-    gap: 5px !important; /* First-row gap */
-    padding-left: 9px !important;
-    padding-right: 0px !important;
-    margin-top:4px !important;
-
-
-
-}
-
-#unified-extensions-button {
-  margin-left: -7px !important;
-  margin-right: -15px !important;
-  display: block !important; /* Make sure it's block-level by default */
-  opacity: 0 !important; /* Hidden initially */
-  transition: opacity 0.3s ease, visibility 0s ease 0.3s; /* Smooth transition */
-}
-
-#unified-extensions-button:hover {
-  opacity: 1 !important; /* Fully visible on hover */
-  visibility: visible !important; /* Make it interactable */
-  transition: opacity 0.3s ease, visibility 0s ease 0s; /* Reset transition for smooth appearance */
-}
-
-
-
-/*
-#unified-extensions-button::before {
-  content: "Extensions" !important; 
-  position: absolute !important; 
-  top: 5px !important; 
-  left: 35px !important; 
-  font-size: 12px !important;
-  color: rgba(255, 255, 255, 0.6) !important; 
-
-  border-radius: 5px !important;
-}
-*/
-
-
 #navigator-toolbox{
 min-width: 147px !important;
 }
 
-.tab-icon-image {
-  height: 14.5px !important;
-  width: auto !important;
-  z-index: 9 !important;
-  animation: none;
-}
-
-.tab-icon-image:hover {
-  animation: tabIconHover 0.3s ease-in-out forwards;
-}
-
-.tab-icon-image:not(:hover) {
-  animation: tabIconUnhover 0.3s ease-in-out forwards;
-}
-
-@keyframes tabIconHover {
-  0% {
-    transform: scale(1) translateY(0) rotate(0deg);
-  }
-  100% {
-    transform: scale(1.2) translateY(-5px) rotate(5deg);
-  }
-}
-
-@keyframes tabIconUnhover {
-  0% {
-    transform: scale(1.2) translateY(-5px) rotate(5deg);
-  }
-  100% {
-    transform: scale(1) translateY(0) rotate(0deg);
-  }
-}
-
-
-
-#zen-sidebar-bottom-buttons, #zen-tabs-wrapper{
-  padding-right: 8px !important;
-  padding-left: 3px !important;
-  
-}
-
-
-#zen-media-controls-toolbar {
-  margin-right: 7px !important;
-  margin-left: 4px !important;
- margin-bottom: 10px !important;
-  
-}
-
-
-
-
-#zen-sidebar-top-buttons-customization-target{
-  margin-right: -3px !important;
-}
-
-#zen-tabs-wrapper .tabbrowser-tab{
-  padding-left: 2px !important;
-  margin-right: -3wpx !important;
-}
-
-#zen-tabs-wrapper tab-group{
-  margin-right: 13px !important;
-  background-color: rgba(255, 255, 255, 0.1) !important;
-}
-
-
-
-    #tabbrowser-tabbox{
-      margin-top: 0px !important;
-    }
-
-
-#nav-bar{
-  margin-top: -2px !important;
-  margin-bottom: 4px !important;
-  margin-right: 1px !important;
-  margin-left: 3px !important;
-}
-
 #urlbar-background {
-border-radius: 12px !important;
-  
-  min-height: 37px !important;
-  background: rgba(5, 5, 5, 0.3) !important;
-
+    border-radius: 12px !important;
+    min-height: 37px !important;
+    background: rgba(5, 5, 5, 0.3) !important;
 }
 
 .urlbar-input-container {
-  padding-left: 10px !important;
+  padding-left: 15px !important;
     color: rgba(255, 255, 255, 0.85) !important; /* White color with 0.6 opacity */
 font-size: 14px !important;
-  padding-bottom: 4px !important; /*
+  padding-bottom: 5px !important; /*
   background-color:  rgba( 255, 255, 255, 0.05) !important; */
+}
+
+.zen-essentials-container .tab-background,
+.tab-background {
+    border-radius: 12px !important;
+}
+
+
+.zen-essentials-container {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important; /* Two items per row */
+  padding-right: 13px !important;
+  padding-left: 6px !important;
+
+    }
+
+#tabbrowser-arrowscrollbox arrowscrollbox {
+  padding-right: 7px !important;
+}
+
+#zen-media-controls-toolbar, #zen-sidebar-bottom-buttons{
+  margin-right: 8px !important;
+  padding-right: 8px !important;
 }
 
 .tab-text[selected=''], #tabs-newtab-button[selected=''] {
   font-size: 1.1em !important;
     opacity: 90% !important;
-  margin-top: -1px !important;
+  margin-top: 0px !important;
   color: rgb(255, 255, 255) !important;
 }
 
 .tab-text, #tabs-newtab-button {
   font-size: 1.1em !important;
       opacity: 70% !important;
-  margin-top: -1px !important;
+  margin-top: 0px !important;
   color: rgba(255, 255, 255) !important;
 }
 
+.zen-current-workspace-indicator{
+margin: -1px -5px -8px 0px !important;
+}
 
+.zen-current-workspace-indicator-icon{
+  margin-left: -2px !important;
+}
+
+.zen-current-workspace-indicator-name{
+  margin-left: 2px !important;
+}
+
+#PanelUI-button{
+  display: none !important;
+}
 
 #zen-main-app-wrapper {
     position: relative;
     padding: 0px; /* Space for the inside border */
   background-color: rgba(50, 50, 50, 0.45)!important;
+  padding-left: 1px !important;
 }
 
 #zen-main-app-wrapper::before {
@@ -275,68 +101,11 @@ font-size: 14px !important;
     right: -1px;
     bottom: -1px;
     border-radius: 8px !important;
-    border: 2px solid rgba(5, 5, 5, 0.25); /* White with 70% opacity */
+    border: 2px solid rgba(5, 5, 5, 0.45); /* White with 70% opacity */
     pointer-events: none;
 }
 
 
-
-
-
-@-moz-document url-prefix("chrome:") {
-  #tabbrowser-tabpanels[zen-split-view="true"]
-    .browserSidebarContainer.deck-selected {
-    outline: var(--zen-colors-border) !important;
-  }
-  
-}
-
-@-moz-document url-prefix("chrome:") {
-  #tabbrowser-tabpanels[zen-split-view="true"]
-    .browserSidebarContainer {
-    outline: var(--zen-colors-border) !important;
-      margin-top: 6px !important;
-      margin-bottom: 0px !important;
-      margin-left: 0px !important;
-      margin-right: 6px !important;
-  }
-  
-}
-
-
-
-
-#zen-sidebar-bottom-buttons {
-  margin-bottom: 0px !important;
-  margin-left: 0px !important;
-    padding: 5px 0px 0px 1px !important;
-
- /* padding: 32px 0px 0px 1px !important;*/
-  position: relative;
-    border-radius: 4px !important;
-  box-shdow: inset 0 0 0 1px rgba(255, 255, 255, 0.1) !important; /* Inset 1px black with 60% opacity */
-
-  backgrond: rgba(255, 255, 255, 0.1) !important;
-  width: calc(100% - 2px) !important; /* 100% width minus 10px */
-}
-
-
-#zen-sidebar-bottom-buttons::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 2%; /* Centers the border */
-  width: 90%;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.1); /* Less opaque */
-}
-
-.vertical-pinned-tabs-container-separator{
-width: 84% !important;
-  margin-left: 7px !important;
-  margin-top: 5px !important;
-  margin-bottom: 6px !important;
-}
 
 /* SoundWave */
 
@@ -408,20 +177,38 @@ width: 84% !important;
           transform: translate(6.9px, -6.9px) scale(0.69) !important;
       }
     }
-  #zen-essentials-wrapper {
-    .tab-icon-overlay:is([soundplaying], [muted]) {
-      margin: 0px !important;
-    }
   
-    .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]) img {
-      opacity: 0 !important;
-    }
+  /* Default height for #zen-appcontent-navbar-container when collapsed is false */
+:root[zen-single-toolbar="true"]:not([customizing]) #zen-appcontent-navbar-container {
+  &:has(#PersonalToolbar[collapsed="false"]) {
+    height: 38px !important; /* Default height */
+    transition: height 0.3s ease-in-out, padding-top 0.3s ease-in-out, opacity 0.3s ease-in-out !important; /* Add smooth transitions */
   }
-  
 }
 
+/* When the conditions aren't met, set height to 0px */
+:root[zen-single-toolbar="true"]:not([customizing]) #zen-appcontent-navbar-container {
+  &:has(#PersonalToolbar[collapsed="false"]) {
+    @media (-moz-bool-pref: "zen.view.hide-window-controls") {
+      &:not([zen-has-hover="true"]):not([has-popup-menu]):not(:focus-within):not(:has(:is([panelopen="true"], [open="true"]))) {
+        height: 0px !important; /* Set height to 0px when the conditions aren't met */
+        opacity: 0 !important; /* Fade out */
+                transition: all 0.3s ease-in-out !important; /* Smooth transition for padding */
 
-/* URL BAR MODS */
+      }
+    }
+  }
+}
+
+/* Set height back to 38px when the conditions aren't met, as the default */
+:root[zen-single-toolbar="true"]:not([customizing]) #zen-appcontent-navbar-container {
+  &:has(#PersonalToolbar[collapsed="false"]) {
+    height: 40px !important; /* Default height when the hover is not active */
+    opacity: 1 !important; /* Make sure it's visible */
+  }
+}
+  
+  /* URL BAR MODS */
 
 #urlbar:is([breakout][breakout-extend], [breakout][usertyping][focused]):after {
   top: -6px !important;
@@ -517,19 +304,3 @@ width: 84% !important;
   --urlbarView-item-block-padding: 12px !important;
 }
 
-#zen-essentials-wrapper .tab-background {
-    border-radius: 12px !important;
-    background: rgba(255, 255, 255, 0.05) !important; /* Normal background */
-}
-
-#zen-essentials-wrapper .tabbrowser-tab {
-    width: 100% !important;
-}
-
-#zen-essentials-wrapper .tabbrowser-tab:hover .tab-background {
-    background: rgba(255, 255, 255, 0.15) !important; /* Hover background */
-}
-
-#zen-essentials-wrapper .tabbrowser-tab[selected] .tab-background {
-    background: rgba(255, 255, 255, 0.5) !important; /* Selected background */
-}
