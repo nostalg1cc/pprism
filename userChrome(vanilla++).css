@@ -3,6 +3,14 @@
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15) !important;
 }
 
+#navigator-toolbox{
+min-width: 147px !important;
+}
+
+.toolbar-items, #zen-sidebar-bottom-buttons{
+  padding-right: 8px !important;
+}
+
 
 .tab-text[selected=''], #tabs-newtab-button[selected=''] {
   font-size: 1.1em !important;
@@ -27,36 +35,18 @@
 
 
 
-.tabbrowser-tab[selected="true"]::before {
-  content: "" !important;
-  position: absolute !important;
-  top: 1px;
-  left: 1px;
-  right: 1px;
-  bottom: 1px;
-  border-radius: 10px;
-  padding: 1px;
-  background: linear-gradient(to bottom right, rgba(255,255,255,0.4), rgba(255,255,255,0.00));
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-  opacity: 70% !important;
-  z-index: 2;
-}
+
 
 #PanelUI-button{
   display: none !important;
 }
 
 #zen-main-app-wrapper {
-    position: relative;
-    padding: 0px; /* Space for the inside border */
-  background-color: rgba(50, 50, 50, 0.45)!important;
-  padding-left: 1px !important;
+    background-color: rgba(50, 50, 50, 0.55) !important;
 }
+
+
+
 
   /* Default height for #zen-appcontent-navbar-container when collapsed is false */
 :root[zen-single-toolbar="true"]:not([customizing]) #zen-appcontent-navbar-container {
