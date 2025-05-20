@@ -33,8 +33,26 @@ min-width: 147px !important;
 
     }
 
+#zen-media-controls-toolbar{
+  margin-right: 3px !important;
+  margin-left: -5px !important;
+  margin-bottom: -35px !important;
+  z-index: 0 !important;
+  
+}
 
+#zen-media-controls-toolbar toolbaritem{
+    border-radius: 0px !important;
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
 
+}
+
+#zen-media-main-vbox{
+  padding-bottom: 35px !important;
+  padding-top: 5px !important;
+
+}
 
 
 #PanelUI-button{
