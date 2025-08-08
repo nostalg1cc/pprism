@@ -1,337 +1,226 @@
-* {
-  font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', sans-serif !important;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15) !important;
+/* ===== Root Variables ===== */
+:root {
+  --tab1: 51, 130, 194;   /* #3382C2 */
+  --tab2: 145, 70, 255;   /* #9146FF */
+  --tab3: 255, 67, 0;     /* #FF4300 */
+  --tab4: 255, 20, 147;   /* #FF1493 */
+  --tab5: 254, 198, 40;   /* #FEC628 */
+  --tab6: 17, 133, 254;   /* #1185FE */
+
+  --pinned-extension-width: 24px;
+  --pinned-extension-height: 24px;
+  --pinned-extension-padding: 4px;
+  --pinned-extension-radius: calc(var(--border-radius-medium) - var(--pinned-extension-padding) + 2px);
+  --pinned-extension-gap: calc(var(--pinned-extension-padding) * 2);
 }
 
-#navigator-toolbox{
-min-width: 147px !important;
+/* ===== Selected Tab Colors ===== */
+.zen-essentials-container .tabbrowser-tab[selected="true"] .tab-background {
+  box-shadow: inset 0 0 0 3px rgba(var(--active-color), 0.25) !important;
+  background-color: rgba(var(--active-color), 0.25) !important;
 }
 
-#urlbar-background {
-    border-radius: 12px !important;
-    min-height: 37px !important;
-    background: rgba(5, 5, 5, 0.3) !important;
-}
+.zen-essentials-container .tabbrowser-tab:nth-child(1)[selected="true"] { --active-color: var(--tab1); }
+.zen-essentials-container .tabbrowser-tab:nth-child(2)[selected="true"] { --active-color: var(--tab2); }
+.zen-essentials-container .tabbrowser-tab:nth-child(3)[selected="true"] { --active-color: var(--tab3); }
+.zen-essentials-container .tabbrowser-tab:nth-child(4)[selected="true"] { --active-color: var(--tab4); }
+.zen-essentials-container .tabbrowser-tab:nth-child(5)[selected="true"] { --active-color: var(--tab5); }
+.zen-essentials-container .tabbrowser-tab:nth-child(6)[selected="true"] { --active-color: var(--tab6); }
 
-.urlbar-input-container {
-  padding-left: 15px !important;
-    color: rgba(255, 255, 255, 0.85) !important; /* White color with 0.6 opacity */
-font-size: 14px !important;
-  padding-bottom: 5px !important; /*
-  background-color:  rgba( 255, 255, 255, 0.05) !important; */
-}
-
-.zen-essentials-container .tab-background,
-.tab-background {
-    border-radius: 12px !important;
-}
-
-.tabbrowser-tab[selected="true"] {
-  position: relative !important;
-  border: none !important;
-  border-radius: 15px !important;
-  background: none !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  z-index: 1 !important;
-}
-
-.tabbrowser-tab[selected="true"]::before {
-  content: "" !important;
-  position: absolute !important;
-  top: 1px;
-  left: 1px;
-  right: 1px;
-  bottom: 1px;
-  border-radius: 14px;
-  padding: 1px;
-  background: linear-gradient(to bottom right, rgba(255,255,255,0.4), rgba(255,255,255,0.00));
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
+/* ===== Main App Wrapper Border ===== */
+#zen-main-app-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border-radius: 9px !important;
+  box-shadow: inset 0 0 0 2px white;
   pointer-events: none;
-  z-index: 2;
+  z-index: 999;
+  opacity: 15%;
 }
 
-
-
-
+/* ===== Tabs Layout ===== */
 .zen-essentials-container {
   display: grid !important;
-  grid-template-columns: repeat(2, 1fr) !important; /* Two items per row */
-  padding-right: 13px !important;
-  padding-left: 6px !important;
-
-    }
-
-#tabbrowser-arrowscrollbox arrowscrollbox {
-  padding-right: 7px !important;
+  grid-template-columns: repeat(3, 1fr) !important;
 }
 
-#zen-media-controls-toolbar, #zen-sidebar-bottom-buttons{
-  margin-right: 8px !important;
-  padding-right: 8px !important;
+.zen-essentials-container .tab-background {
+  height: 35px !important;
+  border-radius: 10px !important;
 }
 
-.tab-text[selected=''], #tabs-newtab-button[selected=''] {
-  font-size: 1.1em !important;
-    opacity: 90% !important;
-  margin-top: 0px !important;
-  color: rgb(255, 255, 255) !important;
+.tab-background::before {
+  border-radius: 7px !important;
+  margin: 3px !important;
+  background: linear-gradient(to bottom, black 0%, transparent 100%) !important;
+  opacity: 35% !important;
+  backdrop-filter: blur(50px) !important;
 }
 
-.tab-text, #tabs-newtab-button {
-  font-size: 1.1em !important;
-      opacity: 70% !important;
-  margin-top: 0px !important;
-  color: rgba(255, 255, 255) !important;
+/* ===== Custom Tab Icons ===== */
+.tabbrowser-tab[label*="Fortnite Leaks"] .tab-icon-image {
+  content: url("file:///C:/Users/marce/AppData/Roaming/zen/Profiles/4wla8y7x.Default%20(twilight)/chrome/x.ico") !important;
 }
 
-.zen-current-workspace-indicator{
-margin: -1px -5px -8px 0px !important;
-}
+/* ===== General UI Adjustments ===== */
+#browser { background-color: rgba(255, 255, 255, 0.05) !important; }
+.zen-current-workspace-indicator { display: none !important; }
 
-.zen-current-workspace-indicator-icon{
-  margin-left: -2px !important;
-}
+#zen-tabbox-wrapper { margin-top: 1px !important; }
+#navigator-toolbox { min-width: 146px !important; }
+#urlbar-input { padding-left: 5px !important; }
+#TabsToolbar { margin-right: 8px !important; }
+#stop-reload-button, #reload-button, #stop-button { padding-right: 10px !important; }
+#zen-sidebar-top-buttons-customization-target { margin-top: -5px !important; }
+#nav-bar { margin-top: -5px !important; }
+.zen-workspace-pinned-tabs-section { margin-top: 4px !important; }
+.pinned-tabs-container-separator { margin: -2px 0 !important; }
 
-.zen-current-workspace-indicator-name{
-  margin-left: 2px !important;
-}
-
-#PanelUI-button{
-  display: none !important;
-}
-
-#zen-main-app-wrapper {
-    position: relative;
-    padding: 0px; /* Space for the inside border */
-  background-color: rgba(50, 50, 50, 0.45)!important;
-  padding-left: 1px !important;
-}
-
-#zen-main-app-wrapper::before {
-    content: "";
-    position: absolute;
-    top: 1px; /* Move the white border up by 1px */
-    left: 0px; 
-    right: 0px;
-    bottom: 0px;
-    border-radius: 8px !important;
-    border: 2px solid rgba(155, 155, 155, 0.4); /* White with 70% opacity */
-    pointer-events: none;
-}
-
-#zen-main-app-wrapper::after {
-    content: "";
-    position: absolute;
-    top: 0px; /* Place the black border 1px above the white border */
-    left: -1px; 
-    right: -1px;
-    bottom: -1px;
-    border-radius: 8px !important;
-    border: 2px solid rgba(5, 5, 5, 0.45); /* White with 70% opacity */
-    pointer-events: none;
-}
-
-
-
-/* SoundWave */
-
-@-moz-document url-prefix("chrome:") {
-  /* ---- Volume Icon Theming ---- */
-  /* edited from github.com/itsmefen/Dark-Harmony */
-  .tabbrowser-tab img {
-    transition: opacity 0.3s ease-in-out;
+/* ===== Pinned Extensions Styling ===== */
+:root:not([customizing]) {
+  #zen-sidebar-top-buttons-customization-target {
+    align-items: flex-start !important;
+    padding: 4px 0 !important;
+    min-width: calc(32px * 5 + 1px) !important; /* Number of buttons * 32px + 1px */
   }
-  
-  .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]) img {
-    opacity: 0 !important;
-    transition: opacity 0.1s !important;
+
+  #unified-extensions-button {
+    position: fixed !important;
+    margin-top: calc(var(--zen-toolbar-height) - 6.5px + 2.666px + 38px + 1px + 1px + var(--pinned-extension-padding)) !important;
+    margin-left: 2px !important;
+    height: var(--pinned-extension-height) !important;
+    padding: 0 var(--pinned-extension-padding) !important;
+    z-index: 1 !important;
+    justify-content: left !important;
   }
-  
-  .tab-icon-overlay {  
-   
-    &:is([soundplaying], [muted], [activemedia-blocked]) {
-      display: block !important;
-      border: 0px !important;
-      border-radius: 0px !important;
-      top: -0px !important;
-      right: 0.5px !important;
-      scale: 1.25 !important;
-      opacity: 0.9 !important;
-      margin: 0px 3px !important;
-      background: white !important;
-      /* svg modified from https://samherbert.net/svg-loaders/ */
-      --play-svg: url('data:image/svg+xml,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%20135%20140%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22%22%3E%3Crect%20y%3D%2210%22%20width%3D%2215%22%20height%3D%22120%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220.5s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220.5s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3Crect%20x%3D%2230%22%20y%3D%2210%22%20width%3D%2215%22%20height%3D%22120%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220.25s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220.25s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3Crect%20x%3D%2260%22%20width%3D%2215%22%20height%3D%22140%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3Crect%20x%3D%2290%22%20y%3D%2210%22%20width%3D%2215%22%20height%3D%22120%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220.25s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220.25s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3Crect%20x%3D%22120%22%20y%3D%2210%22%20width%3D%2215%22%20height%3D%22120%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220.5s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220.5s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3C%2Fsvg%3E');
-      --mute-svg: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxMzYgMTQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9IiNmZmYiPjxyZWN0IHg9IjQiIHk9IjcwIiB3aWR0aD0iMTUiIGhlaWdodD0iMTUiIHJ4PSI2Ii8+PHJlY3QgeD0iMzQiIHk9IjcwIiB3aWR0aD0iMTUiIGhlaWdodD0iMTUiIHJ4PSI2Ii8+PHJlY3QgeD0iNjQiIHk9IjcwIiB3aWR0aD0iMTUiIGhlaWdodD0iMTUiIHJ4PSI2Ii8+PHJlY3QgeD0iOTQiIHk9IjcwIiB3aWR0aD0iMTUiIGhlaWdodD0iMTUiIHJ4PSI2Ii8+PHJlY3QgeD0iMTI0IiB5PSI3MCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjE1IiByeD0iNiIvPjwvc3ZnPg==');
-      mask-size: 10px 10px !important;
-      mask-repeat: no-repeat !important;
-      mask-position: center !important;
-    }
-  
-    @media (prefers-color-scheme: light) {
-      &:is([soundplaying], [muted], [activemedia-blocked]) {
-        filter: invert(1);
-      }
-    }
-  
-    &:is([activemedia-blocked]) {
-      background: none !important;
-      list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEb0lEQVR4nO2YW4hWVRTHP7URvM6ooWYa1kPlQ4GXxISyC4mUVg/RZQyjKLUsUcsmJRm8pqUgXSCRbhZCqT1mkARaWm+l9qK9jCKZ2KhUD4nWLxbuM/1ncfb3nfPNGaeH84cPPtZ/n7XX2pe1/3tXKiVKlChR4v8I4BZgFtCnB/q+AnjQYuiqo2bgby6htbAIs/e/KvRtMTxWr5PpwHn+w3uFR1o7hg+kf4vlnrwOrgHaxckp4Npuizgex3Wh7wS/AWOyftwH2C8f/wFM6Pao4/FMDDEk+BboneXDBXTGbMe/CvwKbOqGoFcCx4Hlzv64i2l+LUdXAmflg22Of9E5bCowif7O92LHfyLcGWBYNWerXePhwt0JXBT+G6BXUYmEPvaKf+trmnAj3CCvjDkZ5Bq2CDcwTHmCX4DRRSYR+hkNnJR+jgEDhH/FDfTANCdPukaDhXtNuL+AKe7Qmgc8kjNoKyrPAwuBBrHfGvpIsEa4wSG2BE+kOf5aGrwl9mGuarzhvtsqXOZkgOfku3cdt1G434Ghwr0t3B7vtNGt/8nCLXUzpU7nC5c+QvFEnnXfzhVuqFvmS4WbIvYLunIqQUslOKWbGDgk3GqxD3HTvE+XSGjTFxgXfn1TOPtGD7sm4dcId1DsvYHTwt2nTtcJ8anbfIrxkQrX7ipc/7A8zkkb+/860E/aDXeDsUq4Ca7vq4XbkbaHjNglRMdhZEJN7G1upn4W7mWXxHfEccAl0yLcEbH3cpXyUXcoJ9ihiRwU4qHIqOtM3Sh2U6YjIhs1hg3S/ipR2IYbhNtOyrkBPCz2HzURzfx2sW8T+2axPyD2Q27d63KK4awruT8Jd3+KjDd8KPZpYj+miZyJ7IPPI8tHK84XYrdNnRU68rvTdBSwROy7IvunPW8iLZGyuzuy5GrhevnuS7HP60oiurRuE/tHGZbW4R5eWm15N/tnkZG3jTpSOCuxtbBe2o8C/onM1PYMm/0HTWRnpPzanV0FnJbfo5Fl1y+U2Bj2u/K7rI7yuyJWftdGyuwYF8T4yLR7yW/JbHAyw/6vd0lEpTmXboaxA3FnmtowYmYViXI4okSb3L0+TaI0iERJ46pJlLVpZ0WQKNY2wb1eNJoAS9DxjmRl142qisa5btSeqdSnfg1PO8WtM/WScFPFbjEPqibj36wi4ze677YI15wjEbuLJNjiuE1VZPw7wn2V92K1zr0vTXUXq6dsM+a5+oZS/UKYmQY34ucjirvRzdScvFfdAa6CnMz8vtS1q26biVDhlwvXnnrVzfD4cIe7fH1f5OND2MQH3PpX3TfSHbattZ6DVK587PjFdEZjgYlY34pFjtfD0arWkLzVxD/Q2fSeUCleYDKbQ5DLnH1O7uoYXjfsWTKBVayJlR4CMAn4U+LZm+nJVE50/4g9ttujdrCHc/eIfVpP+EywJ3xXBjvV+ssB4H3p32K5q15HzVKpOp5kLheA1tD3RRWN9Tq7Cbi7sOjyl+QZwM090X+JEiVKlKjUwr/rwkME7dPwYwAAAABJRU5ErkJggg==") !important;
-      width: 16px !important;
-      height: 16px !important;
-      margin: 0px 3px !important;
-    }
-  
-    &:is([soundplaying]) {
-      list-style-image: none !important;
-      mask-image: var(--play-svg) !important;
-    }
-  
-    &:is([muted]) {
-      list-style-image: none !important;
-      mask-image: var(--mute-svg) !important;
-    }
+
+  #unified-extensions-button .toolbarbutton-icon {
+    height: var(--pinned-extension-height) !important;
+    width: var(--pinned-extension-width) !important;
+    border-radius: var(--pinned-extension-radius) !important;
+    padding: calc((var(--pinned-extension-height) - 16px) / 2) calc((var(--pinned-extension-width) - 16px) / 2) !important;
   }
-  @media not (-moz-bool-pref: "zen.view.sidebar-expanded") {
-      .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]):hover img {
-          opacity: 1 !important;
-          transition: opacity 0.1s ease-out !important;
-      }
-  
-      .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]):hover .tab-icon-overlay { 
-          margin: 0px !important;
-          transition: opacity 0.1s ease-out, transform 0.1s ease-out !important;
-          transform: translate(6.9px, -6.9px) scale(0.69) !important;
-      }
-    }
-  
-  /* Default height for #zen-appcontent-navbar-container when collapsed is false */
-:root[zen-single-toolbar="true"]:not([customizing]) #zen-appcontent-navbar-container {
-  &:has(#PersonalToolbar[collapsed="false"]) {
-    height: 38px !important; /* Default height */
-    transition: height 0.3s ease-in-out, padding-top 0.3s ease-in-out, opacity 0.3s ease-in-out !important; /* Add smooth transitions */
+
+  #TabsToolbar-customization-target {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: var(--pinned-extension-gap) !important;
+    padding-left: calc(2px + var(--pinned-extension-padding) + var(--pinned-extension-width) + var(--pinned-extension-gap)) !important;
+    padding-right: calc(2px + var(--pinned-extension-padding)) !important;
   }
-}
 
-/* When the conditions aren't met, set height to 0px */
-:root[zen-single-toolbar="true"]:not([customizing]) #zen-appcontent-navbar-container {
-  &:has(#PersonalToolbar[collapsed="false"]) {
-    @media (-moz-bool-pref: "zen.view.hide-window-controls") {
-      &:not([zen-has-hover="true"]):not([has-popup-menu]):not(:focus-within):not(:has(:is([panelopen="true"], [open="true"]))) {
-        height: 0px !important; /* Set height to 0px when the conditions aren't met */
-        opacity: 0 !important; /* Fade out */
-                transition: all 0.3s ease-in-out !important; /* Smooth transition for padding */
-
-      }
-    }
+  #TabsToolbar-customization-target #tabbrowser-tabs {
+    margin-top: calc(0px - var(--pinned-extension-gap)) !important;
+    margin-left: calc(-2px - var(--pinned-extension-padding) - var(--pinned-extension-width) - var(--pinned-extension-gap)) !important;
+    margin-right: calc(-2px - var(--pinned-extension-padding)) !important;
+    min-width: calc(100% + 2px + var(--pinned-extension-padding) + var(--pinned-extension-width) + var(--pinned-extension-gap) + 2px + var(--pinned-extension-padding)) !important;
+    contain: inline-size !important;
+    height: 100% !important;
   }
-}
 
-/* Set height back to 38px when the conditions aren't met, as the default */
-:root[zen-single-toolbar="true"]:not([customizing]) #zen-appcontent-navbar-container {
-  &:has(#PersonalToolbar[collapsed="false"]) {
-    height: 40px !important; /* Default height when the hover is not active */
-    opacity: 1 !important; /* Make sure it's visible */
+  /* When no pinned items, lift the tab row */
+  &:not(:has(>toolbarbutton:not([id="tabs-newtab-button"]), .unified-extensions-item)) {
+    #tabbrowser-tabs { margin-top: 0px !important; }
   }
-}
-  
-  /* URL BAR MODS */
 
-#urlbar:is([breakout][breakout-extend], [breakout][usertyping][focused]):after {
-  top: -6px !important;
-}
+  .unified-extensions-item-action-button { padding: 0px !important; }
 
-.urlbarView-body-inner {
-  #urlbar[open] > .urlbarView > .urlbarView-body-outer > & {
-    border-top: none !important;
+  /* Toolbar buttons / Extensions */
+  #TabsToolbar-customization-target > toolbarbutton:not([id="tabs-newtab-button"]),
+  #TabsToolbar-customization-target .unified-extensions-item {
+    order: -1 !important;
+    border-radius: var(--pinned-extension-radius) !important;
+    padding: 0 !important;
+    border-bottom-width: 0 !important;
+    margin: 0 !important;
+    height: var(--pinned-extension-height) !important;
+    margin-top: calc(-0.533px - 1px - var(--pinned-extension-height) - var(--pinned-extension-padding)) !important;
+    width: var(--pinned-extension-width) !important;
+    flex-grow: 1 !important;
+    margin-bottom: 0 !important;
+    margin-inline: 0 !important;
   }
-}
 
-.search-one-offs {
-  display: none !important;
-}
-
-#urlbar[breakout-extend="true"] > #urlbar-background {
-  background: rgba(10, 10, 10, 0.4) !important;
-  backdrop-filter: blur(3rem) !important;
-  border-radius: 16px !important;
-  border-color: transparent !important;
-}
-
-#urlbar[breakout-extend] {
-  #identity-permission-box,
-  #tracking-protection-icon-container,
-  #page-action-buttons {
+  /* === Extension badge divider — removed to avoid accidental accent color lines ===
+     That 1px ::before was producing the vertical line (which can inherit/overlay
+     an accent/focus color in some themes). Hiding it entirely prevents the red line. */
+  #TabsToolbar-customization-target > toolbarbutton:not(#tabs-newtab-button)::before,
+  #TabsToolbar-customization-target .unified-extensions-item::before {
+    content: none !important;
     display: none !important;
+    width: 0 !important;
+    background: transparent !important;
+    pointer-events: none !important;
   }
 
-  #identity-icon-box {
-    margin: 5px !important;
-    scale: 150%;
-    border-radius: 6px !important;
+  /* Extension badges */
+  .toolbarbutton-badge-stack {
+    height: var(--pinned-extension-height);
+    width: var(--pinned-extension-height);
+    justify-content: center;
+    align-items: center;
+    padding: calc((var(--pinned-extension-height) - 16px) / 2) !important;
   }
 
-  #identity-box {
-    margin-right: 0px !important;
+  .toolbarbutton-badge {
+    min-width: 10px !important;
+    max-width: unset !important;
+    width: fit-content !important;
+    justify-content: center !important;
+    box-shadow: none !important;
+    padding: 0px !important;
   }
 
-  #urlbar-input {
-    margin-left: 5px !important;
-    margin-right: 5px !important;
-    font-size: 20px !important;
+  .toolbarbutton-badge:not(:empty) { padding: 1px !important; }
+  .toolbarbutton-badge { line-height: 8px !important; font-size: 8px !important; margin-top: calc(100% - 10px) !important; margin-right: -3px !important; scale: 1 !important; opacity: 1 !important; transition: all 0.2s ease !important; }
+
+  /* Hide badge on hover/open */
+  toolbarbutton:hover .toolbarbutton-badge,
+  toolbarbutton[open] .toolbarbutton-badge,
+  toolbarbutton[checked] .toolbarbutton-badge {
+    scale: 0 !important;
+    opacity: 0 !important;
   }
 }
 
-.urlbarView-row-inner {
-  border-radius: calc(var(--urlbarView-row-gutter) + var(--toolbarbutton-border-radius));
-  display: flex !important;
+/* ===== Nav Bar Size ===== */
+#nav-bar {
+  min-height: calc(2px + 38px + 1px + var(--pinned-extension-height) + var(--pinned-extension-padding) * 2) !important;
+  max-height: calc(2px + 38px + 1px + var(--pinned-extension-height) + var(--pinned-extension-padding) * 2) !important;
+  height: calc(2px + 38px + 1px + var(--pinned-extension-height) + var(--pinned-extension-padding) * 2) !important;
+  width: 142px !important;
 }
 
-.urlbarView-title,
-.urlbarView-title-separator,
-.urlbarView-action,
-.urlbarView-url {
-  margin-top: auto !important;
-  margin-bottom: auto !important;
+/* ===== URL Bar ===== */
+#urlbar-container {
+  --urlbar-container-height: calc(2px + 38px + 1px + var(--pinned-extension-height) + var(--pinned-extension-padding) * 2) !important;
+  pointer-events: none;
 }
 
-.urlbarView-title {
-  font-size: 16px !important;
-  font-weight: 500 !important;
+#urlbar {
+  --urlbar-height: calc(2px + 38px + 1px + var(--pinned-extension-height) + var(--pinned-extension-padding) * 2) !important;
+  pointer-events: none;
 }
 
-.urlbarView-url,
-.urlbarView-title-separator::before {
-  font-weight: 500 !important;
-  color: rgba(215, 215, 215) !important;
+#urlbar:not([open]) {
+  padding-bottom: calc(1px + var(--pinned-extension-height) + var(--pinned-extension-padding) * 2) !important;
 }
 
-.urlbarView-favicon {
-  margin-left: 3px !important;
-  margin-right: 12px !important;
-  padding: 4px !important;
-  border-radius: 6px !important;
-  transform: scale(1.5) !important;
+#urlbar * { pointer-events: all; }
+#urlbar-background { pointer-events: none; }
+
+.urlbar-input-container {
+  border-radius: 0 !important;
+  border-width: 0 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
-.urlbarView-row:hover {
-  background: transparent !important;
+/* ===== Customize Mode ===== */
+:root[customizing] #TabsToolbar-customization-target > * {
+  border-bottom: none !important;
 }
-
-.urlbarView-row:hover .urlbarView-favicon {
-  background-color: #f1efe2 !important;
-}
-
-.urlbarView-row:hover .urlbarView-row-inner {
-  background: color-mix(in srgb, var(--zen-colors-primary) 30%, #f1efe230) !important;
-}
-
-* {
-  --urlbarView-item-inline-padding: 8px !important;
-  --urlbarView-item-block-padding: 12px !important;
-}
-
