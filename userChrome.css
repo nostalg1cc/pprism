@@ -1,43 +1,3 @@
-
-/* ===== Root Variables ===== */
-:root {
-  --tab1: 51, 130, 194;   /* #3382C2 */
-  --tab2: 145, 70, 255;   /* #9146FF */
-  --tab3: 255, 67, 0;     /* #FF4300 */
-  --tab4: 255, 20, 147;   /* #FF1493 */
-  --tab5: 254, 198, 40;   /* #FEC628 */
-  --tab6: 10, 10, 10;   /* #1185FE */
-
-  --pinned-extension-width: 24px;
-  --pinned-extension-height: 24px;
-  --pinned-extension-padding: 4px;
-  --pinned-extension-radius: calc(var(--border-radius-medium) - var(--pinned-extension-padding) + 2px);
-  --pinned-extension-gap: calc(var(--pinned-extension-padding) * 2);
-}
-
-/* ===== Selected Tab Colors ===== */
-/* Always visible parts (inner stroke + background) */
-.zen-essentials-container .tabbrowser-tab[selected="true"] .tab-background {
-  box-shadow: inset 0 0 0 3px rgba(var(--active-color), 0.95) !important;
-  background-color: rgba(var(--active-color), 0.35) !important;
-  transition: filter 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* Only show the outer outline + brightness boost on hover */
-.zen-essentials-container .tabbrowser-tab[selected="true"]:hover .tab-background {
-  box-shadow:
-    0 0 0 2px rgba(var(--active-color), 1),           /* outer outline */
-    inset 0 0 0 3px rgba(var(--active-color), 0.35) !important; /* inner stroke */
-}
-
-
-.zen-essentials-container .tabbrowser-tab:nth-child(1)[selected="true"] { --active-color: var(--tab1); }
-.zen-essentials-container .tabbrowser-tab:nth-child(2)[selected="true"] { --active-color: var(--tab2); }
-.zen-essentials-container .tabbrowser-tab:nth-child(3)[selected="true"] { --active-color: var(--tab3); }
-.zen-essentials-container .tabbrowser-tab:nth-child(4)[selected="true"] { --active-color: var(--tab4); }
-.zen-essentials-container .tabbrowser-tab:nth-child(5)[selected="true"] { --active-color: var(--tab5); }
-.zen-essentials-container .tabbrowser-tab:nth-child(6)[selected="true"] { --active-color: var(--tab6); }
-
 /* ===== Main App Wrapper Border ===== */
 #zen-main-app-wrapper::before {
   content: '';
@@ -53,44 +13,16 @@
   opacity: 20%;
 }
 
-/* ===== Tabs Layout ===== */
-.zen-essentials-container {
-  display: grid !important;
-  grid-template-columns: repeat(2, 1fr) !important;
-}
-
-.zen-essentials-container .tab-background {
-  max-height: 15px !important;
-}
-
-.tab-background {
-  border-radius: 10px !important;
-
-}
-
-.tab-background::before {
-  border-radius: 7px !important;
-  margin: 3px !important;
-  background: linear-gradient(to bottom, black 0%, transparent 100%) !important;
-  opacity: 35% !important;
-  backdrop-filter: blur(50px) !important;
-}
-
 /* ===== Custom Tab Icons ===== */
 .tabbrowser-tab[label*="Fortnite Leaks"] .tab-icon-image {
   content: url("file:///C:/Users/marce/AppData/Roaming/zen/Profiles/4wla8y7x.Default%20(twilight)/chrome/x.ico") !important;
-}
-
-.zen-essentials-container .tabbrowser-tab:nth-child(1) .tab-icon-image {
-  content: url("file:///C:/Users/marce/AppData/Roaming/zen/Profiles/4wla8y7x.Default%20(twilight)/chrome/fastmail.png") !important;
-  height: auto !important;
 }
 
 /* ===== General UI Adjustments ===== */
 #browser { background-color: rgba(255, 255, 255, 0.05) !important; }
 .zen-current-workspace-indicator { display: none !important; }
 
-#zen-tabbox-wrapper { margin-top: 1px !important; }
+#zen-tabbox-wrapper { margin-top: 0px !important; }
 #navigator-toolbox { min-width: 146px !important; }
 #urlbar-input { padding-left: 5px !important; }
 #TabsToolbar { margin-right: 8px !important; }
@@ -100,148 +32,3 @@
 .zen-workspace-pinned-tabs-section { margin-top: 4px !important; }
 .pinned-tabs-container-separator { margin: 6px 0 !important; }
 
-/* ===== Pinned Extensions Styling ===== */
-:root:not([customizing]) {
-  #zen-sidebar-top-buttons-customization-target {
-    align-items: flex-start !important;
-    padding: 4px 0 !important;
-    min-width: calc(32px * 5 + 1px) !important; /* Number of buttons * 32px + 1px */
-  }
-
-  #unified-extensions-button {
-    position: fixed !important;
-    margin-top: calc(var(--zen-toolbar-height) - 6.5px + 2.666px + 38px + 1px + 1px + var(--pinned-extension-padding)) !important;
-    margin-left: 2px !important;
-    height: var(--pinned-extension-height) !important;
-    padding: 0 var(--pinned-extension-padding) !important;
-    z-index: 1 !important;
-    justify-content: left !important;
-  }
-
-  #unified-extensions-button .toolbarbutton-icon {
-    height: var(--pinned-extension-height) !important;
-    width: var(--pinned-extension-width) !important;
-    border-radius: var(--pinned-extension-radius) !important;
-    padding: calc((var(--pinned-extension-height) - 16px) / 2) calc((var(--pinned-extension-width) - 16px) / 2) !important;
-  }
-
-  #TabsToolbar-customization-target {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    gap: var(--pinned-extension-gap) !important;
-    padding-left: calc(2px + var(--pinned-extension-padding) + var(--pinned-extension-width) + var(--pinned-extension-gap)) !important;
-    padding-right: calc(2px + var(--pinned-extension-padding)) !important;
-  }
-
-  #TabsToolbar-customization-target #tabbrowser-tabs {
-    margin-top: calc(-2px - var(--pinned-extension-gap)) !important;
-    margin-left: calc(-2px - var(--pinned-extension-padding) - var(--pinned-extension-width) - var(--pinned-extension-gap)) !important;
-    margin-right: calc(-2px - var(--pinned-extension-padding)) !important;
-    min-width: calc(100% + 2px + var(--pinned-extension-padding) + var(--pinned-extension-width) + var(--pinned-extension-gap) + 2px + var(--pinned-extension-padding)) !important;
-    contain: inline-size !important;
-    height: 100% !important;
-  }
-
-  /* When no pinned items, lift the tab row */
-  &:not(:has(>toolbarbutton:not([id="tabs-newtab-button"]), .unified-extensions-item)) {
-    #tabbrowser-tabs { margin-top: 0px !important; }
-  }
-
-  .unified-extensions-item-action-button { padding: 0px !important; }
-
-  /* Toolbar buttons / Extensions */
-  #TabsToolbar-customization-target > toolbarbutton:not([id="tabs-newtab-button"]),
-  #TabsToolbar-customization-target .unified-extensions-item {
-    order: -1 !important;
-    border-radius: var(--pinned-extension-radius) !important;
-    padding: 0 !important;
-    border-bottom-width: 0 !important;
-    margin: 0 !important;
-    height: var(--pinned-extension-height) !important;
-    margin-top: calc(-0.533px - 1px - var(--pinned-extension-height) - var(--pinned-extension-padding)) !important;
-    width: var(--pinned-extension-width) !important;
-    flex-grow: 1 !important;
-    margin-bottom: 0 !important;
-    margin-inline: 0 !important;
-  }
-
-  /* === Extension badge divider — removed to avoid accidental accent color lines ===
-     That 1px ::before was producing the vertical line (which can inherit/overlay
-     an accent/focus color in some themes). Hiding it entirely prevents the red line. */
-  #TabsToolbar-customization-target > toolbarbutton:not(#tabs-newtab-button)::before,
-  #TabsToolbar-customization-target .unified-extensions-item::before {
-    content: none !important;
-    display: none !important;
-    width: 0 !important;
-    background: transparent !important;
-    pointer-events: none !important;
-  }
-
-  /* Extension badges */
-  .toolbarbutton-badge-stack {
-    height: var(--pinned-extension-height);
-    width: var(--pinned-extension-height);
-    justify-content: center;
-    align-items: center;
-    padding: calc((var(--pinned-extension-height) - 16px) / 2) !important;
-  }
-
-  .toolbarbutton-badge {
-    min-width: 10px !important;
-    max-width: unset !important;
-    width: fit-content !important;
-    justify-content: center !important;
-    box-shadow: none !important;
-    padding: 0px !important;
-  }
-
-  .toolbarbutton-badge:not(:empty) { padding: 1px !important; }
-  .toolbarbutton-badge { line-height: 8px !important; font-size: 8px !important; margin-top: calc(100% - 10px) !important; margin-right: -3px !important; scale: 1 !important; opacity: 1 !important; transition: all 0.2s ease !important; }
-
-  /* Hide badge on hover/open */
-  toolbarbutton:hover .toolbarbutton-badge,
-  toolbarbutton[open] .toolbarbutton-badge,
-  toolbarbutton[checked] .toolbarbutton-badge {
-    scale: 0 !important;
-    opacity: 0 !important;
-  }
-}
-
-/* ===== Nav Bar Size ===== */
-#nav-bar {
-  min-height: calc(2px + 38px + 1px + var(--pinned-extension-height) + var(--pinned-extension-padding) * 2) !important;
-  max-height: calc(2px + 38px + 1px + var(--pinned-extension-height) + var(--pinned-extension-padding) * 2) !important;
-  height: calc(2px + 38px + 1px + var(--pinned-extension-height) + var(--pinned-extension-padding) * 2) !important;
-  width: 142px !important;
-}
-
-/* ===== URL Bar ===== */
-#urlbar-container {
-  --urlbar-container-height: calc(2px + 38px + 1px + var(--pinned-extension-height) + var(--pinned-extension-padding) * 2) !important;
-  pointer-events: none;
-}
-
-#urlbar {
-  --urlbar-height: calc(2px + 38px + 1px + var(--pinned-extension-height) + var(--pinned-extension-padding) * 2) !important;
-  pointer-events: none;
-}
-
-#urlbar:not([open]) {
-  padding-bottom: calc(1px + var(--pinned-extension-height) + var(--pinned-extension-padding) * 2) !important;
-  
-}
-
-#urlbar * { pointer-events: all; }
-#urlbar-background { pointer-events: none; }
-
-.urlbar-input-container {
-  border-radius: 0 !important;
-  border-width: 0 !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-}
-
-/* ===== Customize Mode ===== */
-:root[customizing] #TabsToolbar-customization-target > * {
-  border-bottom: none !important;
-}
