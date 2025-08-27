@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+}
+
+
+
 /* ===== Main App Wrapper Border ===== */
 #zen-main-app-wrapper::before {
   content: '';
@@ -13,10 +22,13 @@
   opacity: 20%;
 }
 
+
 /* ===== Custom Tab Icons ===== */
 .tabbrowser-tab[label*="Fortnite Leaks"] .tab-icon-image {
   content: url("file:///C:/Users/marce/AppData/Roaming/zen/Profiles/4wla8y7x.Default%20(twilight)/chrome/x.ico") !important;
 }
+
+
 
 /* ===== General UI Adjustments ===== */
 #browser { background-color: rgba(255, 255, 255, 0.05) !important; }
@@ -32,3 +44,7 @@
 .zen-workspace-pinned-tabs-section { margin-top: 4px !important; }
 .pinned-tabs-container-separator { margin: 6px 0 !important; }
 
+/* ===== Nav Bar Size ===== */
+#nav-bar {
+  width: 142px !important;
+}
