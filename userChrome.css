@@ -1,12 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
-*{
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-}
-
-
-
 /* ===== Main App Wrapper Border ===== */
 #zen-main-app-wrapper::before {
   content: '';
@@ -21,6 +12,11 @@
   z-index: 999;
   opacity: 20%;
 }
+
+#zen-main-app-wrapper {
+  background: rgba(125, 155, 125, 0.5) !important;
+}
+
 
 
 /* ===== Custom Tab Icons ===== */
@@ -38,7 +34,7 @@
 #navigator-toolbox { min-width: 146px !important; }
 #urlbar-input { padding-left: 5px !important; }
 #TabsToolbar { margin-right: 8px !important; }
-#stop-reload-button, #reload-button, #stop-button { padding-right: 10px !important; }
+#stop-reload-button, #reload-button, #stop-button { padding-right: 0px !important; }
 #zen-sidebar-top-buttons-customization-target { margin-top: -5px !important; }
 #nav-bar { margin-top: -5px !important; }
 .zen-workspace-pinned-tabs-section { margin-top: 4px !important; }
@@ -47,4 +43,12 @@
 /* ===== Nav Bar Size ===== */
 #nav-bar {
   width: 142px !important;
+}
+
+.tab-background, #urlbar-background{
+  border-radius: 10px !important;
+}
+
+#PanelUI-menu-button{
+  display: none !important;
 }
