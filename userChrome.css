@@ -1,3 +1,4 @@
+
 /* ===== Root Variables ===== */
 :root {
   --tab1: 51, 130, 194;   /* #3382C2 */
@@ -5,7 +6,7 @@
   --tab3: 255, 67, 0;     /* #FF4300 */
   --tab4: 255, 20, 147;   /* #FF1493 */
   --tab5: 254, 198, 40;   /* #FEC628 */
-  --tab6: 17, 133, 254;   /* #1185FE */
+  --tab6: 10, 10, 10;   /* #1185FE */
 
   --pinned-extension-width: 24px;
   --pinned-extension-height: 24px;
@@ -15,10 +16,20 @@
 }
 
 /* ===== Selected Tab Colors ===== */
+/* Always visible parts (inner stroke + background) */
 .zen-essentials-container .tabbrowser-tab[selected="true"] .tab-background {
-  box-shadow: inset 0 0 0 3px rgba(var(--active-color), 0.25) !important;
-  background-color: rgba(var(--active-color), 0.25) !important;
+  box-shadow: inset 0 0 0 3px rgba(var(--active-color), 0.95) !important;
+  background-color: rgba(var(--active-color), 0.35) !important;
+  transition: filter 0.2s ease, box-shadow 0.2s ease;
 }
+
+/* Only show the outer outline + brightness boost on hover */
+.zen-essentials-container .tabbrowser-tab[selected="true"]:hover .tab-background {
+  box-shadow:
+    0 0 0 2px rgba(var(--active-color), 1),           /* outer outline */
+    inset 0 0 0 3px rgba(var(--active-color), 0.35) !important; /* inner stroke */
+}
+
 
 .zen-essentials-container .tabbrowser-tab:nth-child(1)[selected="true"] { --active-color: var(--tab1); }
 .zen-essentials-container .tabbrowser-tab:nth-child(2)[selected="true"] { --active-color: var(--tab2); }
@@ -39,18 +50,22 @@
   box-shadow: inset 0 0 0 2px white;
   pointer-events: none;
   z-index: 999;
-  opacity: 15%;
+  opacity: 20%;
 }
 
 /* ===== Tabs Layout ===== */
 .zen-essentials-container {
   display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
+  grid-template-columns: repeat(2, 1fr) !important;
 }
 
 .zen-essentials-container .tab-background {
-  height: 35px !important;
+  max-height: 15px !important;
+}
+
+.tab-background {
   border-radius: 10px !important;
+
 }
 
 .tab-background::before {
@@ -66,6 +81,11 @@
   content: url("file:///C:/Users/marce/AppData/Roaming/zen/Profiles/4wla8y7x.Default%20(twilight)/chrome/x.ico") !important;
 }
 
+.zen-essentials-container .tabbrowser-tab:nth-child(1) .tab-icon-image {
+  content: url("file:///C:/Users/marce/AppData/Roaming/zen/Profiles/4wla8y7x.Default%20(twilight)/chrome/fastmail.png") !important;
+  height: auto !important;
+}
+
 /* ===== General UI Adjustments ===== */
 #browser { background-color: rgba(255, 255, 255, 0.05) !important; }
 .zen-current-workspace-indicator { display: none !important; }
@@ -78,7 +98,7 @@
 #zen-sidebar-top-buttons-customization-target { margin-top: -5px !important; }
 #nav-bar { margin-top: -5px !important; }
 .zen-workspace-pinned-tabs-section { margin-top: 4px !important; }
-.pinned-tabs-container-separator { margin: -2px 0 !important; }
+.pinned-tabs-container-separator { margin: 6px 0 !important; }
 
 /* ===== Pinned Extensions Styling ===== */
 :root:not([customizing]) {
@@ -115,7 +135,7 @@
   }
 
   #TabsToolbar-customization-target #tabbrowser-tabs {
-    margin-top: calc(0px - var(--pinned-extension-gap)) !important;
+    margin-top: calc(-2px - var(--pinned-extension-gap)) !important;
     margin-left: calc(-2px - var(--pinned-extension-padding) - var(--pinned-extension-width) - var(--pinned-extension-gap)) !important;
     margin-right: calc(-2px - var(--pinned-extension-padding)) !important;
     min-width: calc(100% + 2px + var(--pinned-extension-padding) + var(--pinned-extension-width) + var(--pinned-extension-gap) + 2px + var(--pinned-extension-padding)) !important;
@@ -209,6 +229,7 @@
 
 #urlbar:not([open]) {
   padding-bottom: calc(1px + var(--pinned-extension-height) + var(--pinned-extension-padding) * 2) !important;
+  
 }
 
 #urlbar * { pointer-events: all; }
